@@ -1,0 +1,18 @@
+---
+author: codyalantaylor
+comments: true
+date: 2013-06-17 02:42:23+00:00
+layout: post
+slug: ti-8384-reference-sheet
+title: TI-83/84 Reference Sheet
+wordpress_id: 33
+categories:
+- Education
+- Open
+post_format:
+- Image
+---
+
+Something that I have noticed among students who I tutor is that many are unfamiliar with their graphing calculators. The [manual](http://education.ti.com/guidebooks/graphing/84p/TI84PlusGuidebook_Part2_EN.pdf) that comes with the TI-84, the most popular calculator among high school an undergraduate college students, is very useful and well put together; however, most students do not take the time to sit down with their manual to familiarize themselves with their calculator. I searched the internet for content that would help my students better utilize their calculators, but everything that I found covered every feature of the calculator in exhaustive detail. This is great unless you're a student. It has been my experience that students want to quickly reference materials and return to doing their work with as little time spent searching and reading as possible. We flip through textbooks in search of specific equations or examples and often never read the paragraphs of text surrounding them. The TI-84 manual and the other reference materials I found online regarding graphing calculators were full of text and few images. When I created this sheet, I had ease-of-use and speed in mind. Which means that it is full of images and includes only text that I thought was necessary to explain a feature. For most features this is none at all. Although this particular sheet does not cover _all_ of the features of the '84, it certainly covers the majority of which are used through College Algebra. Perhaps I will put together different versions of this in the future.
+
+**Download: [calculatorReference](http://codyalantaylor.com/wp-content/uploads/2014/10/calculatorReference.pdf) **[6.73 MB]
