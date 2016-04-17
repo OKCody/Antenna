@@ -15,7 +15,7 @@ For my individual design project, I chose to build an electronic tic-tac-toe gam
 ##  Latch Design
 
 
-I tried my best to create two independent latch circuits, one controlling a green LED and the other a red LED.  In this configuration I imagined having one switch that would turn on either latching circuit depending on whose turn it was in the game.  I also planned on using a 555 timer in a flip-flop configuration to keep track of whose turn it was.  When the output of the 555 was high it would be one player's turn and when low, the other player's.  After each press of a button on the playing surface, the 555 would need to switch states.  The design that most closely performed as I intended it to is in the diagram below.  It does allow for selectively controlling each LED; however, when switching between states it unintendedly toggles the state of the LED who is being unselected.
+I tried my best to create two independent latch circuits, one controlling a green LED and the other a red LED.  In this configuration I imagined having one switch that would turn on either latching circuit depending on whose turn it was in the game.  I also planned on using a 555 timer in a flip-flop configuration to keep track of whose turn it was.  When the output of the 555 was high it would be one player's turn and when low, the other player's.  After each press of a button on the playing surface, the 555 would need to switch states.  The design that most closely performed as I intended it to is in the diagram below.  It does allow for selectively controlling each LED; however, when switching between states it unintentionally toggles the state of the LED who is being unselected.
 
 [![latch-design-3](http://codyalantaylor.com/wp-content/uploads/2015/02/latch-design-3.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/latch-design-3.jpg)
 
@@ -33,7 +33,6 @@ The circuit above comprised only one cell of the playing area, that is to say, i
 
 
 ## Win Indicator
-
 
 The win indicator circuitry is simple, yet in order to accommodate all 16 possible win configurations (8 for green, 8 for red), I build 16 three-way AND gates.  Because all I wanted to do was  turn on an LED when a row, column, or oblique had three green or three red LEDs lit, this meant cascading three BS170 MOSFETs together source-to-drain, source-to-drain, and connecting the unconnected drain to the +5v rail through a 1k ohm resistor and the unconnected source to the ground rail through a respectively colored LED, while each gate was connected to a respective latch circuit in a given row, column or oblique.
 
@@ -55,7 +54,8 @@ In all, the win indicators are comprised of 32 MOSFETS, bringing the total trans
 
 Based on the Parts Count Failure Rate Data Excerpt from MIL-HDBK-217F, I have calculated the failure rate over one year of this design.
 
-[latex]part failure rate = GF\times quantity \times quality factor [/latex]                       [latex]failures/10^6 hours[/latex] 
+\(part failure rate = GF\times quantity \times quality factor \)                       \(failures/10^6 hours\)
+
 <table width="361" >
 <tbody >
 <tr >
@@ -179,7 +179,8 @@ Based on the Parts Count Failure Rate Data Excerpt from MIL-HDBK-217F, I have ca
 </tr>
 </tbody>
 </table>
-[latex]R = e^{-(53.856+2.068+1.332+.03456+1.08+.48 \times365.25 \times 24)}=.5953 \rightarrow 59.53\%[/latex]  [latex]chance of failure within 1 year[/latex] 
+
+\(R = e^{-(53.856+2.068+1.332+.03456+1.08+.48 \times365.25 \times 24)}=.5953 \rightarrow 59.53\%\)  \(chance of failure within 1 year\) 
 
 Such a high failure rate is due to the large number of parts in this design, 236 total parts.
 

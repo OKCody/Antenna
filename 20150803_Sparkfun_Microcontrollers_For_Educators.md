@@ -8,18 +8,13 @@ Since the beginning of the year I have been attending the planning meetings for 
 
 
 
-<blockquote>
-
-> 
-> So excited to bein Niwot, CO [@SparkFunEDU](https://twitter.com/SparkFunEDU) for [#micro4ed15](https://twitter.com/hashtag/micro4ed15?src=hash) ! [pic.twitter.com/STahMCGxSv](http://t.co/STahMCGxSv)
-> 
-> 
-— Cody Taylor (@OKCody_) [July 6, 2015](https://twitter.com/OKCody_/status/618115924529250304)</blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">So excited to bein Niwot, CO <a href="https://twitter.com/SparkFunEDU">@SparkFunEDU</a> for <a href="https://twitter.com/hashtag/micro4ed15?src=hash">#micro4ed15</a> ! <a href="http://t.co/STahMCGxSv">pic.twitter.com/STahMCGxSv</a></p>&mdash; Cody Taylor (@OKCody_) <a href="https://twitter.com/OKCody_/status/618115924529250304">July 6, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
 
-Despite the typo, my first day at Sparkfun was fantastic. We began by discussing what exactly the Maker movement is and its role in education. Most of us in the class had already drank the Maker Kool-aide and were in agreement that making in the classroom is good way to introduce STE(A)M topics to students of various ages and interests. After this priming discussion we began to tinker with Scratch. We toured the building and were visited by some folks from TeachEngineering.org. Anyone familiar with Sparkfun's website has surely noticed their light-hearted nature. The building tour certainly was consistent with this. Fun electronic projects were scattered throughout the building. Offices were extremely personalized. Employees shared inside jokes. There was beer-on-tap in the break room. -what a fun place. 
+Despite the typo, my first day at Sparkfun was fantastic. We began by discussing what exactly the Maker movement is and its role in education. Most of us in the class had already drank the Maker Kool-aide and were in agreement that making in the classroom is good way to introduce STE(A)M topics to students of various ages and interests. After this priming discussion we began to tinker with Scratch. We toured the building and were visited by some folks from TeachEngineering.org. Anyone familiar with Sparkfun's website has surely noticed their light-hearted nature. The building tour certainly was consistent with this. Fun electronic projects were scattered throughout the building. Offices were extremely personalized. Employees shared inside jokes. There was beer-on-tap in the break room. -what a fun place.
 
 
 
@@ -30,11 +25,8 @@ Despite the typo, my first day at Sparkfun was fantastic. We began by discussing
 
 
 
-<blockquote>
-Used Playdough and two pennies to make a .6v battery. Tried combining to light LED -never worked. [#micro4ed15](https://twitter.com/hashtag/micro4ed15?src=hash) [pic.twitter.com/tXaw1xBv5p](http://t.co/tXaw1xBv5p)
-
-— Cody Taylor (@OKCody_) [July 7, 2015](https://twitter.com/OKCody_/status/618459821956730880)
-</blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Used Playdough and two pennies to make a .6v battery. Tried combining to light LED -never worked. <a href="https://twitter.com/hashtag/micro4ed15?src=hash">#micro4ed15</a> <a href="http://t.co/tXaw1xBv5p">pic.twitter.com/tXaw1xBv5p</a></p>&mdash; Cody Taylor (@OKCody_) <a href="https://twitter.com/OKCody_/status/618459821956730880">July 7, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
@@ -49,18 +41,13 @@ Tuesday we played with squishy circuits. The night before Brian cooked up some c
 
 
 
-<blockquote>
-
-> 
-> OU logo made from a few lines of Processing. [#micro4ed15](https://twitter.com/hashtag/micro4ed15?src=hash) [pic.twitter.com/sg0gSIqNSZ](http://t.co/sg0gSIqNSZ)
-> 
-> 
-— Cody Taylor (@OKCody_) [July 7, 2015](https://twitter.com/OKCody_/status/618478872334483456)</blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">OU logo made from a few lines of Processing. <a href="https://twitter.com/hashtag/micro4ed15?src=hash">#micro4ed15</a> <a href="http://t.co/sg0gSIqNSZ">pic.twitter.com/sg0gSIqNSZ</a></p>&mdash; Cody Taylor (@OKCody_) <a href="https://twitter.com/OKCody_/status/618478872334483456">July 7, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
 
-From squishy circuits we moved on to text-based programming with Processing. It had been years since I had done anything using Processing. It was nice to be reacquainted. I implemented my personal 'Hello World' sketch, the Monte Carlo pi calculation. After this we were tasked with drawing a picture using only rectangles. After playing with Processing, we opened up our Sparkfun Inventor's Kits for the first time and began blinking LEDs, using the analogRead function, and mixing colors using RGB LEDs. Engrossed in exploring our kits on our own, the class half-heartedly listened to Brian demonstrate Fritzing and explain fundamental electrical science topics such as Ohm's Law and diode voltage drops for the remainder of the afternoon. 
+From squishy circuits we moved on to text-based programming with Processing. It had been years since I had done anything using Processing. It was nice to be reacquainted. I implemented my personal 'Hello World' sketch, the Monte Carlo pi calculation. After this we were tasked with drawing a picture using only rectangles. After playing with Processing, we opened up our Sparkfun Inventor's Kits for the first time and began blinking LEDs, using the analogRead function, and mixing colors using RGB LEDs. Engrossed in exploring our kits on our own, the class half-heartedly listened to Brian demonstrate Fritzing and explain fundamental electrical science topics such as Ohm's Law and diode voltage drops for the remainder of the afternoon.
 
 
 
@@ -69,18 +56,14 @@ From squishy circuits we moved on to text-based programming with Processing. It 
 
 
 Wednesday opened with Makey Makey. Because Makey Makey is such a plug-and-play device, there was actually only a little bit of discussion about it before we were set loose to explore the board on our own. Makey Makey is a general purpose human interface device that senses when a closed circuit is present between one of the button pads on the board and the ground rail also on the board. When it senses a closed circuit it outputs the very same signal a keyboard or mouse would when used accordingly. That is to say, you can "press" specific keyboard buttons by completing the circuit between respective pads on the Makey Makey. Familiar with Scratch, my partner and I set out to make a reaction time testing circuit using our Makey Makey board and Scratch. Our Scratch sketch shows a green background when the test is initialized but when the background color changes to red the person being tested sould close the circuit using parts of their body to measure their reaction time. Their reaction time is then shown on the screen. Try our sketch below by using the spacebar as the reaction timer trigger. We used some of the conductive play-dough that we still had laying around to function as buttons for our Makey Makey. I smashed a glob of conductive play-dough on my left wrist using a pipe-cleaner and used my right and to quickly touch another glob of conductive play-dough sitting on the table. Both globs were connected to the Makey Makey board using alligator clips. I enjoyed walking around the classroom during this time to have a look at all the things the rest of the class had made. Just before we ran out of time to experiment, my partner and I devised a way of using a Makey Makey and Scratch to measure the motion of a pendulum. We theorized that by using conductive thread, a conductive pendulum mass, and a conductive wall ( covered with foil maybe ) for a pendulum to bounce off of at the apex of its swing, we could in a similar way to our reaction timer, quantify the motion of a pendulum. I would still like to try this.
-     
-    
 
 
 
 
-<blockquote>
-Stepped out of my comfort zone today and sewed my first wearable circuit. [#micro4ed15](https://twitter.com/hashtag/micro4ed15?src=hash) [pic.twitter.com/uPrdW3yLQK](http://t.co/uPrdW3yLQK)
 
-— Cody Taylor (@OKCody_) [July 9, 2015](https://twitter.com/OKCody_/status/618935880040906752)
-</blockquote>
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Stepped out of my comfort zone today and sewed my first wearable circuit. <a href="https://twitter.com/hashtag/micro4ed15?src=hash">#micro4ed15</a> <a href="http://t.co/uPrdW3yLQK">pic.twitter.com/uPrdW3yLQK</a></p>&mdash; Cody Taylor (@OKCody_) <a href="https://twitter.com/OKCody_/status/618935880040906752">July 9, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 
@@ -92,7 +75,7 @@ Also on Wednesday we were visited by Angela Sheehan who is also a Sparkfun Educa
 
 
 
-Thursday we dove even deeper into the Inventor's Kit exploring the Redboard and ATTiny85s. We were largely allowed to investigate the Redboard on our own having already been introduced to the Arduino platform via the Digital Sandbox and Makey Makey. Most of the instruction on Thursday was centered around the ATTiny, how to program it, and how to build circuits around the ATTiny IC. I had never used an IC programmer before and had quite honestly been intimidated by the thought of using one. After learning the limitations of an ATTiny, programming it and then using it in a circuit is very straight forward. The ATTiny includes an internal clock crystal and therefore does not require an external crystal oscillator. This means that all that is required to use a programmed ATTiny in a circuit is a 5v source. Our Inventor's Kits included a barrel jack, a wall wart power supply, and a 5v regulator. There was some confusion in the class about the 5v voltage regulators because the instructions we were given were written for a very specific 5v regulator model; however, some kits (including mine) were supplied with a 3.3v regulator which would not have been a problem had the 3.3v and 5v regulators used the same pin-out. Because they did not, many people's circuits did not work at all until Brian gracefully swapped the unexpected 3.3v regulators with 5v regulators. -not knocking Brian or his class, but noting this for myself: this instructor error was a great teachable moment. As a EE student I am quite familiar with component datasheets, pin-out diagrams, and troubleshooting circuits, yet I applied none of these skills during this part of the class. -I don't know why. "Follow the leader" I guess. At any rate this mistake created a great opportunity to introduce the class to the exact nature of electronics. -might consider making "mistakes" similar to this if I ever lead a similar workshop. Guiding the class through the types of problems they should expect without letting them know that they have been intentionally induced could make for powerful teaching opportunities. 
+Thursday we dove even deeper into the Inventor's Kit exploring the Redboard and ATTiny85s. We were largely allowed to investigate the Redboard on our own having already been introduced to the Arduino platform via the Digital Sandbox and Makey Makey. Most of the instruction on Thursday was centered around the ATTiny, how to program it, and how to build circuits around the ATTiny IC. I had never used an IC programmer before and had quite honestly been intimidated by the thought of using one. After learning the limitations of an ATTiny, programming it and then using it in a circuit is very straight forward. The ATTiny includes an internal clock crystal and therefore does not require an external crystal oscillator. This means that all that is required to use a programmed ATTiny in a circuit is a 5v source. Our Inventor's Kits included a barrel jack, a wall wart power supply, and a 5v regulator. There was some confusion in the class about the 5v voltage regulators because the instructions we were given were written for a very specific 5v regulator model; however, some kits (including mine) were supplied with a 3.3v regulator which would not have been a problem had the 3.3v and 5v regulators used the same pin-out. Because they did not, many people's circuits did not work at all until Brian gracefully swapped the unexpected 3.3v regulators with 5v regulators. -not knocking Brian or his class, but noting this for myself: this instructor error was a great teachable moment. As a EE student I am quite familiar with component datasheets, pin-out diagrams, and troubleshooting circuits, yet I applied none of these skills during this part of the class. -I don't know why. "Follow the leader" I guess. At any rate this mistake created a great opportunity to introduce the class to the exact nature of electronics. -might consider making "mistakes" similar to this if I ever lead a similar workshop. Guiding the class through the types of problems they should expect without letting them know that they have been intentionally induced could make for powerful teaching opportunities.
 
 Throughout the day Thursday, the class worked on brainstorming what they were going to build for the hack-a-thon that was to take place that evening. We had been told on Wednesday that there would be a theme for the hack-a-thon. Our projects needed to be creative, and should have an educational component to them and that special consideration would be given to teams that used traditional objects in non-traditional ways. Jonah Duckles and I teamed up earlier in the week and had begun working on ideas for the hack-a-thon. Our early ideas included the robot chassis in our kits, but we ultimately decided not to use them, but when we were still considering using the robot chassis I suggested that the robots communicate with each other using pulses of light. This sparked an idea and we began working on a model fiber optic network. We decided to use glue sticks from the craft table as our fiber optic cables. They worked pretty well. We also knew that to truly replicate a fiber optic network we would need to build signal repeaters that would relay the signal as it propagates along its path. ATTinies proved to be a perfect fit for building the repeaters as they are fairly simple devices. Each repeater would need to sense an incoming pulse of light and output an identical pulse so on and so forth down the line. Our kits included only one photo resistor each so we ended up placing a Sparkfun order for local pick up ( a dangerous thing to have access to ) for a handful of photoresitors. I began working on designing the repeater circuits while Jonah worked on the code to run on each ATTiny. We wanted the code on each repeater to be exactly the same as programming 8 ICs was going to be trouble enough without each running different code. As I began testing the repeater circuit I realized that each was going to need to be adjusted based on ambient light.  Our first thought was to use a potentiometer to adjust the sensitivity of the circuit but then realized that each repeater would need to be adjusted independently and likely repeatedly as ambient conditions changed.  This led us to change the code running on the repeater instead of the circuit itself.  The code we implemented performed analogReads and averaged those readings to get a baseline reading of the ambient light near that repeater.  When the baseline value was exceeded by a threshold the repeater would be triggered.  The code works in the same way to determine when the signal has gone off.  We chained seven repeaters together with hotglue sticks and Jonah pulled together some code that would convert text to morse code.  This code ran on a full-sized Arduino and would flash an LED in morse code accordingly.  This was the input to our network.  We chose "Call me Ishmael." as the message to be transmitted through the network.  We had originally planned on decoding the morse code and having it display on an LCD screen, but were not able to make this happen in the allotted time.
 

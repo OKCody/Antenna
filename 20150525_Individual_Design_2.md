@@ -12,110 +12,110 @@ The code running on the microcontroller is pretty simple. It calculates a runnin
 
 
 
-    
-    #include <math.h>
-    
-    <span style="color: #cc6600;">int</span> popLED = A4;
-    <span style="color: #cc6600;">int</span> redLED = A3;
-    <span style="color: #cc6600;">int</span> yellowLED = A2;
-    <span style="color: #cc6600;">int</span> greenLED = A1;
-    <span style="color: #cc6600;">int</span> popCount = 0;
-    <span style="color: #cc6600;">float</span> sensorValue = 0;
-    <span style="color: #cc6600;">float</span> n = 0;
-    <span style="color: #cc6600;">float</span> mean = 0;
-    <span style="color: #cc6600;">float</span> maxSample = 0;
-    <span style="color: #cc6600;">float</span> buffer = 0;
-    <span style="color: #cc6600;">float</span> oldMax = 0;
-    <span style="color: #cc6600;">float</span> sample = 0;
-    <span style="color: #cc6600;">float</span> stdDev = 0;
-    <span style="color: #cc6600;">float</span> avgStdDev = 0;
-    <span style="color: #cc6600;">float</span> sum = 0;
-    <span style="color: #cc6600;">unsigned</span> <span style="color: #cc6600;">long</span> lastPop;
-    
-    <span style="color: #cc6600;">void</span> <span style="color: #cc6600;"><b>setup</b></span>() {
-        
-      <span style="color: #cc6600;">pinMode</span>( popLED, <span style="color: #006699;">OUTPUT</span> );
-      <span style="color: #cc6600;">pinMode</span>( redLED, <span style="color: #006699;">OUTPUT</span> );
-      <span style="color: #cc6600;">pinMode</span>( yellowLED, <span style="color: #006699;">OUTPUT</span> );
-      <span style="color: #cc6600;">pinMode</span>( greenLED, <span style="color: #006699;">OUTPUT</span> );
-      
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">begin</span>(9600);
-      
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">"Time"</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">"Sample"</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">"Std.Devs."</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">println</span>( <span style="color: #006699;">"Millis_Since_Pop"</span> );
-      
-      <span style="color: #7e7e7e;">//prime mean value</span>
-      
-      <span style="color: #cc6600;">for</span>( <span style="color: #cc6600;">int</span> n = 0; n < 1000; n++ ){
-        mean += <span style="color: #cc6600;">analogRead</span>(A0);    
-        maxSample = <span style="color: #cc6600;">analogRead</span>(A0);
-        <span style="color: #cc6600;">if</span>( maxSample > oldMax ){
-          oldMax = maxSample;
-        }
-      }
-      mean = mean / 1000.0;  
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">"mean: "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">println</span>( mean );
-      
-      buffer = oldMax - mean;
-      
-      <span style="color: #cc6600;">float</span> n = 0.0;
+
+    #include <math.h>
+
+    int popLED = A4;
+    int redLED = A3;
+    int yellowLED = A2;
+    int greenLED = A1;
+    int popCount = 0;
+    float sensorValue = 0;
+    float n = 0;
+    float mean = 0;
+    float maxSample = 0;
+    float buffer = 0;
+    float oldMax = 0;
+    float sample = 0;
+    float stdDev = 0;
+    float avgStdDev = 0;
+    float sum = 0;
+    unsigned long lastPop;
+
+    void setup() {
+
+    pinMode( popLED, OUTPUT );
+    pinMode( redLED, OUTPUT );
+    pinMode( yellowLED, OUTPUT );
+    pinMode( greenLED, OUTPUT );
+
+    Serial.begin(9600);
+
+    Serial.print( "Time" );
+    Serial.print( " " );
+    Serial.print( "Sample" );
+    Serial.print( " " );
+    Serial.print( "Std.Devs." );
+    Serial.print( " " );
+    Serial.println( "Millis_Since_Pop" );
+
+    //prime mean value
+
+    for( int n = 0; n < 1000; n++ ){
+    mean += analogRead(A0);    
+    maxSample = analogRead(A0);
+    if( maxSample > oldMax ){
+      oldMax = maxSample;
     }
-    
-    <span style="color: #cc6600;">void</span> <span style="color: #cc6600;"><b>loop</b></span>() {
-      
-      n++;
-    
-      sample = <span style="color: #cc6600;">analogRead</span>(A0);
-      sum += sample;
-      mean = sum / n;
-      
-      stdDev = <span style="color: #cc6600;">sqrt</span>( ( (sample - mean) * (sample - mean) ) / n);
-      avgStdDev = (stdDev + avgStdDev) / n;
-      
-      <span style="color: #cc6600;">if</span>( sample <= (mean - (7)) || sample >= (mean + (7)) ){  <span style="color: #7e7e7e;">//consider it a pop if between thresholds</span>
-    <span style="color: #7e7e7e;">//    if( stdDev >= .25){</span>
-        lastPop = <span style="color: #cc6600;">millis</span>();
-        <span style="color: #cc6600;">digitalWrite</span>( popLED, <span style="color: #006699;">HIGH</span> );
-        <span style="color: #cc6600;">delay</span>( 50 );
-        <span style="color: #cc6600;">digitalWrite</span>( popLED, <span style="color: #006699;">LOW</span> );
-        popCount++;
-      } 
-      <span style="color: #cc6600;">if</span>( (popCount <= 25) ){
-        <span style="color: #cc6600;">digitalWrite</span>( greenLED, <span style="color: #006699;">HIGH</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( yellowLED, <span style="color: #006699;">LOW</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( redLED, <span style="color: #006699;">LOW</span> );
-      }
-      <span style="color: #cc6600;">if</span>( ( (popCount > 25) ) && ( (<span style="color: #cc6600;">millis</span>() - lastPop) < 2000 )){
-        <span style="color: #cc6600;">digitalWrite</span>( greenLED, <span style="color: #006699;">LOW</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( yellowLED, <span style="color: #006699;">HIGH</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( redLED, <span style="color: #006699;">LOW</span> );
-      }
-      <span style="color: #cc6600;">if</span>( ( (popCount > 25) ) && ( (<span style="color: #cc6600;">millis</span>() - lastPop) > 2000 ) ){
-        <span style="color: #cc6600;">digitalWrite</span>( greenLED, <span style="color: #006699;">LOW</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( yellowLED, <span style="color: #006699;">LOW</span> );
-        <span style="color: #cc6600;">digitalWrite</span>( redLED, <span style="color: #006699;">HIGH</span> );
-      }  
-      
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #cc6600;">millis</span>() );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( mean );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( sample );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( avgStdDev );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( stdDev );  <span style="color: #7e7e7e;">//( (sample - mean) / stdDev );</span>
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">print</span>( <span style="color: #006699;">" "</span> );
-      <span style="color: #cc6600;"><b>Serial</b></span>.<span style="color: #cc6600;">println</span>( <span style="color: #cc6600;">millis</span>() - lastPop );
     }
-    
-    
+    mean = mean / 1000.0;  
+    Serial.print( "mean: " );
+    Serial.println( mean );
+
+    buffer = oldMax - mean;
+
+    float n = 0.0;
+    }
+
+    void loop() {
+
+    n++;
+
+    sample = analogRead(A0);
+    sum += sample;
+    mean = sum / n;
+
+    stdDev = sqrt( ( (sample - mean) * (sample - mean) ) / n);
+    avgStdDev = (stdDev + avgStdDev) / n;
+
+    if( sample <= (mean - (7)) || sample >= (mean + (7)) ){  //consider it a pop if between thresholds
+    //    if( stdDev >= .25){
+    lastPop = millis();
+    digitalWrite( popLED, HIGH );
+    delay( 50 );
+    digitalWrite( popLED, LOW );
+    popCount++;
+    }
+    if( (popCount <= 25) ){
+    digitalWrite( greenLED, HIGH );
+    digitalWrite( yellowLED, LOW );
+    digitalWrite( redLED, LOW );
+    }
+    if( ( (popCount > 25) ) && ( (millis() - lastPop) < 2000 )){
+    digitalWrite( greenLED, LOW );
+    digitalWrite( yellowLED, HIGH );
+    digitalWrite( redLED, LOW );
+    }
+    if( ( (popCount > 25) ) && ( (millis() - lastPop) > 2000 ) ){
+    digitalWrite( greenLED, LOW );
+    digitalWrite( yellowLED, LOW );
+    digitalWrite( redLED, HIGH );
+    }  
+
+    Serial.print( millis() );
+    Serial.print( " " );
+    Serial.print( mean );
+    Serial.print( " " );
+    Serial.print( sample );
+    Serial.print( " " );
+    Serial.print( avgStdDev );
+    Serial.print( " " );
+    Serial.print( stdDev );  //( (sample - mean) / stdDev );
+    Serial.print( " " );
+    Serial.println( millis() - lastPop );
+    }
+
+
 
 
 The schematics for the filters are below

@@ -23,7 +23,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[latex size="1"]\frac{3v-1v}{1k\Omega} = 2mA << 75mA[/latex] current limit
+\(\frac{3v-1v}{1k\Omega} = 2mA << 75mA\) current limit
 
 
 
@@ -44,7 +44,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[latex]\frac{3v-1v}{1k\Omega}=.2mA << 1A[/latex] current limit
+\(\frac{3v-1v}{1k\Omega}=.2mA << 1A\) current limit
 
 
 
@@ -65,7 +65,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[latex]\frac{3v-.3v}{1k\Omega} = 2.7mA << 200mA[/latex] current limit
+\(\frac{3v-.3v}{1k\Omega} = 2.7mA << 200mA\) current limit
 
 
 
@@ -111,12 +111,12 @@ Design a circuit using only resistors, a potentiometer, and a red and green LED.
 
 
 
-[latex]I_D=\frac{15v-.7v}{1k\Omega} = 14.3mA; 5mA (minimum current) < 14.3mA < 20 (maximum current)[/latex]
+$$I_D=\frac{15v-.7v}{1k\Omega} = 14.3mA; 5mA (minimum current) < 14.3mA < 20 (maximum current)$$
 
 
 
 
-Measured current:  [latex]I_D = 13.7 mA[/latex]
+Measured current:  \(I_D = 13.7 mA\)
 
 
 
@@ -172,7 +172,7 @@ Design a circuit that will only pass through the negative cycles of 6 V p-p sine
 Thinking of R1 as the load of the rectifier, with a 3v peak sine wave being dropped across it, R2 and R3 form a voltage divider to drop the wave to the required -1.6v.
 
 
-[latex]3\times\frac{11.4k\Omega}{10k\Omega+11.4k\Omega} = 1.59v[/latex]
+$$3\times\frac{11.4k\Omega}{10k\Omega+11.4k\Omega} = 1.59v$$
 
 
 

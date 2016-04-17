@@ -26,17 +26,17 @@ Note: We used a 3 second off period because the motor took 2 seconds to spin dow
 [![2](http://codyalantaylor.com/wp-content/uploads/2015/02/2.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/2.jpg)
 
 
-[latex]t=RCLN(3)[/latex]
+$$t=RCLN(3)$$
 
 
 
 
-[latex]3sec.=(1M\Omega)(C)Ln(3)[/latex]
+$$3sec.=(1M\Omega)(C)Ln(3)$$
 
 
 
 
-[latex]\frac{3sec}{(1M)(Ln(3))}=C=3\mu F[/latex]
+$$\frac{3sec}{(1M)(Ln(3))}=C=3\mu F$$
 
 
 

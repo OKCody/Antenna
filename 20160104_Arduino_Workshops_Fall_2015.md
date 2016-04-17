@@ -10,16 +10,16 @@ The first thing I discussed in these workshops was the definition of voltage, cu
 
 It's customary when learning a new programming language to write a "Hello World" program.  I think this is fun and it provided a good chance to introduce the CodeBender IDE and the most basic components of an Arduino program.  Upon registering for these workshops I asked that participants visit [CodeBender.cc](https://codebender.cc/) and follow their instructions for installing any necessary browser plugins in order to minimize the amount of time spent doing this during the workshop.  I like using CodeBender because it provides a lower barrier to entry than does installing the Arduino IDE.  It is perfectly functional and it allows participants to save their code in a public way.  Explaining this segued nicely into my soapbox about the open-source ethos that is the basis of the Arduino community.
 
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">setup</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
-      <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">begin</span><span style="color: #000000;">(</span><span style="color: #000000;">9600</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #00979c;">"Hello World!"</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-    <span style="color: #000000;">}</span>
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">loop</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
-    
-    <span style="color: #000000;">}</span>
-    
+
+    void setup() {
+    Serial.begin(9600);
+    Serial.println("Hello World!");
+    }
+
+    void loop() {
+
+    }
+
 
 
 Once they had completed the Hello World, I encouraged them to experiment with their code a bit.  "Do some math," I told them.  Most had no trouble doing this.  Some of the more advanced people even asked questions that led me to explain loops.  -exciting stuff!
@@ -42,20 +42,20 @@ The first time you log into CodeBender.cc it presents you with the physical comp
 
 Once everyone had a blinking LED I'd instruct them to play with the code again.  One example that I proposed was to reduce the amount of time in the delay() functions until the LED was blinking so fast that they could no longer perceive that it was blinking.  I'd allow several minutes for this.  The ease with which participants at this point were able to make meaningful changes to the code by themselves is a testament to the power of the Arduino platform.  I was thrilled to find that people didn't usually stop at modifying the code, but that they also made modifications to the circuit!  They would add more LEDs experimenting with series and parallel configurations.  Some even tried using different pins of the RedBoard and made a circuit that would blink two LEDs.  -one on, the other off.   I found that encouraging participants at this point and walking them through any necessary troubleshooting improved their confidence to try things later in the workshop.
 
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">setup</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
-      <span style="color: #434f54;">// initialize digital pin 13 as an output.</span>
-      <span style="color: #d35400;">pinMode</span><span style="color: #000000;">(</span><span style="color: #000000;">13</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">OUTPUT</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-    <span style="color: #000000;">}</span>
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">loop</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
-      <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">13</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>   <span style="color: #434f54;">// turn the LED on (HIGH is the voltage level)</span>
-      <span style="color: #d35400;">delay</span><span style="color: #000000;">(</span><span style="color: #000000;">1000</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>              <span style="color: #434f54;">// wait for a second</span>
-      <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">13</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">LOW</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>    <span style="color: #434f54;">// turn the LED off by making the voltage LOW</span>
-      <span style="color: #d35400;">delay</span><span style="color: #000000;">(</span><span style="color: #000000;">1000</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>              <span style="color: #434f54;">// wait for a second</span>
-    <span style="color: #000000;">}</span>
-    
-    
+
+    void setup() {
+    // initialize digital pin 13 as an output.
+    pinMode(13, OUTPUT);
+    }
+
+    void loop() {
+    digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(1000);              // wait for a second
+    digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+    delay(1000);              // wait for a second
+    }
+
+
 
 
 **Buttons**
@@ -66,53 +66,53 @@ Once we were all, again, on the same page, I asked that they add at least one mo
 
 I did have one person ask about my use of the integer datatype for the variables that hold the state of the buttons, blueState, and yellState.  He asked why I chose to use int instead of bool given that the result would always take a binary form.  I noted that he was correct and that he was welcome to pursue that avenue, but that [for simplicity](http://cybergibbons.com/arduino/arduino-misconceptions-7-boolean-variables-are-a-native-cavr-type/), having said very little at this point about datatypes, I would stick to using integer type variables.  -a good opportunity to plug future, more advanced, workshops!
 
-    
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">blueButton</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">2</span><span style="color: #000000;">;</span>
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">yellButton</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">3</span><span style="color: #000000;">;</span>
-    
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">blueLED</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">6</span><span style="color: #000000;">;</span>
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">yellLED</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">7</span><span style="color: #000000;">;</span>
-    
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">blueState</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">0</span><span style="color: #000000;">;</span>
-    <span style="color: #00979c;">int</span> <span style="color: #000000;">yellState</span> <span style="color: #434f54;">=</span> <span style="color: #000000;">0</span><span style="color: #000000;">;</span>
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">setup</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>
-    <span style="color: #000000;">{</span>
-      <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">begin</span><span style="color: #000000;">(</span><span style="color: #000000;">9600</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      
-      <span style="color: #d35400;">pinMode</span><span style="color: #000000;">(</span><span style="color: #000000;">blueButton</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">INPUT</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      <span style="color: #d35400;">pinMode</span><span style="color: #000000;">(</span><span style="color: #000000;">yellButton</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">INPUT</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-    
-      <span style="color: #d35400;">pinMode</span><span style="color: #000000;">(</span><span style="color: #000000;">blueLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">OUTPUT</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      <span style="color: #d35400;">pinMode</span><span style="color: #000000;">(</span><span style="color: #000000;">yellLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">OUTPUT</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-    <span style="color: #000000;">}</span>
-    
-    <span style="color: #00979c;">void</span> <span style="color: #5e6d03;">loop</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">{</span>
-      <span style="color: #000000;">blueState</span> <span style="color: #434f54;">=</span> <span style="color: #d35400;">digitalRead</span><span style="color: #000000;">(</span><span style="color: #000000;">blueButton</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      <span style="color: #000000;">yellState</span> <span style="color: #434f54;">=</span> <span style="color: #d35400;">digitalRead</span><span style="color: #000000;">(</span><span style="color: #000000;">yellButton</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      
-      <span style="color: #5e6d03;">if</span><span style="color: #000000;">(</span> <span style="color: #000000;">(</span><span style="color: #000000;">blueState</span> <span style="color: #434f54;">==</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span> <span style="color: #434f54;">&&</span> <span style="color: #000000;">(</span><span style="color: #000000;">yellState</span> <span style="color: #434f54;">==</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span><span style="color: #000000;">{</span>
-        <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #00979c;">"green"</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">blueLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">yellLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-      <span style="color: #000000;">}</span>
-      <span style="color: #5e6d03;">else</span><span style="color: #000000;">{</span>
-        <span style="color: #5e6d03;">if</span><span style="color: #000000;">(</span><span style="color: #000000;">blueState</span> <span style="color: #434f54;">==</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">{</span>
-          <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #00979c;">"blue"</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-          <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">blueLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #000000;">}</span>
-        <span style="color: #5e6d03;">else</span><span style="color: #000000;">{</span>
-          <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">yellLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">LOW</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #000000;">}</span>
-        <span style="color: #5e6d03;">if</span><span style="color: #000000;">(</span><span style="color: #000000;">yellState</span> <span style="color: #434f54;">==</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">{</span>
-          <b><span style="color: #d35400;">Serial</span></b><span style="color: #434f54;">.</span><span style="color: #d35400;">println</span><span style="color: #000000;">(</span><span style="color: #00979c;">"yellow"</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-          <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">yellLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">HIGH</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #000000;">}</span>
-        <span style="color: #5e6d03;">else</span><span style="color: #000000;">{</span>
-          <span style="color: #d35400;">digitalWrite</span><span style="color: #000000;">(</span><span style="color: #000000;">blueLED</span><span style="color: #434f54;">,</span> <span style="color: #00979c;">LOW</span><span style="color: #000000;">)</span><span style="color: #000000;">;</span>
-        <span style="color: #000000;">}</span>
-      <span style="color: #000000;">}</span>
-    <span style="color: #000000;">}</span>
+
+    int blueButton = 2;
+    int yellButton = 3;
+
+    int blueLED = 6;
+    int yellLED = 7;
+
+    int blueState = 0;
+    int yellState = 0;
+
+    void setup()
+    {
+    Serial.begin(9600);
+
+    pinMode(blueButton, INPUT);
+    pinMode(yellButton, INPUT);
+
+    pinMode(blueLED, OUTPUT);
+    pinMode(yellLED, OUTPUT);
+    }
+
+    void loop(){
+    blueState = digitalRead(blueButton);
+    yellState = digitalRead(yellButton);
+
+    if( (blueState == HIGH) && (yellState == HIGH) ){
+    Serial.println("green");
+    digitalWrite(blueLED, HIGH);
+    digitalWrite(yellLED, HIGH);
+    }
+    else{
+    if(blueState == HIGH){
+      Serial.println("blue");
+      digitalWrite(blueLED, HIGH);
+    }
+    else{
+      digitalWrite(yellLED, LOW);
+    }
+    if(yellState == HIGH){
+      Serial.println("yellow");
+      digitalWrite(yellLED, HIGH);
+    }
+    else{
+      digitalWrite(blueLED, LOW);
+    }
+    }
+    }
 
 
 **Conclusion**
@@ -122,18 +122,8 @@ I did have one person ask about my use of the integer datatype for the variables
 
 
 
-<blockquote>
-
-> 
-> It's 1:30am. My desk is a wreck. Just finished preparing for tomorrow's Intro to [#Arduino](https://twitter.com/hashtag/Arduino?src=hash) workshop. So excited!! [pic.twitter.com/RSVKFTqlJa](http://t.co/RSVKFTqlJa)
-> 
-> 
-
-> 
-> — Cody Taylor (@OKCody_) [October 13, 2015](https://twitter.com/OKCody_/status/653821588555460608)
-> 
-> 
-</blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">It&#39;s 1:30am. My desk is a wreck. Just finished preparing for tomorrow&#39;s Intro to <a href="https://twitter.com/hashtag/Arduino?src=hash">#Arduino</a> workshop. So excited!! <a href="http://t.co/RSVKFTqlJa">pic.twitter.com/RSVKFTqlJa</a></p>&mdash; Cody Taylor (@OKCody_) <a href="https://twitter.com/OKCody_/status/653821588555460608">October 13, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 

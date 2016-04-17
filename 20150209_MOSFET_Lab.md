@@ -45,7 +45,7 @@ Repeat part 2) with a p-channel MOSFET (ZVP 3306).
 
 [![Problem-3](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-3.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-3.jpg)
 
-For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100[latex]\Omega[/latex] resistor, R2, represents a hobby motor.
+For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100 \(\Omega\) resistor, R2, represents a hobby motor.
 
 
 ### Configurations
@@ -183,7 +183,7 @@ Frequency: 30Hz
 
 Period: 33.33 mS
 
-RPM: [latex]\frac{60sec}{period}=\frac{60sec}{33.33mS}=1800rev/min[/latex]
+RPM: \(\frac{60sec}{period}=\frac{60sec}{33.33mS}=1800rev/min\)
 
 Note we were able to achieve such a high RPM by fixing a magnet to the output shaft of a hobby motor while applying current to it and holding it over the hall effect sensor.
 

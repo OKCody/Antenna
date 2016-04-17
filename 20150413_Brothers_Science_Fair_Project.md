@@ -7,6 +7,7 @@ We chose what we believed to be the most simple way of analyzing the Tic-Tac-Toe
 
 
 A magic square is divided into a grid where each cell has been assigned a number such that the sum of each column, row, and diagonal all equal the same number.  In this case, that number is 15 as shown above.  By creating variables that keep track of the sum of each column, row, and diagonal and then subtracting the value of each occupied cell from the columns, rows, or diagonals that that cell belongs to we're able to know which cells remain unoccupied.  Here is an example to clear that up.
+
 <table >
 <tbody >
 <tr >
@@ -23,22 +24,22 @@ A magic square is divided into a grid where each cell has been assigned a number
 </tr>
 <tr >
 
-<td >[latex]D1 = 15 - 2 - 8 = 5 \\ \\
+<td >\(D1 = 15 - 2 - 8 = 5 \\ \\
 D2 = 15 - 4 = 11 \\ \\
 H1 = 15 - 2 = 13 \\ \\
 H2 = 15 \\\\
 H3 = 15 - 4 -8 = 3 \\ \\
 V1 = 15 - 2 - 4 = 9 \\ \\
 V2 = 15 \\ \\
-V3 = 15 - 8 = 7
-[/latex]
+V3 = 15 - 8 = 7\)
 </td>
 
-<td >[latex]D1 = 15 - 5 = 10 \\ \\D2 = 15 - 6 - 5 = 4 \\ \\H1 = 15 - 6 = 9 \\ \\H2 = 15 - 5 = 10 \\ \\H3 = 15 \\ \\V1 = 15 \\ \\V2 = 15 - 5 = 10 \\ \\V3 = 15 - 6 = 9[/latex]
+<td >\(D1 = 15 - 5 = 10 \\ \\D2 = 15 - 6 - 5 = 4 \\ \\H1 = 15 - 6 = 9 \\ \\H2 = 15 - 5 = 10 \\ \\H3 = 15 \\ \\V1 = 15 \\ \\V2 = 15 - 5 = 10 \\ \\V3 = 15 - 6 = 9\)
 </td>
 </tr>
 </tbody>
 </table>
+
 Notice that there are two separate totals kept for each row, column, and diagonal.  -one for Xs and another for Os.  Separately keeping track of these totals makes determining the winning cell easy as well as determining which cell to choose in order to block an opponent from winning.
 
 In the case that the algorithm is allowed to make the first move, it follows a well documented pattern of moves in order to allow itself two winning moves to chose from at once. That is, during the opponent's final turn they are only able to block one of the two winning cells. This pattern begins by randomly choosing a corner cell on the first turn of the game.  During the algorithm's second turn it should choose the corner cell that is directly opposite that of the first move. By this point in the game, the opponent has most usually chosen the center cell and one of the corner cells.  If so, the algorithm's third move should be to occupy the only remaining cell.  If this is possible, the algorithm is set to win the game on its next turn as it has two possible winning moves that it can make during its next turn; however, the opponent may only block one. There are scenarios in which the magic square algorithm does not directly point to where the next move should be made.  In those cases the algorithm, narrows down its possible moves as much as it can then makes moves at random until it chooses an un occupied place to move. Sometimes when this happens, you might notice that the game seems to be glitching, though in fact it is searching for a place to move. In not so many words the sequence below explains the strategy implemented in our algorithm.
@@ -139,6 +140,7 @@ Computer Win
 </tr>
 </tbody>
 </table>
+
 What my brother concluded of this data was that computer algorithms can be made to never lose a game of Tic-Tac-Toe though they can still be tied.  Comparing this to the Human v. Human trials, computer algorithms are much, much better at playing Tic-Tac-Toe than the average player.
 
 [![Jett-Science-Fair](http://codyalantaylor.com/wp-content/uploads/2015/04/Jett-Science-Fair.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/Jett-Science-Fair.jpg)
