@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2016-01-04 19:21:28+00:00
-layout: post
-slug: arduino-workshops-fall-2015
-title: 'Electronics Workshops: Fall 2015'
-wordpress_id: 998
-categories:
-- Education
-- Electronics
-- Open
-- Programming
----
-
 I'm living the dream.  During the fall semester of 2015 OU Libraries soft-launched a makerspace called the EDGE.  The EDGE is equipped with several 3D printers, Oculus Rift headsets, and 10 Sparkfun Inventor's Kits.  As part of the EDGE programming, two emerging tech librarians and myself each led weekly workshops on our respective areas of expertise.  These workshops covered the fundamentals of 3D printing, virtual reality development, and electronics.  In the spring we plan to offer more advanced workshops.  Throughout their duration, hosting the electronics workshop was consistently the highlight of my week.  I can't wait to start again once classes start.  Over the winter break I spent time developing more advanced lessons and cannot wait to give them a shot.
 
 **LEDestroyer**

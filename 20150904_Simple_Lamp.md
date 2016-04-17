@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-09-04 04:04:33+00:00
-layout: post
-slug: simple-lamp
-title: Simple Lamp
-wordpress_id: 900
-categories:
-- Electronics
-- Open
-- Woodworking
----
-
-A couple weeks ago, I needed a lamp, and I also needed one last summer project. I had a little material left over from the entertainment cabinet that I made a few weeks prior. I looked at a ton of lamp designs before I sketched a design of my own. One thing I noticed about the lamps I looked at is that there is no shortage of wild designs. In fact, I had a hard time finding designs that were sufficiently simple to my taste. The secondary motivation for building a lamp of my own was my dissatisfaction with the switch typically used in lamps. I'm talking about the switch that is built into the socket, the one that you have to blindly reach inside of the lamp shade to turn. For a long time I have been frustrated by fumbling with these switches. To fix this I set out to design my lamp around this switch frustration.
 
 [![latch](http://codyalantaylor.com/wp-content/uploads/2015/09/latch.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/09/latch.jpg)
 

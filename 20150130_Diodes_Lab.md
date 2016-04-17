@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-01-30 22:58:37+00:00
-layout: post
-slug: diodes-lab
-title: Diodes Lab
-wordpress_id: 234
-categories:
-- Education
-- Electronics
----
-
-This semester I am taking an Electronics Lab class.  The class consists of several exhaustive explorations of the major electronic components.  As part of each lab assignment, we must compose and turn in a lab report that details all of our design specifications.  As a way of documenting my progress in the electrical engineering curriculum, I have decided to write my lab reports here and print them using @print CSS so that they look when printed as if they were composed using a conventional word processor.  In addition to this, at work, we are experimenting with Wordpress as a simple textbook publishing platform.  I wouldn't quite be comfortable recommending that our clients author whole texts using Wordpress when I hadn't done some much as composed a single document for a similar purpose.  In all, this is a way for me to document what I have learned thus far in my EE career and as a testbed for a platform that I am championing at work.  Of course, as is the purpose of most everything that I publish on this site, I hope someone might be able to learn something from this.  Truth be told, I will probably reference this sometime in the future.
-
 
 ## Problem 1:  Diode Differences
 

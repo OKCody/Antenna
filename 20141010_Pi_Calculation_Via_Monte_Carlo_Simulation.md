@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2014-10-10 22:20:04+00:00
-layout: post
-slug: pi-calculation-via-monte-carlo-simulation
-title: Pi Calculation via Monte Carlo Simulation
-wordpress_id: 94
-categories:
-- Education
-- Open
-- Programming
----
-
-The Monte Carlo Method is used in simulations which are statistically deterministic. It is not the most efficient or accurate method used to calculate pi; however, it is the most comprehensible and is also a good demonstration of the power of the Monte Carlo Method.  Before calculating pi let us discuss what it is. Pi is the ratio between a circle's circumference and its diameter.  This ratio is the same for all circles.  It is called pi.
 
 To begin the simulation, let's begin with the well known relationship,
 

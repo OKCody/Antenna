@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-08-03 20:20:06+00:00
-layout: post
-slug: sparkfun-microcontrollers-for-educators
-title: Sparkfun Microcontrollers for Educators
-wordpress_id: 725
-categories:
-- Education
-- Electronics
-- Programming
----
-
-For several years now I have been just as interested in education as I have been in engineering. For nearly as long as I have been working on my undergraduate engineering degree I have, in parallel, been doing something related to education. Working as a TRiO academic mentor, taking a STEM engineering outreach class, instructing a summer Upward Bound Geometry course for high school students, and now working with open educational resources for OU Libraries have all fostered my interest in education. Sparkfun, is not only an electronics retailer. It is in my opinion the best online source of educational materials for learning electronics. The parts and kits that Sparkfun sells are perfectly matched by thorough, thoughtful and freely accessible educational resources. As a company, Sparkfun brilliantly blends electrical engineering with education. When I learned that Sparkfun was going to offer a week-long class called Microcontrollers for Educators, I sprung at the opportunity to attend.
 
 Since the beginning of the year I have been attending the planning meetings for what is to become a makerspace on the OU campus. With OU Libraries being involved in the development of the Innovation Hub I was able to convince Collections Development, the department I work for, to partially fund my trip to Colorado to attend the week-long class. I am equal parts lucky and grateful to have been supported by the Libraries. I am doing my best right now to grow into a position that involves both creating OER and supporting a university makerspace.
 

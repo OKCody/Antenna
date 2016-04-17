@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-08-20 05:24:25+00:00
-layout: post
-slug: resistor-combination-app
-title: Resistor Combination App
-wordpress_id: 853
-categories:
-- Education
-- Electronics
-- Open
-- Programming
----
-
 Last semester during my Electronics Lab class, there were a few times that my partner and I needed a very specific resistor value. I got by at the time guessing values to combine and then running the numbers on my calculator to check how close the result was.  After several attempts using this method, I knew there must be a better way to find which values of resistors to combine to achieve a target value. I did find a calculator or two online that would do this but each had its own problems. One I recall wanted the user to enter all the resistor values they had on hand prior to each calculation, and another assumed that the user had all possible standard resistor values. -two extremes.
 
 I decided to use only the resistor values provided to us in our lab kits.  I feel like those values make up the smallest range of resistors that someone serious about electronics might have on hand.  -by using the smallest range of reasonable resistor values, I'm not assuming much on the part of the user in terms of what they have access to.  Each point on the two lines below represents a possible resistor combination using the resistors in the following table.  The first line shows all possible values, and the second line shows values between 0 and 500K ohms in more detail as most combinations will fall within this range.  Note that the distribution of possible values is nearly continuous between 0 and 100K ohms and only slightly less continuous between 0 and 500K ohms.  Click on each image for a closer look.

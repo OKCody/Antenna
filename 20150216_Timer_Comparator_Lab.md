@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-02-16 20:11:24+00:00
-layout: post
-slug: timer-comparator-lab
-title: Timer / Comparator Lab
-wordpress_id: 345
-categories:
-- Education
-- Electronics
----
-
-## Problem 1: One-Shot 555
-
 
 Design a circuit that turns on an LED for 600 millisecond (+/- 100 milliseconds).
 

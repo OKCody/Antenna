@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-02-09 18:38:54+00:00
-layout: post
-slug: mosfet-lab
-title: MOSFET Lab
-wordpress_id: 300
-categories:
-- Education
-- Electronics
----
-
-## Problem 1:  MOSFET Inverter
-
 
 Design a MOSFET inverter with a BS170 and use it to turn on an LED when you cover a CdS cell with your finger.
 

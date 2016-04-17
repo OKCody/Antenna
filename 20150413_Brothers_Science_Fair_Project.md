@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-04-13 00:45:48+00:00
-layout: post
-slug: brothers-science-fair-project
-title: 'Brother''s Science Fair Project: Tic-Tac-Toe'
-wordpress_id: 424
-categories:
-- Education
-- Programming
----
-
-For the past month or so I have been helping my brother with a middle school science fair project. He chose to enter the math and computers category. Other choices included; consumer product comparison, engineering, biology, and a few others. He said that he chose the math and computers category because his teacher informed the class that historically few people compete in that category. He asked me to help him with his project and I couldn't be more proud of that. Together, we spent a couple weeks trying to come up with a good project idea. In the end, my brother insisted on taking a look at how computers might play Tic-Tac-Toe. Specifically, he wanted to compare the win statistics of a computer to those of people.
-
 Some algorithms that play Tic-Tac-Toe are well documented, but none are straight-forward enough for a twelve year old to understand. Honestly, most are so complex that I did not care to spend much time trying to understand them. Considering this, my brother and I set out to build an algorithm to play Tic-Tac-Toe ourselves. From research we knew that the player who makes the first move has a better chance of winning. Considering this, we decided that our algorithm would be forked into two parts, one where the computer algorithm has the first turn, and the other where the player makes the first move. Because I thought it would be most difficult we built the computer-first aspect of the game first. My brother, prior to this project, had no programming experience. For this reason we built our algorithm using [Scratch](https://scratch.mit.edu/). Full disclosure: I think that the visual nature of Scratch helped me keep track of the intricate logic involved too.
 
 We chose what we believed to be the most simple way of analyzing the Tic-Tac-Toe grid. That is, to assign a number to each cell such that the cells in each column, row, and diagonal add up to 15. Using this method, it is easy to analytically decide where the next move should be. The [Wikipedia article on Tic-Tac-Toe](http://en.wikipedia.org/wiki/Tic-tac-toe) is excellent and outlines a number of strategies including the one we chose to use, the [magic square method](http://en.wikipedia.org/wiki/Magic_square).

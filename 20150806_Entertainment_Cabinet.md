@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-08-06 05:34:37+00:00
-layout: post
-slug: entertainment-cabinet
-title: Entertainment Cabinet
-wordpress_id: 796
-categories:
-- Open
-- Woodworking
----
-
-In the summer when work is my only day-to-day responsibility I enjoy pleasure projects.  So far I have been busy this summer with a class and more recently with packing a moving.  Within a week or so I will be moving into an apartment.  Until recently the only pieces of furniture that I owned were a lounge chair, a coffee table and an end table.  Each of which were probably built in the 60s.  Last summer Skylar and I refinished and reupholstered the chair.  When we bought it from a Norman thrift store it was in need of being refinished. Its foam padding was crumbling and would snow from underneath the chair's cushions when sat in.  Regretfully, I failed to take 'before' and 'after' pictures of the chair, but we took plenty of in-progress pictures as we worked on it.  The tables we bought from an antique store in decent shape and have been using since then in the conditions that we bought them in.  They're nice enough for now.  The end table might end up being refinished soon, though.
-
 [![2014-06-29 14.20.06](http://codyalantaylor.com/wp-content/uploads/2015/08/2014-06-29-14.20.06.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/08/2014-06-29-14.20.06.jpg)
 
 [![2014-06-29 14.28.50](http://codyalantaylor.com/wp-content/uploads/2015/08/2014-06-29-14.28.50.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/08/2014-06-29-14.28.50.jpg)

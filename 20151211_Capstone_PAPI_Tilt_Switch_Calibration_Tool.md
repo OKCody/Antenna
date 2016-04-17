@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-12-11 05:47:06+00:00
-layout: post
-slug: capstone-papi-tilt-switch-calibration-tool
-title: 'Capstone: PAPI Tilt Switch Calibration Tool'
-wordpress_id: 932
-categories:
-- Education
-- Electronics
-- Open
-- Programming
----
-
 Precision Approach Path Indicators (PAPI) provide pilots a visual indication of their deviation from the glide slope while landing.  PAPIs operate by pointing lights in very precise, yet slightly different angles.  When a plane is above the glide slope the pilot is only able to see the white lights of the PAPI.  When the plane is below the correct glide slope the pilot is only able to see the red lights of the PAPI. When on the correct glide path she is able to see both the red and white lights indicating a proper approach. These lights are typically installed near the end of a runway near the spot a plane should touch down. Because the angle that these lights point could not be more critical there is an angle sensor inside their housing that actively monitors their angle.  If ever the housing of a PAPI system deviates from its correct angle, its lights turn off in order to not mislead pilots.  If ever this happens the sensor must be re-calibrated. Of the airports within the jurisdiction of the FAA many of their PAPI systems are maintained by the FAA in Oklahoma City.  The FAA maintains about 800 of these specific models.  Calibrating these sensors by hand is an incredibly tedious process involving an inclinometer, an oscilloscope, and technician with a steady hand and the patients of several people.
 
 At OU one of the last classes that a student in the Electrical and Computer Engineering program takes is a Capstone class. In Capstone, students are grouped by their interest and self-identified ability to work on a project for the entire semester. Projects are provided by local companies, university professors, and in my case the Federal Aviation Administration. Given three project options, I chose to be on a team that would design a device that would automate or assist a technician whose job it is to calibrate PAPI tilt sensors. In a class of Electrical Engineering students and Computer Engineering students I self-identified as having above-average mechanical ability and was therefore assigned the role of designing the mechanics for this project. Other members of the group took on roles such as Group Leader and Hardware Designers. Most groups also had a Software Engineer. Ours did not.

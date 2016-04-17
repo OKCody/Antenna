@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2015-02-23 16:33:39+00:00
-layout: post
-slug: independent-design-project
-title: Independent Design Project
-wordpress_id: 372
-categories:
-- Electronics
-- Open
----
-
-## Context
-
 
 The past few posts, [Diodes Lab](http://codyalantaylor.com/archive/diodes-lab/), [MOSFET Lab](http://codyalantaylor.com/archive/mosfet-lab/), and [Timer Lab](http://codyalantaylor.com/archive/timer-comparator-lab/) have all been written in the form of reports for my Electronics Lab class. For this class we're tasked with building several circuits exploring each of these components, their applications, and their limitations.  For each, in addition to designing and building these circuits we're also required to write a lab report explaining our designs and their functionality. Instead of typing up these reports in Word, I decided to share them here and print them out to turn in.  I hope that these write-ups might help someone who is learning electronics, but more realistically I imagine that these will serve as references for myself.
 

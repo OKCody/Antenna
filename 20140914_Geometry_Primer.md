@@ -1,18 +1,3 @@
----
-author: codyalantaylor
-comments: true
-date: 2014-09-14 15:36:30+00:00
-layout: post
-slug: geometry-primer
-title: Geometry Primer
-wordpress_id: 133
-categories:
-- Education
-- Open
----
-
-Last summer, the summer of 2013 was full of experiences that came to me by surprise. As the spring semester was winding down and I was preparing for final exams, I was also looking for a second job for the summer. At the time I was working as an 'academic mentor' at Rose State College. My job there was to mentor and tutor students in the TRiO Student Support Services program. I loved that job. I enjoyed the interaction with students and they seemed to enjoy working with me. I hope that, whatever path I choose, my career is as rewarding as the work that I did at TRiO.
-
 As most student jobs are, I was limited to working 20 hours per week at Rose. With classes ending, my schedule for the summer allowed me to work more than 20 hours so I began looking for an additional summer job. Because I enjoyed my work at Rose so much I looked for jobs in other TRiO offices at nearby campuses. I found a program at Oklahoma City Community College that is related to the TRiO program that I worked for at Rose. They were looking for summer instructors for their Upward Bound program. Upward Bound serves high school students who meet certain criteria in a way that aims to help them to graduate high school and enroll in a college program. They were looking for applicants who were familiar with their program and who could teach a class of high school students. The subjects they were looking for would prepare the students for a class they would be taking when school started again in the fall. I submitted an application listing my qualifications and ideas for classes I thought that I was capable of teaching. I interviewed for the position and was offered the job.
 
 The class was scheduled to meet twice a week for 8 weeks, but the May tornadoes of Oklahoma affected several students in the program and classes were delayed two weeks. In a way this was nice because it allowed me extra time to prepare worksheets and to plan the lessons I was to deliver. Having never had any formal training, I was very careful and tried to be extremely thoughtful in the way that I prepared for the class. I wanted on the first meeting to assess the students' understanding of what I thought were basic arithmetic skills that would be required for the class so that I could being the material in a way that would be appropriate based on their prior knowledge. So during our first meeting I asked the students to take a pre-test that would be the basis of where the class began and would serve as a reference for which to compare their final test to.
