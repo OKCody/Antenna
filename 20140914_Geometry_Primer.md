@@ -5,6 +5,7 @@ The class was scheduled to meet twice a week for 8 weeks, but the May tornadoes 
 <table >
 <tbody >
 <tr >
+<td></td>
 <td>Pre-Test</td>
 <td>Angles & Polygons</td>
 <td>Pythagorean Theorem</td>
