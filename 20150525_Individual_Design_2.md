@@ -1,8 +1,8 @@
-[![PopcornSpectrogram](http://codyalantaylor.com/wp-content/uploads/2015/04/PopcornSpectrogram.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/PopcornSpectrogram.jpg)
+[![PopcornSpectrogram](http://codytaylor.cc/legacy-images/PopcornSpectrogram.jpg)](http://codytaylor.cc/legacy-images/PopcornSpectrogram.jpg)
 
 Because mircowaves are noisy, I thought it best to filter out as much of that noise as possible such that only the popping of kernels is recorded.  To do this I recorded the sound of popcorn popping in a microwave and passed that audio file through a MatLab spectrogram function in order to determine which frequencies needed to be filtered out. I chose to make a pretty narrow filter centered around 2kHz in order to isolate the frequencies of a popping kernel as the pop seems to include nearly equal amounts of all audible frequencies as indicated by the red vertical lines in the spectrogram above.  Below is the response of the butterworth filter that I made.
 
-[![BandpassFilter](http://codyalantaylor.com/wp-content/uploads/2015/04/BandpassFilter.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/BandpassFilter.jpg)
+[![BandpassFilter](http://codytaylor.cc/legacy-images/BandpassFilter.jpg)](http://codytaylor.cc/legacy-images/BandpassFilter.jpg)
 
 
 
@@ -122,16 +122,16 @@ The schematics for the filters are below
 
 Highpass Filter:
 
-[![HighpassSchem](http://codyalantaylor.com/wp-content/uploads/2015/04/HighpassSchem.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/HighpassSchem.jpg)
+[![HighpassSchem](http://codytaylor.cc/legacy-images/HighpassSchem.jpg)](http://codytaylor.cc/legacy-images/HighpassSchem.jpg)
 
 Lowpass Filter:
 
-[![lowpass](http://codyalantaylor.com/wp-content/uploads/2015/04/lowpass.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/lowpass.jpg)
+[![lowpass](http://codytaylor.cc/legacy-images/lowpass.jpg)](http://codytaylor.cc/legacy-images/lowpass.jpg)
 
 
 
 Gain Stage:
 
-[![gainstage](http://codyalantaylor.com/wp-content/uploads/2015/04/gainstage.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/gainstage.jpg)
+[![gainstage](http://codytaylor.cc/legacy-images/gainstage.jpg)](http://codytaylor.cc/legacy-images/gainstage.jpg)
 
 Although I received a low A grade for this project, it didn't work all that great. I suppose that most of the credit I earned lies in the design -that is using a spectrogram and designing filters because the actual implementation was a bit of a flop. I think that with more time this design could possibly be made to work a little better if not as intended. As it is, a larger than acceptable proportion of pops are missed by the device. This results in inaccurate timing and ultimately imperfectly cooked popcorn. I may revisit it at some point if I need a project to work on or happen to think of a better way to implement it.

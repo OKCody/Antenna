@@ -4,9 +4,9 @@ At OU one of the last classes that a student in the Electrical and Computer Engi
 
 During the first few weeks of class we went out to the FAA to meet the engineering mentors that we would be designing this for and who would also be giving us advice along the way. We met the technician who would be using our device and watched him calibrate a tilt sensor to get a feel of his current process. -the process we would hopefully be simplifying. As it was, the technician put a tilt sensor into a pivot and connected its wires to a signal generator and an oscilloscope. He would gently nudge the sensor and watch the RMS voltage of a square wave passing through the sensor be attenuated. Proportional to the RMS voltage of the signal is the angle of the sensor. During calibration, the technician is supposed to move the sensor to the extreme values of its tolerance. At each set point the technician is also supposed to measure and adjust the angle of the top plate of the sensor. All angle measurements are made in units of minutes, that is all measurements are made with sub-degree precision.
 
-[![2015-09-10 11.27.25](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-10-11.27.25.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-10-11.27.25.jpg)
+[![2015-09-10 11.27.25](http://codytaylor.cc/legacy-images/2015-09-10-11.27.25.jpg)](http://codytaylor.cc/legacy-images/2015-09-10-11.27.25.jpg)
 
-[![2015-09-10 11.52.33](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-10-11.52.33.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-10-11.52.33.jpg)
+[![2015-09-10 11.52.33](http://codytaylor.cc/legacy-images/2015-09-10-11.52.33.jpg)](http://codytaylor.cc/legacy-images/2015-09-10-11.52.33.jpg)
 
 One of the first steps in the design process was to choose a microcontroller that would be the brains of our design.  Here at OU, National Instruments products are heavily used in the Electrical Engineering curriculum.  Because of this many of my classmates default to using LabView and DAQs when working on a project such as this.  Personally, I'm not a fan of LabView or DAQs.  I prefer text-based programming and hardware that is as open as possible.  This project was attempted last semester by several groups each of which chose to use NI DAQs.  None were successful.  During our first design discussions I was adamant that we would not be using a DAQ.  Because one of our design requirements was to display the output signal from the tilt sensor on a screen I suggested using a Raspberry Pi.  The Raspberry Pi offered more than enough GPIO pins and natively supports HDMI.  I was also aware of the abundance of Raspberry Pi hats that are available that would simplify our hardware designs.  At this point, I had a little bit of experience with Raspberry Pi, but none of my teammates had used one.  Only a couple new what a Raspberry Pi was at the time.  Because of this they were understandably reluctant to stray from what they were proposing; DAQs.  When I told them that I would like Python to be the language we used during this project they looked at me even more strangely.  None had ever used Python, but somehow I convinced them to trust me.  I'm realizing now how much faith they put into me at this early stage in the design process.
 
@@ -20,13 +20,13 @@ One of the first steps in the design process was to choose a microcontroller tha
 
 We decided early on that we would be using a stepper motor to move the tilt sensor back and forth.  Plenty were available from hobby electronics suppliers such as Pololu, Adafruit, and Sparkfun.  The outlets also carried plenty of stepper motor drivers that would be easy to use with the Raspberry Pi.  We ultimately chose to use a stepper motor from Sparkfun and stepper motor driver from Adafruit because of the simplicity of its accompanying Python library.   I have no regrets.  These parts proved to be exactly what we needed and were perfectly easy to use with the provided documentation.
 
-[![getCachedPicture](http://codyalantaylor.com/wp-content/uploads/2015/12/getCachedPicture.jpeg)](http://codyalantaylor.com/wp-content/uploads/2015/12/getCachedPicture.jpeg)
+[![getCachedPicture](http://codytaylor.cc/legacy-images/getCachedPicture.jpeg)](http://codytaylor.cc/legacy-images/getCachedPicture.jpeg)
 
 
 Image: Adafruit, [DC & Stepper Motor HAT for Raspberry Pi - Mini Kit](https://www.adafruit.com/products/2348)
 
 
-[![10848-06](http://codyalantaylor.com/wp-content/uploads/2015/12/10848-06.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/10848-06.jpg)
+[![10848-06](http://codytaylor.cc/legacy-images/10848-06.jpg)](http://codytaylor.cc/legacy-images/10848-06.jpg)
 
 
 Image: Sparkfun Electronics, [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
@@ -34,7 +34,7 @@ Image: Sparkfun Electronics, [CC BY-NC-SA 3.0](http://creativecommons.org/licen
 
 
 
-Our first mechanical drawings were primitive, but they evolved nicely by the end of the project. [![FAA Design](http://codyalantaylor.com/wp-content/uploads/2015/12/FAA-Design.png)](http://codyalantaylor.com/wp-content/uploads/2015/12/FAA-Design.png)
+Our first mechanical drawings were primitive, but they evolved nicely by the end of the project. [![FAA Design](http://codytaylor.cc/legacy-images/FAA-Design.png)](http://codytaylor.cc/legacy-images/FAA-Design.png)
 
 
 
@@ -49,12 +49,12 @@ The part of the design that required the most thought on my part was figuring ou
 
 
 
-[![2015-10-25 20.16.40](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-10-25-20.16.40.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-10-25-20.16.40.jpg)
+[![2015-10-25 20.16.40](http://codytaylor.cc/legacy-images/2015-10-25-20.16.40.jpg)](http://codytaylor.cc/legacy-images/2015-10-25-20.16.40.jpg)
 
 
 
 
-The next step was to begin working on building the platform for which all parts would be mounted.  We decided that we would build a box with 45 degree slant at the front where a 7" touchscreen would be mounted.  This would serve equal parts as a screen mount and as a housing for the bulk of electronics.  It turned out to be a really tight fit for all the electronics, but made for a clean-looking final product.  Its frame is made out of 1/2" angle iron, and is covered in clear acrylic of which the inside surface is painted black. [![2015-10-29 17.14.59](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-10-29-17.14.59.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-10-29-17.14.59.jpg)
+The next step was to begin working on building the platform for which all parts would be mounted.  We decided that we would build a box with 45 degree slant at the front where a 7" touchscreen would be mounted.  This would serve equal parts as a screen mount and as a housing for the bulk of electronics.  It turned out to be a really tight fit for all the electronics, but made for a clean-looking final product.  Its frame is made out of 1/2" angle iron, and is covered in clear acrylic of which the inside surface is painted black. [![2015-10-29 17.14.59](http://codytaylor.cc/legacy-images/2015-10-29-17.14.59.jpg)](http://codytaylor.cc/legacy-images/2015-10-29-17.14.59.jpg)
 
 
 
@@ -64,7 +64,7 @@ For the control panel, we decided that having a "coarse" and "fine" (I did my be
 
 
 
-[![control pannel](http://codyalantaylor.com/wp-content/uploads/2015/12/control-pannel.png)](http://codyalantaylor.com/wp-content/uploads/2015/12/control-pannel.png)
+[![control pannel](http://codytaylor.cc/legacy-images/control-pannel.png)](http://codytaylor.cc/legacy-images/control-pannel.png)
 
 
 
@@ -91,7 +91,7 @@ These are only the problems that we never were able to overcome, but there were 
 
 
 
-[![2015-09-27 16.12.57](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-27-16.12.57.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-09-27-16.12.57.jpg) [![2015-12-04 02.34.26](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-02.34.26.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-02.34.26.jpg)
+[![2015-09-27 16.12.57](http://codytaylor.cc/legacy-images/2015-09-27-16.12.57.jpg)](http://codytaylor.cc/legacy-images/2015-09-27-16.12.57.jpg) [![2015-12-04 02.34.26](http://codytaylor.cc/legacy-images/2015-12-04-02.34.26.jpg)](http://codytaylor.cc/legacy-images/2015-12-04-02.34.26.jpg)
 
 
 
@@ -101,7 +101,7 @@ Before our final presentation to the FAA, we made a trip out there to meet with 
 
 
 
-[![2015-11-07 17.10.57](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-07-17.10.57.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-07-17.10.57.jpg)
+[![2015-11-07 17.10.57](http://codytaylor.cc/legacy-images/2015-11-07-17.10.57.jpg)](http://codytaylor.cc/legacy-images/2015-11-07-17.10.57.jpg)
 
 
 
@@ -111,7 +111,7 @@ Arranging parts
 
 
 
-[![2015-11-07 19.38.23](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-07-19.38.23.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-07-19.38.23.jpg)
+[![2015-11-07 19.38.23](http://codytaylor.cc/legacy-images/2015-11-07-19.38.23.jpg)](http://codytaylor.cc/legacy-images/2015-11-07-19.38.23.jpg)
 
 
 
@@ -121,7 +121,7 @@ My first serious attempt at welding... Pretty proud of that bead. :)
 
 
 
-[![2015-11-15 20.01.26](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-15-20.01.26.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-15-20.01.26.jpg)
+[![2015-11-15 20.01.26](http://codytaylor.cc/legacy-images/2015-11-15-20.01.26.jpg)](http://codytaylor.cc/legacy-images/2015-11-15-20.01.26.jpg)
 
 
 
@@ -131,7 +131,7 @@ Clear coat made the paint crack.  Put an embarrassing amount of time into that 
 
 
 
-[![2015-11-08 23.31.09](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-08-23.31.09.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-08-23.31.09.jpg)
+[![2015-11-08 23.31.09](http://codytaylor.cc/legacy-images/2015-11-08-23.31.09.jpg)](http://codytaylor.cc/legacy-images/2015-11-08-23.31.09.jpg)
 
 
 
@@ -141,7 +141,7 @@ Mocked up in primer
 
 
 
-[![2015-11-30 23.40.47](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-30-23.40.47.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-11-30-23.40.47.jpg)
+[![2015-11-30 23.40.47](http://codytaylor.cc/legacy-images/2015-11-30-23.40.47.jpg)](http://codytaylor.cc/legacy-images/2015-11-30-23.40.47.jpg)
 
 
 
@@ -151,7 +151,7 @@ Finally got to see the guts of the tilt sensor when it had to be taken apart to 
 
 
 
-[![2015-12-01 23.51.54](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-01-23.51.54.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-01-23.51.54.jpg)
+[![2015-12-01 23.51.54](http://codytaylor.cc/legacy-images/2015-12-01-23.51.54.jpg)](http://codytaylor.cc/legacy-images/2015-12-01-23.51.54.jpg)
 
 
 
@@ -161,7 +161,7 @@ Prototype of virtual ground circuit with +/- 5v rails with an astable multivibra
 
 
 
-[![2015-12-04 06.18.07](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.18.07.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.18.07.jpg)
+[![2015-12-04 06.18.07](http://codytaylor.cc/legacy-images/2015-12-04-06.18.07.jpg)](http://codytaylor.cc/legacy-images/2015-12-04-06.18.07.jpg)
 
 
 
@@ -171,9 +171,9 @@ Final assembly.
 
 
 
-[![2015-12-04 06.17.40](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.17.40.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.17.40.jpg) [![2015-12-04 06.17.49](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.17.49.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/12/2015-12-04-06.17.49.jpg)
+[![2015-12-04 06.17.40](http://codytaylor.cc/legacy-images/2015-12-04-06.17.40.jpg)](http://codytaylor.cc/legacy-images/2015-12-04-06.17.40.jpg) [![2015-12-04 06.17.49](http://codytaylor.cc/legacy-images/2015-12-04-06.17.49.jpg)](http://codytaylor.cc/legacy-images/2015-12-04-06.17.49.jpg)
 
 
 
 
-[![PAPI SELF](http://codyalantaylor.com/wp-content/uploads/2015/12/PAPI-SELF.png)](http://codyalantaylor.com/wp-content/uploads/2015/12/PAPI-SELF.png)
+[![PAPI SELF](http://codytaylor.cc/legacy-images/PAPI-SELF.png)](http://codytaylor.cc/legacy-images/PAPI-SELF.png)

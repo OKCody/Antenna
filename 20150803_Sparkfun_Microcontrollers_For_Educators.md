@@ -34,7 +34,7 @@ Despite the typo, my first day at Sparkfun was fantastic. We began by discussing
 
 
 
-[![2015-07-07 10.22.39](http://codyalantaylor.com/wp-content/uploads/2015/07/2015-07-07-10.22.39-e1437428913295.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/07/2015-07-07-10.22.39-e1437428913295.jpg)
+[![2015-07-07 10.22.39](http://codytaylor.cc/legacy-images/2015-07-07-10.22.39-e1437428913295.jpg)](http://codytaylor.cc/legacy-images/2015-07-07-10.22.39-e1437428913295.jpg)
 
 Tuesday we played with squishy circuits. The night before Brian cooked up some conductive and non-conductive play-dough. It was our job to explore this play-dough to find ways to apply it to lessons. We used the multimeter in our kits to measure and become familiar with the resistance of the play-dough. Using it to connect LEDs to a battery it was possible to light the LEDs. It was my partner's idea to attempt to make a strain gauge for use in his Physics class. To do this we began by making cubes of both conductive and non-conductive types of play-dough. We hypothesized that by measuring the change in resistance as we deformed the cubes we might notice a relationship between the resistance of the play-dough and strain. In order for the multimeter we were using to make good contact with the cube we used a penny on either side to increase the surface area in contact with the play-dough. Doing this we measured a negative resistance and concluded that we had accidentally made a galvanic cell. That is, our pennies and play-dough were creating a voltage. We had made a .6v battery! From then on we focused on trying to increase the voltage of our galvanic cell. Knowing that it would take about 1.5v to light an LED we made that our goal and began combining cells but were never able to combine them to create any more than .6v of potential.
 
@@ -81,7 +81,7 @@ Throughout the day Thursday, the class worked on brainstorming what they were go
 
 There were a lot of neat things made during the hack-a-thon.  I got a lot of interesting ideas from other people.  Besides that it was nice to share a room with twenty other people who were intensely involved in making something that was interesting to them.  -fun times.
 
-[![2015-07-09 16.38.57](http://codyalantaylor.com/wp-content/uploads/2015/07/2015-07-09-16.38.57-e1437428750734.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/07/2015-07-09-16.38.57-e1437428750734.jpg)
+[![2015-07-09 16.38.57](http://codytaylor.cc/legacy-images/2015-07-09-16.38.57-e1437428750734.jpg)](http://codytaylor.cc/legacy-images/2015-07-09-16.38.57-e1437428750734.jpg)
 
 Oh and Brian also took us up to the roof! I went along to see the solar panel array on top of the building that I am told practically offsets Sparkfun's electric bill. An amazing thing for a place where manufacturing happens. Anyway, I went to see the solar panels, but stayed to stare at the mountains. There is a gorgeous view of the mountains from the Sparkfun rooftop that I did not want to walk away from.
 
@@ -92,7 +92,7 @@ Oh and Brian also took us up to the roof! I went along to see the solar panel ar
 Brian reserved Friday for advanced topics and building the robot chassis that came in our kits.  The robot was easy enough to assemble and with the provided example sketches was easy enough to program.  I only had the chance to scratch the surface of possibilities that this robot platform provides and look forward to using it in future robot applications.
 People started to leave fairly early on Friday as all the material had been covered, but before anyone left we went outside and took a group photo.
 
-[![Microcontrollers_for_Educators_Class-06 (2)](http://codyalantaylor.com/wp-content/uploads/2015/07/Microcontrollers_for_Educators_Class-06-2-e1437428552143.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/07/Microcontrollers_for_Educators_Class-06-2-e1437428552143.jpg)
+[![Microcontrollers_for_Educators_Class-06 (2)](http://codytaylor.cc/legacy-images/Microcontrollers_for_Educators_Class-06-2-e1437428552143.jpg)](http://codytaylor.cc/legacy-images/Microcontrollers_for_Educators_Class-06-2-e1437428552143.jpg)
 
 
 

@@ -5,7 +5,7 @@ Design a MOSFET inverter with a BS170 and use it to turn on an LED when you cove
 ### Circuit Setup
 
 
-[![Problem-1](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-1.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-1.jpg)
+[![Problem-1](http://codytaylor.cc/legacy-images/Problem-1.jpg)](http://codytaylor.cc/legacy-images/Problem-1.jpg)
 
 
 
@@ -21,7 +21,7 @@ Build a circuit using the BS-170 n-channel MOSFET to switch a motor on when the 
 ## Circuit Setup
 
 
-[![Problem-2](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-2.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-2.jpg)
+[![Problem-2](http://codytaylor.cc/legacy-images/Problem-2.jpg)](http://codytaylor.cc/legacy-images/Problem-2.jpg)
 
 For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100[latex]\Omega[/latex] resistor, R2, represents a hobby motor.
 
@@ -43,7 +43,7 @@ Repeat part 2) with a p-channel MOSFET (ZVP 3306).
 ### Circuit Setup
 
 
-[![Problem-3](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-3.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-3.jpg)
+[![Problem-3](http://codytaylor.cc/legacy-images/Problem-3.jpg)](http://codytaylor.cc/legacy-images/Problem-3.jpg)
 
 For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100 \(\Omega\) resistor, R2, represents a hobby motor.
 
@@ -65,11 +65,11 @@ Design a Bypassed Common Source MOSFET amplifier with one n-channel MOSFET to ac
 ### Circuit Setup
 
 
-[![Problem-4](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4.jpg)
+[![Problem-4](http://codytaylor.cc/legacy-images/Problem-4.jpg)](http://codytaylor.cc/legacy-images/Problem-4.jpg)
 
-[![Problem-4-Sim-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4-Sim-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4-Sim-Scope.jpg)
+[![Problem-4-Sim-Scope](http://codytaylor.cc/legacy-images/Problem-4-Sim-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-4-Sim-Scope.jpg)
 
-[![Problem-4-scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4-scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-4-scope.jpg)
+[![Problem-4-scope](http://codytaylor.cc/legacy-images/Problem-4-scope.jpg)](http://codytaylor.cc/legacy-images/Problem-4-scope.jpg)
 
 Note that the scales on the actual scope capture are not intuitively chosen.  I wish I could say this was done for a specific reason; however, I am afraid it was simply an oversight on my part.  The input signal is on channel 2 and the output is on channel 1.
 
@@ -91,11 +91,11 @@ Modify the circuit in part 4) to achieve as much gain as you can.  Calculate th
 ### Circuit Setup
 
 
-[![Problem-5](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5.jpg)
+[![Problem-5](http://codytaylor.cc/legacy-images/Problem-5.jpg)](http://codytaylor.cc/legacy-images/Problem-5.jpg)
 
-[![Problem-5-Sim-Scope 2](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5-Sim-Scope-2.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5-Sim-Scope-2.jpg)
+[![Problem-5-Sim-Scope 2](http://codytaylor.cc/legacy-images/Problem-5-Sim-Scope-2.jpg)](http://codytaylor.cc/legacy-images/Problem-5-Sim-Scope-2.jpg)
 
-[![Problem-5-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-5-Scope.jpg)
+[![Problem-5-Scope](http://codytaylor.cc/legacy-images/Problem-5-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-5-Scope.jpg)
 
 
 
@@ -119,13 +119,13 @@ Modify the circuit in part 5) to make it an Unbypassed Common-Source amplifier.�
 ### Circuit Setup
 
 
-[![Problem-6](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6.jpg)
+[![Problem-6](http://codytaylor.cc/legacy-images/Problem-6.jpg)](http://codytaylor.cc/legacy-images/Problem-6.jpg)
 
-[![Problem-6-Sim-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6-Sim-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6-Sim-Scope.jpg)
+[![Problem-6-Sim-Scope](http://codytaylor.cc/legacy-images/Problem-6-Sim-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-6-Sim-Scope.jpg)
 
 
 
-[![Problem-6-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-6-Scope.jpg)
+[![Problem-6-Scope](http://codytaylor.cc/legacy-images/Problem-6-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-6-Scope.jpg)
 
 
 
@@ -145,15 +145,15 @@ Build a Bypassed Common-Source amplifier using a current mirror for biasing to a
 ### Circuit Setup
 
 
-[![Problem-7](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7.jpg)
+[![Problem-7](http://codytaylor.cc/legacy-images/Problem-7.jpg)](http://codytaylor.cc/legacy-images/Problem-7.jpg)
 
 
 
-[![Problem-7-Sim-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7-Sim-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7-Sim-Scope.jpg)
+[![Problem-7-Sim-Scope](http://codytaylor.cc/legacy-images/Problem-7-Sim-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-7-Sim-Scope.jpg)
 
 
 
-[![Problem-7-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-7-Scope.jpg)
+[![Problem-7-Scope](http://codytaylor.cc/legacy-images/Problem-7-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-7-Scope.jpg)
 
 Input: 100mV
 
@@ -171,11 +171,11 @@ Design a circuit using a MOSFET and the SS400 series hall effect latch sensor to
 ### Circuit Setup
 
 
-[![halleffect-sensor](http://codyalantaylor.com/wp-content/uploads/2015/02/halleffect-sensor.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/halleffect-sensor.jpg)
+[![halleffect-sensor](http://codytaylor.cc/legacy-images/halleffect-sensor.jpg)](http://codytaylor.cc/legacy-images/halleffect-sensor.jpg)
 
 
 
-[![Problem-8-Scope](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-8-Scope.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/Problem-8-Scope.jpg)
+[![Problem-8-Scope](http://codytaylor.cc/legacy-images/Problem-8-Scope.jpg)](http://codytaylor.cc/legacy-images/Problem-8-Scope.jpg)
 
 
 
@@ -197,4 +197,4 @@ Build a MOSFET H-Bridge and control a motor with it.  Demonstrate the forward, 
 ### Circuit Setup
 
 
-[![H-Bridge](http://codyalantaylor.com/wp-content/uploads/2015/02/H-Bridge.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/H-Bridge.jpg)
+[![H-Bridge](http://codytaylor.cc/legacy-images/H-Bridge.jpg)](http://codytaylor.cc/legacy-images/H-Bridge.jpg)

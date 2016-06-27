@@ -5,9 +5,9 @@ Design a circuit that turns on an LED for 600 millisecond (+/- 100 milliseconds)
 ### Circuit Setup
 
 
-[![1-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/1-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/1-circuit.jpg)
+[![1-circuit](http://codytaylor.cc/legacy-images/1-circuit.jpg)](http://codytaylor.cc/legacy-images/1-circuit.jpg)
 
-[![1](http://codyalantaylor.com/wp-content/uploads/2015/02/1.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/1.jpg)
+[![1](http://codytaylor.cc/legacy-images/1.jpg)](http://codytaylor.cc/legacy-images/1.jpg)
 
 
 ## Problem 2: Inverten One-Shot 555 Motor Driver
@@ -19,11 +19,11 @@ Utilize a MOSFET inverter to flip the logic in part one. This time have a motor 
 ### Circuit Setup
 
 
-[![2-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/2-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/2-circuit.jpg)
+[![2-circuit](http://codytaylor.cc/legacy-images/2-circuit.jpg)](http://codytaylor.cc/legacy-images/2-circuit.jpg)
 
 Note: We used a 3 second off period because the motor took 2 seconds to spin down.
 
-[![2](http://codyalantaylor.com/wp-content/uploads/2015/02/2.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/2.jpg)
+[![2](http://codytaylor.cc/legacy-images/2.jpg)](http://codytaylor.cc/legacy-images/2.jpg)
 
 
 $$t=RCLN(3)$$
@@ -51,9 +51,9 @@ Design a circuit that converts a 1.2 kHz 50% duty cycle square wave to a 400 Hz 
 ### Circuit Setup
 
 
-[![3-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/3-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/3-circuit.jpg)
+[![3-circuit](http://codytaylor.cc/legacy-images/3-circuit.jpg)](http://codytaylor.cc/legacy-images/3-circuit.jpg)
 
-[![3 555 Frequency Divider](http://codyalantaylor.com/wp-content/uploads/2015/02/3-555-Frequency-Divider.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/3-555-Frequency-Divider.jpg)
+[![3 555 Frequency Divider](http://codytaylor.cc/legacy-images/3-555-Frequency-Divider.jpg)](http://codytaylor.cc/legacy-images/3-555-Frequency-Divider.jpg)
 
 
 ### Note:
@@ -71,7 +71,7 @@ Design a bistable 555 timer circuit that toggles a Red LED on and off. Connect t
 ### Circuit Setup
 
 
-[![4-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/4-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/4-circuit.jpg)
+[![4-circuit](http://codytaylor.cc/legacy-images/4-circuit.jpg)](http://codytaylor.cc/legacy-images/4-circuit.jpg)
 
 
 ## Problem 5: AC-In PWM-Out 555 Pulse Width Modulator
@@ -83,9 +83,9 @@ Design a 555 Timer Pulse Width Modulator circuit and adjust the control voltage 
 ### Circuit Setup
 
 
-[![5-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/5-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/5-circuit.jpg)
+[![5-circuit](http://codytaylor.cc/legacy-images/5-circuit.jpg)](http://codytaylor.cc/legacy-images/5-circuit.jpg)
 
-[![5 AC to PWM](http://codyalantaylor.com/wp-content/uploads/2015/02/5-AC-to-PWM.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/5-AC-to-PWM.jpg)
+[![5 AC to PWM](http://codytaylor.cc/legacy-images/5-AC-to-PWM.jpg)](http://codytaylor.cc/legacy-images/5-AC-to-PWM.jpg)
 
 
 ## Problem 6: Thermistor Temperature Indicator with Comparator
@@ -97,7 +97,7 @@ Using a thermistor and a comparator IC (LM293) to turn on 2 LEDs sequentially as
 ### Circuit Setup
 
 
-[![6-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/6-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/6-circuit.jpg)
+[![6-circuit](http://codytaylor.cc/legacy-images/6-circuit.jpg)](http://codytaylor.cc/legacy-images/6-circuit.jpg)
 
 
 ## Problem 7: 38kHz Square Wave Generator
@@ -109,11 +109,11 @@ Design a 555 timer circuit that has a 50% duty cycle 0 to 5 Volt square wave in 
 ### Circuit Setup
 
 
-[![7-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/7-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/7-circuit.jpg)
+[![7-circuit](http://codytaylor.cc/legacy-images/7-circuit.jpg)](http://codytaylor.cc/legacy-images/7-circuit.jpg)
 
-[![7 Variable Frequency 555 36kHz](http://codyalantaylor.com/wp-content/uploads/2015/02/7-Variable-Frequency-555-36kHz.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/7-Variable-Frequency-555-36kHz.jpg)
+[![7 Variable Frequency 555 36kHz](http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-36kHz.jpg)](http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-36kHz.jpg)
 
-[![7 Variable Frequency 555 40kHz](http://codyalantaylor.com/wp-content/uploads/2015/02/7-Variable-Frequency-555-40kHz.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/7-Variable-Frequency-555-40kHz.jpg)
+[![7 Variable Frequency 555 40kHz](http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-40kHz.jpg)](http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-40kHz.jpg)
 
 
 ## Problem 8: 38kHz Infrared Signal Controlled Motor Driver
@@ -125,9 +125,9 @@ Design a circuit that will turn on a motor when it detects a TV remote control s
 ### Circuit Setup
 
 
-[![8-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/8-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/8-circuit.jpg)
+[![8-circuit](http://codytaylor.cc/legacy-images/8-circuit.jpg)](http://codytaylor.cc/legacy-images/8-circuit.jpg)
 
-[![8 38kHz](http://codyalantaylor.com/wp-content/uploads/2015/02/8-38kHz.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/8-38kHz.jpg)
+[![8 38kHz](http://codytaylor.cc/legacy-images/8-38kHz.jpg)](http://codytaylor.cc/legacy-images/8-38kHz.jpg)
 
 
 
@@ -147,7 +147,7 @@ Create a PWM (also commonly referred to as PDM) speed control circuit. Use a pot
 ### Circuit Setup
 
 
-[![special-circuit](http://codyalantaylor.com/wp-content/uploads/2015/02/special-circuit.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/02/special-circuit.jpg)
+[![special-circuit](http://codytaylor.cc/legacy-images/special-circuit.jpg)](http://codytaylor.cc/legacy-images/special-circuit.jpg)
 
 
 

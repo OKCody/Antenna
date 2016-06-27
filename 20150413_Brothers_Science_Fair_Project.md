@@ -2,7 +2,7 @@ Some algorithms that play Tic-Tac-Toe are well documented, but none are straight
 
 We chose what we believed to be the most simple way of analyzing the Tic-Tac-Toe grid. That is, to assign a number to each cell such that the cells in each column, row, and diagonal add up to 15. Using this method, it is easy to analytically decide where the next move should be. The [Wikipedia article on Tic-Tac-Toe](http://en.wikipedia.org/wiki/Tic-tac-toe) is excellent and outlines a number of strategies including the one we chose to use, the [magic square method](http://en.wikipedia.org/wiki/Magic_square).
 
-[![Magicsquareexample (3)](http://codyalantaylor.com/wp-content/uploads/2015/03/Magicsquareexample-3-1024x796.png)](http://codyalantaylor.com/wp-content/uploads/2015/03/Magicsquareexample-3.png)
+[![Magicsquareexample (3)](http://codytaylor.cc/legacy-images/Magicsquareexample-3-1024x796.png)](http://codytaylor.cc/legacy-images/Magicsquareexample-3.png)
 
 
 
@@ -16,10 +16,10 @@ A magic square is divided into a grid where each cell has been assigned a number
 </tr>
 <tr >
 
-<td > [![MagicSquare-Demo5](http://codyalantaylor.com/wp-content/uploads/2015/03/MagicSquare-Demo5-300x260.png)](http://codyalantaylor.com/wp-content/uploads/2015/03/MagicSquare-Demo5.png)
+<td > [![MagicSquare-Demo5](http://codytaylor.cc/legacy-images/MagicSquare-Demo5-300x260.png)](http://codytaylor.cc/legacy-images/MagicSquare-Demo5.png)
 </td>
 
-<td >[![MagicSquare-Demo4](http://codyalantaylor.com/wp-content/uploads/2015/03/MagicSquare-Demo4-300x260.png)](http://codyalantaylor.com/wp-content/uploads/2015/03/MagicSquare-Demo4.png)
+<td >[![MagicSquare-Demo4](http://codytaylor.cc/legacy-images/MagicSquare-Demo4-300x260.png)](http://codytaylor.cc/legacy-images/MagicSquare-Demo4.png)
 </td>
 </tr>
 <tr >
@@ -44,7 +44,7 @@ Notice that there are two separate totals kept for each row, column, and diagona
 
 In the case that the algorithm is allowed to make the first move, it follows a well documented pattern of moves in order to allow itself two winning moves to chose from at once. That is, during the opponent's final turn they are only able to block one of the two winning cells. This pattern begins by randomly choosing a corner cell on the first turn of the game.  During the algorithm's second turn it should choose the corner cell that is directly opposite that of the first move. By this point in the game, the opponent has most usually chosen the center cell and one of the corner cells.  If so, the algorithm's third move should be to occupy the only remaining cell.  If this is possible, the algorithm is set to win the game on its next turn as it has two possible winning moves that it can make during its next turn; however, the opponent may only block one. There are scenarios in which the magic square algorithm does not directly point to where the next move should be made.  In those cases the algorithm, narrows down its possible moves as much as it can then makes moves at random until it chooses an un occupied place to move. Sometimes when this happens, you might notice that the game seems to be glitching, though in fact it is searching for a place to move. In not so many words the sequence below explains the strategy implemented in our algorithm.
 
-[caption id="attachment_476" align="alignnone" width="1000"][![CC: BY-SA Wikipedia user: Kilom691](http://codyalantaylor.com/wp-content/uploads/2015/03/1000px-Tic-tac-toe-game-1.png)](http://codyalantaylor.com/wp-content/uploads/2015/03/1000px-Tic-tac-toe-game-1.png) CC: BY-SA Wikipedia user: Kilom691[/caption]
+[caption id="attachment_476" align="alignnone" width="1000"][![CC: BY-SA Wikipedia user: Kilom691](http://codytaylor.cc/legacy-images/1000px-Tic-tac-toe-game-1.png)](http://codytaylor.cc/legacy-images/1000px-Tic-tac-toe-game-1.png) CC: BY-SA Wikipedia user: Kilom691[/caption]
 
 Of course, this strategy does not guarantee a win. In fact it is most certainly possible for the game to end in a tie with neither player able to place three of their marks in a row.  The version of the game that my brother used in his science fair project is embedded below.  We only finished the portion of the game where the computer has the first turn.  We found another game that played the portion of the game where the player has the first turn and gathered statistics using it.  We would still like to finish our player-first algorithm, but figured that what we have built thus far deserves to be documented.
 
@@ -143,6 +143,6 @@ Computer Win
 
 What my brother concluded of this data was that computer algorithms can be made to never lose a game of Tic-Tac-Toe though they can still be tied.  Comparing this to the Human v. Human trials, computer algorithms are much, much better at playing Tic-Tac-Toe than the average player.
 
-[![Jett-Science-Fair](http://codyalantaylor.com/wp-content/uploads/2015/04/Jett-Science-Fair.jpg)](http://codyalantaylor.com/wp-content/uploads/2015/04/Jett-Science-Fair.jpg)
+[![Jett-Science-Fair](http://codytaylor.cc/legacy-images/Jett-Science-Fair.jpg)](http://codytaylor.cc/legacy-images/Jett-Science-Fair.jpg)
 
 In his school-wide science fair, my brother placed second in his category.  The top three projects from each category were entered into a regional science fair that took place at a local community college.  There my brother placed first in his category.  I was unable to be there for the awards ceremony, but here he is FaceTiming me the evening of the fair proudly showing me his trophy and telling me about the event.  I also understand that In the coming week he is going to be recognized by the local school board for doing so well at a regional competition.  This big brother couldn't be more proud.
