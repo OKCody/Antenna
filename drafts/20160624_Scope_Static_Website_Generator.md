@@ -23,10 +23,6 @@ The typical use case where the user wants to create PDFs of their content and we
 ```
 $bash build.sh --pdf -u
 ```
-Another use case where a user might not want to generate PDFs and is not using GitHub to host the content of their posts.
-```
-$bash build.sh ~/Desktop/website-posts/ --nogit -u
-```
 The minimal use case where the user does not wish to create PDFs of their content, does not want to automatically upload their site to a server, but they are using GitHub to host the content of their site.
 ```
 $bash build.sh
@@ -46,16 +42,66 @@ Top level pages should not follow this convention if it is not desired for them 
 
 Each time the build script is run it deletes all files from the previous time the script was ran and creates the root directory where the contents of the generated site will be saved.  
 
+```
+scope-clean(){
+  echo "Cleaning up Scope/ ..."
+
+  #delete site-content directory, will be recreated when cloned
+  #delete contents of /root
+  rm -rf site-content
+  rm -rf root
+  mkdir root
+}
+```
+
 
 #### Cloning from GitHub
 
-If you are not a Git or GitHub user this function can be overridden by using the "--nogit" flag and pointing the script to the directory where your markdown files are found.  
+Scope assumes that authors are publishing their raw text content to GitHub. The "pages" global variable in scope.sh ought to be set to the URL of the GitHub repository where the markdown files to become individual pages/posts can be found.
+
+```
+github-clone() {
+  echo "Cloning Pages/ from Github ..."
+
+  #pull down most current version of all site entries
+  git clone -q $pages
+
+  #rename cloned directory to fit schema
+  mv Pages site-content
+}
+```
 
 #### Scholdoc Markdown to HTML conversion
+
+Scholdoc is being used to convert markdown files to HTML.  In previous iterations I experimented with using Pandoc and the perl script from Daring Fireball for converting markdown to HTML. Those implementations have been commented out, but not deleted for those who might prefer another conversion method.
+
+```
+markdown-html(){
+  echo "Converting .md files to .html ..."
+
+  cd site-content
+  #run markdown.pl script to convert .md files to .html
+  for filename in *.md
+  do
+  # pandoc -f markdown -t html -o ${filename%.md}.html $filename
+  #  perl ../scope-scripts/Markdown.pl $filename > ${filename%.md}.html
+  scholdoc $filename -o ${filename%.md}.html
+  done
+  cd ..
+}
+```
 
 
 #### Copy site-dependent CSS and images
 
+Websites invariably depend on a handful of images, icons, and stylesheets. This function copies those files directly from their homes in scope-style/, scope-images/, and scope-images/license/, directories respectively. Because Scope builds the entire contents of what will become a sites' root directory automatically, there are directories within Scope where unchanging content is stored and included in the root directory where appropriate.
+
+```math
+scope-style/ &\rightarrow root/style/\\
+scope-images/ &\rightarrow root/scope-images/\\
+scope-images/license/ &\rightarrow root/scope-images/license/\\
+site-content/<filename>.md &\rightarrow root/archive/<filename>/index.html\\
+```
 
 #### Create index.html for root of site
 
