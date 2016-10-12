@@ -495,7 +495,7 @@ Please give it a try.  Keep in mind that it has no means of prompting users when
 
 
 
-[Take Me to the App!](http://apps.codytaylor.cc:8080/omega)
+[Take Me to the App!](http://codytaylor.cc/resistor/)
 
 
 
