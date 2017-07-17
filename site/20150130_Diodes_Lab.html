@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">Diodes Lab</h1>
+<h2 id="problem-1-diode-differences">Problem 1:  Diode Differences</h2>
+<p>Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz square wave to the anode of the following diodes (1N914, IN4007, and BAT85) and connect the cathode to ground via one resistor that will assure the diode’s current rating will not be exceeded for any of them.  Overlay the input voltage and voltage across the resistor (<strong>no autoscale</strong>) and print <strong>between 1 and 2 cycles</strong> for each.  Measure and provide reasons for the primary differences of these three diodes.  Show the circuit diagrams used for all three and the calculations made to verify the current limit was not exceeded for the 1N914 and BAT85 (Don’t worry about the IN4007 calculation).</p>
+<h3 id="circuit-setup">Circuit Setup:</h3>
+<p><a href="http://codytaylor.cc/legacy-images/diode-differences-1n914.jpg"><img src="http://codytaylor.cc/legacy-images/diode-differences-1n914.jpg" alt="diode-differences-1n914" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/bat85.jpg"><img src="http://codytaylor.cc/legacy-images/bat85.jpg" alt="bat85" /></a></p>
+<h3 id="current-limit-calculations-voltage-drop">Current Limit Calculations &amp; Voltage Drop:</h3>
+<h4 id="n914">1N914</h4>
+<p>( = 2mA &lt;&lt; 75mA) current limit</p>
+<p>1v Voltage Drop</p>
+<p><a href="http://codytaylor.cc/legacy-images/1N914-Voltage-Drop.jpg"><img src="http://codytaylor.cc/legacy-images/1N914-Voltage-Drop.jpg" alt="1N914-Voltage-Drop" /></a></p>
+<h4 id="n4007">1N4007</h4>
+<p>(=.2mA &lt;&lt; 1A) current limit</p>
+<p>600mV Voltage Drop</p>
+<p><a href="http://codytaylor.cc/legacy-images/1N4007-Voltage-Drop.jpg"><img src="http://codytaylor.cc/legacy-images/1N4007-Voltage-Drop.jpg" alt="1N4007-Voltage-Drop" /></a></p>
+<h4 id="bat85">BAT85</h4>
+<p>( = 2.7mA &lt;&lt; 200mA) current limit</p>
+<p>300mV Voltage Drop</p>
+<p><a href="http://codytaylor.cc/legacy-images/BAT85-Voltage-Drop.jpg"><img src="http://codytaylor.cc/legacy-images/BAT85-Voltage-Drop.jpg" alt="BAT85-Voltage-Drop" /></a></p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The main thing to note about this lab exercise is that not all diodes adhere to the .7v drop assumption and that some diodes switch on and off more quickly than others.  The 1N914 signal diode and BAT85 schottky diode switch very quickly while the 1n4007 rectifier diode is slow, but has a relatively larger maximum current rating.</p>
+<h2 id="problem-2-dc-diode-circuits">Problem 2:  DC Diode Circuits</h2>
+<p>Design a circuit using only resistors, a potentiometer, and a red and green LED. The circuit must have only the red LED <strong>brightly lit</strong> (Make ID between 5 and 20 mA) when the potentiometer is turned all the way one direction and only the green LED brightly lit when the potentiometer is turned all the way in the other direction.  Measure the current and compare it to your calculations.</p>
+<h3 id="circuit-setup-1">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/problem-2.jpg"><img src="http://codytaylor.cc/legacy-images/problem-2.jpg" alt="problem-2" /></a></p>
+<h3 id="current-calculations-measurements">Current Calculations &amp; Measurements</h3>
+<p><br /><span class="math display">$$I_D=\frac{15v-.7v}{1k\Omega} = 14.3mA; 5mA (minimum current) &lt; 14.3mA &lt; 20 (maximum current)$$</span><br /></p>
+<p>Measured current:  (I_D = 13.7 mA)</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>In this circuit, a large potentiometer value was chosen in order to ensure most of the current in the circuit is directed through the selected LED.  Because the wiper of the potentiometer is connected between the two LEDs, it forms a variable voltage divider where that applies a fraction of the source voltage across each LED-resistor pair.  In the extreme positions of the potentiometer's range, the full 10K[latex]drops the full 15v across one LED-resistor pair, while forming a short in parallel with the other LED-resistor pair.  In lab we confirmed our own curiosity that both LEDs could be turned on when the wiper was positioned in the center of its range.  In this position, 7.5v was applied across each LED-resistor pair and each passed about 7mA of current.</p>
+<h2 id="problem-3-clamper-circuit">Problem 3:  Clamper Circuit</h2>
+<p>Design a circuit that will convert a 50% duty cycle square wave that goes from - 3V to + 3V to a 50% duty cycle square wave that goes from 0V to – 6V (+/- 0.5V).</p>
+<h3 id="circuit-setup-2">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/clamper-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/clamper-circuit.jpg" alt="clamper-circuit" /></a></p>
+<p>The values for the resistor R and capacitor C should be determined from the time constant equation of the circuit, t = RC. The values must be large enough to make sure that the voltage across the capacitor C does not change significantly during the time interval the diode is non-conducting. In a good clamper circuit, the circuit time constant t = RC should be at least ten times the time period of the input signal voltage. (http://www.circuitstoday.com/diode-clamping-circuits)</p>
+<h3 id="measurement">Measurement</h3>
+<p><a href="http://codytaylor.cc/legacy-images/clamper-circuit1.jpg"><img src="http://codytaylor.cc/legacy-images/clamper-circuit1.jpg" alt="clamper-circuit" /></a></p>
+<h3 id="conclusion-2">Conclusion</h3>
+<p>This is a negative clamper circuit.  It clamps the peak voltage to 0v while maintaining the same peak-to-peak voltage as the input signal.  Reversing the polarity of the schottky diode reverses the clamper circuit, now a positive clamper circuit, such that the minimum voltage is clamped to 0v while maintaining the original peak-to-peak voltage.</p>
+<h2 id="problem-4-negative-rectifier"> Problem 4:  Negative Rectifier</h2>
+<p>Design a circuit that will only pass through the negative cycles of 6 V p-p sine wave and reduce the negative peak voltage from -3 V to -1.6 V(+/- 0.2 V).  Show input and output on the plot.</p>
+<h3 id="circuit-setup-3">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/negative-rectifier.jpg"><img src="http://codytaylor.cc/legacy-images/negative-rectifier.jpg" alt="negative-rectifier" /></a></p>
+<p>Thinking of R1 as the load of the rectifier, with a 3v peak sine wave being dropped across it, R2 and R3 form a voltage divider to drop the wave to the required -1.6v.</p>
+<p><br /><span class="math display">$$3\times\frac{11.4k\Omega}{10k\Omega+11.4k\Omega} = 1.59v$$</span><br /></p>
+<h3 id="measurement-1">Measurement</h3>
+<p><a href="http://codytaylor.cc/legacy-images/negative-rectifier1.jpg"><img src="http://codytaylor.cc/legacy-images/negative-rectifier1.jpg" alt="negative-rectifier" /></a></p>
+<p>Note that in this image, the horizontal cursor is set at -1.4v.</p>
+<h3 id="conclusion-3">Conclusion</h3>
+<p>In this circuit the signal diode, 1N914, truncates the positive portion of the input sinewave.  The voltage divider comprised of R2 and R3 drop the -3v portion of the voltage swing to about -1.6v.</p>
+<h2 id="problem-5-bridge-peak-rectifier"> Problem 5:  Bridge Peak Rectifier</h2>
+<p>Design a peak bridge rectifier circuit with 1N4007 diodes to produce a 5 V DC (+/- 0.3 V) signal with ripple between (5 and 20%) from a 15V p-p sine wave input. You will have to use the subtract feature on the scope to show this on the scope since you are not using a transformer.</p>
+<h3 id="circuit-setup-4">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/bridge-peak-rectifier.jpg"><img src="http://codytaylor.cc/legacy-images/bridge-peak-rectifier.jpg" alt="bridge-peak-rectifier" /></a></p>
+<p>Note that care must be taken to properly measure the voltage across the load of this circuit.  In Multisim, one probe and its reference may be intuitively applied across the load; however, when using the oscilloscopes in lab, two probes must be used in conjunction with the scope's 'math' function.  The ground leads of both scopes should be connected to the circuit's ground node, while the channel 1 probe should be connected to the high side of the load.  Likewise, the channel 2 probe should be connected to the low side of the load.  The voltage across the load is then channel 1 minus channel 2.</p>
+<p><a href="http://codytaylor.cc/legacy-images/hand.jpg"><img src="http://codytaylor.cc/legacy-images/hand.jpg" alt="hand" /></a></p>
+<h3 id="measurement-2">Measurement</h3>
+<p><a href="http://codytaylor.cc/legacy-images/bridge-peak-rectifier1.jpg"><img src="http://codytaylor.cc/legacy-images/bridge-peak-rectifier1.jpg" alt="bridge-peak-rectifier" /></a></p>
+<h2 id="problem-6-half-wave-peak-rectifier">Problem 6:  Half Wave Peak Rectifier</h2>
+<p>Design a half wave peak rectifier circuit with BAT85 schottky diodes to produce a 9 V DC (+/- 0.3 V) signal with &lt; 10% ripple from a 20V p-p sine wave input.</p>
+<h3 id="circuit-setup-5">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/6.2.jpg"><img src="http://codytaylor.cc/legacy-images/6.2.jpg" alt="6.2" /></a></p>
+<h3 id="measurement-3">Measurement</h3>
+<p><a href="http://codytaylor.cc/legacy-images/6.3.jpg"><img src="http://codytaylor.cc/legacy-images/6.3.jpg" alt="6.3" /></a></p>
+<h3 id="conclusion-4"> Conclusion</h3>
+<p>Because the requirement for this problem was to have less than 10% ripple, we simply chose to use a relatively large capacitance in parallel with a voltage divider to bring the voltage across the load down to 9v.</p>
+<h2 id="problem-7-zener-regulator"> Problem 7:  Zener Regulator</h2>
+<p>Design a zener regulator circuit that will provide a 9 V (+/- 0.5 V) regulated output from a 12V DC source. If we don’t have the exact zener diode you are looking for you will have to combine ones that we have. From the output of the 9V regulator circuit add a CdS cell into the circuit to dim (or turn off) an LED when you cover the CdS cell with your finger. Measure the voltage across the zener for each of the following: CdS circuit not added, CdS Cell uncovered, CdS Cell covered.</p>
+<h3 id="circuit-setup-6"> Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/7.jpg"><img src="http://codytaylor.cc/legacy-images/7.jpg" alt="7" /></a></p>
+<p>Note that 1N4732A has a reverse voltage drop of 4.7v.</p>
+<h3 id="measurements">Measurements</h3>
+<p>Voltage across diodes with CDS uncovered:   9.3v</p>
+<p>Voltage across diodes with CDS covered:        9.4v</p>
+<p>CDS and LED removed from circuit:                 9.4v</p>
+<h3 id="conclusion-5">Conclusion</h3>
+<p>Using zener diodes in this way assures a very constant output voltage no matter the load attached to the circuit.</p>
+<h2 id="problem-8-limiter-circuit">Problem 8:  Limiter Circuit</h2>
+<p>Design a circuit that takes a sine wave that is symmetrical about the x-axis and limits the positive cycle to a predefined level. In other words it will clip positive cycles of the sine wave at the limit you set.   You must use a momentary switch in the circuit so that you can turn on or off the limiter.</p>
+<h3 id="circuit-setup-7">Circuit setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/8.jpg"><img src="http://codytaylor.cc/legacy-images/8.jpg" alt="8" /></a></p>
+<p>This circuit clips the top half of the input waveform to no higher than .7v.</p>
+<h3 id="measurement-4">Measurement</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Limiter-Circuit.jpg"><img src="http://codytaylor.cc/legacy-images/Limiter-Circuit.jpg" alt="Limiter-Circuit" /></a></p>
+<h2 id="special-design-problem">Special Design Problem</h2>
+<p>Design a circuit using only diodes and resistors that implements the following digital logic circuit. Verify that all 8 possible input combinations turns a green LED on or off appropriately. For one of the states when the LED is on verify that the current is between 5 and 20 mA. You must use 3 slide toggle switches or a DIP switch in this problem (put them back in the bin when you are done). The inputs (switches) should always be forced to either ground or the positive rail voltage (i.e. don’t leave it “floating”).</p>
+<p><a href="http://codytaylor.cc/legacy-images/Untitled-Diagram.jpg"><img src="http://codytaylor.cc/legacy-images/Untitled-Diagram.jpg" alt="Untitled Diagram" /></a></p>
+<h3 id="circuit-setup-8">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/9.jpg"><img src="http://codytaylor.cc/legacy-images/9.jpg" alt="9" /></a></p>
+<h3 id="conclusion-6">Conclusion</h3>
+<p>The most difficult part of designing this circuit, was adjusting component values just right to ensure that specific thresholds were exceeded by particular switch combinations.</p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

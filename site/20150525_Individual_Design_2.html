@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">Individual Design 2</h1>
+<p><a href="http://codytaylor.cc/legacy-images/PopcornSpectrogram.jpg"><img src="http://codytaylor.cc/legacy-images/PopcornSpectrogram.jpg" alt="PopcornSpectrogram" /></a></p>
+<p>Because mircowaves are noisy, I thought it best to filter out as much of that noise as possible such that only the popping of kernels is recorded.  To do this I recorded the sound of popcorn popping in a microwave and passed that audio file through a MatLab spectrogram function in order to determine which frequencies needed to be filtered out. I chose to make a pretty narrow filter centered around 2kHz in order to isolate the frequencies of a popping kernel as the pop seems to include nearly equal amounts of all audible frequencies as indicated by the red vertical lines in the spectrogram above.  Below is the response of the butterworth filter that I made.</p>
+<p><a href="http://codytaylor.cc/legacy-images/BandpassFilter.jpg"><img src="http://codytaylor.cc/legacy-images/BandpassFilter.jpg" alt="BandpassFilter" /></a></p>
+<p>The code running on the microcontroller is pretty simple. It calculates a running average in order to tell a pop from noise.  It also prints its readings as text which can be pulled into a spreadsheet and visualized. The code is below.</p>
+<pre><code>#include &lt;math.h&gt;
+
+int popLED = A4;
+int redLED = A3;
+int yellowLED = A2;
+int greenLED = A1;
+int popCount = 0;
+float sensorValue = 0;
+float n = 0;
+float mean = 0;
+float maxSample = 0;
+float buffer = 0;
+float oldMax = 0;
+float sample = 0;
+float stdDev = 0;
+float avgStdDev = 0;
+float sum = 0;
+unsigned long lastPop;
+
+void setup() {
+
+pinMode( popLED, OUTPUT );
+pinMode( redLED, OUTPUT );
+pinMode( yellowLED, OUTPUT );
+pinMode( greenLED, OUTPUT );
+
+Serial.begin(9600);
+
+Serial.print( &quot;Time&quot; );
+Serial.print( &quot; &quot; );
+Serial.print( &quot;Sample&quot; );
+Serial.print( &quot; &quot; );
+Serial.print( &quot;Std.Devs.&quot; );
+Serial.print( &quot; &quot; );
+Serial.println( &quot;Millis_Since_Pop&quot; );
+
+//prime mean value
+
+for( int n = 0; n &lt; 1000; n++ ){
+mean += analogRead(A0);    
+maxSample = analogRead(A0);
+if( maxSample &gt; oldMax ){
+  oldMax = maxSample;
+}
+}
+mean = mean / 1000.0;  
+Serial.print( &quot;mean: &quot; );
+Serial.println( mean );
+
+buffer = oldMax - mean;
+
+float n = 0.0;
+}
+
+void loop() {
+
+n++;
+
+sample = analogRead(A0);
+sum += sample;
+mean = sum / n;
+
+stdDev = sqrt( ( (sample - mean) * (sample - mean) ) / n);
+avgStdDev = (stdDev + avgStdDev) / n;
+
+if( sample &lt;= (mean - (7)) || sample &gt;= (mean + (7)) ){  //consider it a pop if between thresholds
+//    if( stdDev &gt;= .25){
+lastPop = millis();
+digitalWrite( popLED, HIGH );
+delay( 50 );
+digitalWrite( popLED, LOW );
+popCount++;
+}
+if( (popCount &lt;= 25) ){
+digitalWrite( greenLED, HIGH );
+digitalWrite( yellowLED, LOW );
+digitalWrite( redLED, LOW );
+}
+if( ( (popCount &gt; 25) ) &amp;&amp; ( (millis() - lastPop) &lt; 2000 )){
+digitalWrite( greenLED, LOW );
+digitalWrite( yellowLED, HIGH );
+digitalWrite( redLED, LOW );
+}
+if( ( (popCount &gt; 25) ) &amp;&amp; ( (millis() - lastPop) &gt; 2000 ) ){
+digitalWrite( greenLED, LOW );
+digitalWrite( yellowLED, LOW );
+digitalWrite( redLED, HIGH );
+}  
+
+Serial.print( millis() );
+Serial.print( &quot; &quot; );
+Serial.print( mean );
+Serial.print( &quot; &quot; );
+Serial.print( sample );
+Serial.print( &quot; &quot; );
+Serial.print( avgStdDev );
+Serial.print( &quot; &quot; );
+Serial.print( stdDev );  //( (sample - mean) / stdDev );
+Serial.print( &quot; &quot; );
+Serial.println( millis() - lastPop );
+}</code></pre>
+<p>The schematics for the filters are below</p>
+<p>Highpass Filter:</p>
+<p><a href="http://codytaylor.cc/legacy-images/HighpassSchem.jpg"><img src="http://codytaylor.cc/legacy-images/HighpassSchem.jpg" alt="HighpassSchem" /></a></p>
+<p>Lowpass Filter:</p>
+<p><a href="http://codytaylor.cc/legacy-images/lowpass.jpg"><img src="http://codytaylor.cc/legacy-images/lowpass.jpg" alt="lowpass" /></a></p>
+<p>Gain Stage:</p>
+<p><a href="http://codytaylor.cc/legacy-images/gainstage.jpg"><img src="http://codytaylor.cc/legacy-images/gainstage.jpg" alt="gainstage" /></a></p>
+<p>Although I received a low A grade for this project, it didn't work all that great. I suppose that most of the credit I earned lies in the design -that is using a spectrogram and designing filters because the actual implementation was a bit of a flop. I think that with more time this design could possibly be made to work a little better if not as intended. As it is, a larger than acceptable proportion of pops are missed by the device. This results in inaccurate timing and ultimately imperfectly cooked popcorn. I may revisit it at some point if I need a project to work on or happen to think of a better way to implement it.</p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,3 +1,5 @@
-# About
-
-My name is Cody Taylor.  I am trained as an electrical engineer and I am a practicing  emerging technologies librarian at University of Oklahoma Libraries.  I spend a significant portion of my time supporting and developing open educational resources.  The remainder, and largest portion of my time, is spent supporting Innovation @ the Edge, a makerspace in the Bizzell Memorial Library on the OU campus.  I enjoy exploring innovative ways of publishing OER, STEAM education, prototyping anything, and toying with code.
+<h1>About</h1>
+<img src="site-assets/photo.jpg" id="about-photo"></img>
+<div id="about">
+  <p>My name is Cody Taylor.  I'm lucky to identify as both a librarian and as an engineer.  The prior by practice and the later by training. At the [University of Oklahoma](https://ou.edu), I studied Electrical Engineering. Presently, I am an [Emerging Technologies Librarian](https://libraries.ou.edu) there.  Professionally, I develop [Open Educational Resources](https://open.ou.edu), manage a [makerspace](https://libraries.ou.edu/edge), and consult with the University community in hopes of improving learning outcomes, pedagogy, and research via honest technology implementations. Personally, I have many interests; tinkering, electronics, microcontrollers, coding, museum exhibit design, web design and development, live music, photography, and all things open-source.</p>
+</div>

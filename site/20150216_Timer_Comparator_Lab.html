@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">Timer Comparator Lab</h1>
+<p>Design a circuit that turns on an LED for 600 millisecond (+/- 100 milliseconds).</p>
+<h3 id="circuit-setup">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/1-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/1-circuit.jpg" alt="1-circuit" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/1.jpg"><img src="http://codytaylor.cc/legacy-images/1.jpg" alt="1" /></a></p>
+<h2 id="problem-2-inverten-one-shot-555-motor-driver">Problem 2: Inverten One-Shot 555 Motor Driver</h2>
+<p>Utilize a MOSFET inverter to flip the logic in part one. This time have a motor running and turn it off for 1 second (+/- 0.2 seconds) and then have it start up again. Comment on how much time you had to set for your delay pulse to make the motor turn off for one second. Also, please use a protection diode so your MOSFET doesn’t smoke. You might also consider having multiple MOSFETs in parallel for this problem.</p>
+<h3 id="circuit-setup-1">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/2-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/2-circuit.jpg" alt="2-circuit" /></a></p>
+<p>Note: We used a 3 second off period because the motor took 2 seconds to spin down.</p>
+<p><a href="http://codytaylor.cc/legacy-images/2.jpg"><img src="http://codytaylor.cc/legacy-images/2.jpg" alt="2" /></a></p>
+<p><br /><span class="math display"><em>t</em> = <em>R</em><em>C</em><em>L</em><em>N</em>(3)</span><br /></p>
+<p><br /><span class="math display">3<em>s</em><em>e</em><em>c</em>.=(1<em>M</em><em>Ω</em>)(<em>C</em>)<em>L</em><em>n</em>(3)</span><br /></p>
+<p><br /><span class="math display">$$\frac{3sec}{(1M)(Ln(3))}=C=3\mu F$$</span><br /></p>
+<h2 id="problem-3-555-frequency-divider">Problem 3: 555 Frequency Divider</h2>
+<p>Design a circuit that converts a 1.2 kHz 50% duty cycle square wave to a 400 Hz square wave.</p>
+<h3 id="circuit-setup-2">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/3-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/3-circuit.jpg" alt="3-circuit" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/3-555-Frequency-Divider.jpg"><img src="http://codytaylor.cc/legacy-images/3-555-Frequency-Divider.jpg" alt="3 555 Frequency Divider" /></a></p>
+<h3 id="note">Note:</h3>
+<p>Had a difficult time building this circuit.  -built is several times using diagram found on internet for frequency divider, but was never able to make it work.  We discovered that the LM555 datasheet had an example of a frequency divider in it.  That circuit worked very well.</p>
+<h2 id="problem-4-bistable-555-led-blinker">Problem 4: Bistable 555 LED Blinker</h2>
+<p>Design a bistable 555 timer circuit that toggles a Red LED on and off. Connect the output to a MOSFET inverter so that a green LED turns ON when the red LED turns OFF and vice versa.</p>
+<h3 id="circuit-setup-3">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/4-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/4-circuit.jpg" alt="4-circuit" /></a></p>
+<h2 id="problem-5-ac-in-pwm-out-555-pulse-width-modulator">Problem 5: AC-In PWM-Out 555 Pulse Width Modulator</h2>
+<p>Design a 555 Timer Pulse Width Modulator circuit and adjust the control voltage with the DC supply up and down so it looks like a sinewave and produces an output similar to the datasheet.</p>
+<h3 id="circuit-setup-4">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/5-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/5-circuit.jpg" alt="5-circuit" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/5-AC-to-PWM.jpg"><img src="http://codytaylor.cc/legacy-images/5-AC-to-PWM.jpg" alt="5 AC to PWM" /></a></p>
+<h2 id="problem-6-thermistor-temperature-indicator-with-comparator">Problem 6: Thermistor Temperature Indicator with Comparator</h2>
+<p>Using a thermistor and a comparator IC (LM293) to turn on 2 LEDs sequentially as the temperature gets warmer. You can cover the thermistor with your fingers to heat it up.</p>
+<h3 id="circuit-setup-5">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/6-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/6-circuit.jpg" alt="6-circuit" /></a></p>
+<h2 id="problem-7-38khz-square-wave-generator">Problem 7: 38kHz Square Wave Generator</h2>
+<p>Design a 555 timer circuit that has a 50% duty cycle 0 to 5 Volt square wave in MultiSim. <strong>Don’t use 1nF capacitors.</strong> Use a potentiometer to vary the frequency between 36 and 40 kHz. When the potentiometer is turned all the way counter clockwise the frequency should be 36 kHz and when the potentiometer is turned all the way clockwise the frequency should be 40 kHz. Use the MultiSim scope to make measurements needed to calculate the frequency.</p>
+<h3 id="circuit-setup-6">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/7-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/7-circuit.jpg" alt="7-circuit" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-36kHz.jpg"><img src="http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-36kHz.jpg" alt="7 Variable Frequency 555 36kHz" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-40kHz.jpg"><img src="http://codytaylor.cc/legacy-images/7-Variable-Frequency-555-40kHz.jpg" alt="7 Variable Frequency 555 40kHz" /></a></p>
+<h2 id="problem-8-38khz-infrared-signal-controlled-motor-driver">Problem 8: 38kHz Infrared Signal Controlled Motor Driver</h2>
+<p>Design a circuit that will turn on a motor when it detects a TV remote control signal. You will use the 38 kHz IR detector sensor to accomplish this (see spec. sheet on D2L). Instead of using an actual TV remote connect the signal from the circuit in problem 7 to an IR LED via a resistor. You will likely need to include a MOSFET in your design.</p>
+<h3 id="circuit-setup-7">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/8-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/8-circuit.jpg" alt="8-circuit" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/8-38kHz.jpg"><img src="http://codytaylor.cc/legacy-images/8-38kHz.jpg" alt="8 38kHz" /></a></p>
+<h3 id="note-1">Note</h3>
+<p>Had a tough time getting the IR receiver to work properly because we were using a receiver whose part number we were unsure of so we looked a datasheets that seemed similar to the part we were using. -wasted hours.  Bought a new 38kHz receiver from Radio Shack (during weekend, didn't have access to parts closet) and looked at its datasheet for the correct pinout.  -had no problem making it work.  Lesson learned.</p>
+<h2 id="special-design-problem-pwm-motor-controller">Special Design Problem: PWM Motor Controller</h2>
+<p>Create a PWM (also commonly referred to as PDM) speed control circuit. Use a potentiometer to adjust the speed. Connect the output to a common drain amplifier (source follower) so that it can source more current.   Use the IRF620 or other Power MOSFET for the source follower (return the Power MOSFET after using it because they are expensive). Demonstrate the circuit by controlling the speed of a motor.</p>
+<h3 id="circuit-setup-8">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/special-circuit.jpg"><img src="http://codytaylor.cc/legacy-images/special-circuit.jpg" alt="special-circuit" /></a></p>
+<p>Compared to other independent design problems, this was not too bad.  Simply built a 555 PWM circuit and used it to drive the gate of a MOSFET.  It worked beautifully.</p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

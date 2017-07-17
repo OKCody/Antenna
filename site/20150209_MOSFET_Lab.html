@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">MOSFET Lab</h1>
+<p>Design a MOSFET inverter with a BS170 and use it to turn on an LED when you cover a CdS cell with your finger.</p>
+<h3 id="circuit-setup">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-1.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-1.jpg" alt="Problem-1" /></a></p>
+<p>While building this circuit, we used several different CdS cells each with different ranges of resistances.  A rule of thumb that I found useful when designing this circuit was to make the bias resistor, R2, about half of the maximum of the range of the CdS cell.</p>
+<h2 id="problem-2-n-channel-mosfet-switch">Problem 2: N-Channel MOSFET Switch</h2>
+<p>Build a circuit using the BS-170 n-channel MOSFET to switch a motor on when the light level increases.  Also, build a circuit that switches a motor off when the light level increases.  You MUST use a phototransistor for the light sensor.</p>
+<h2 id="circuit-setup-1">Circuit Setup</h2>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-2.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-2.jpg" alt="Problem-2" /></a></p>
+<p>For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100[latex]resistor, R2, represents a hobby motor.</p>
+<h3 id="configurations">Configurations</h3>
+<ol style="list-style-type: lower-alpha">
+<li><p>    With light on CdS: Motor on     Without light on CdS: Motor off</p></li>
+<li><p>    With light on CdS: Motor off     Without light on CdS: Motor on</p></li>
+</ol>
+<h2 id="problem-3-p-channel-mosfet-switch">Problem 3: P-Channel MOSFET Switch</h2>
+<p>Repeat part 2) with a p-channel MOSFET (ZVP 3306).</p>
+<h3 id="circuit-setup-2">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-3.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-3.jpg" alt="Problem-3" /></a></p>
+<p>For the purpose of clarity, some components in the diagrams above are merely stand-ins for parts that are not easily modeled in Multisim.  In both diagrams, the LED represents an infrared LED and the switch represents a phototransistor.  Also, in both circuits the 100 () resistor, R2, represents a hobby motor.</p>
+<h3 id="configurations-1">Configurations</h3>
+<ol style="list-style-type: lower-alpha">
+<li><p>    With light on CdS: Motor on     Without light on CdS: Motor off</p></li>
+<li><p>    With light on CdS: Motor off     Without light on CdS: Motor on</p></li>
+</ol>
+<h2 id="problem-4-bypassed-common-source-amplifier">Problem 4: Bypassed Common Source Amplifier</h2>
+<p>Design a Bypassed Common Source MOSFET amplifier with one n-channel MOSFET to achieve a gain of 5 V/V (± 0.5 V/V). Calculate the theoretical gain of your circuit and compare it to the actual gain achieved.  You can use any biasing scheme other than the current mirror scheme.</p>
+<h3 id="circuit-setup-3">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-4.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-4.jpg" alt="Problem-4" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-4-Sim-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-4-Sim-Scope.jpg" alt="Problem-4-Sim-Scope" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-4-scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-4-scope.jpg" alt="Problem-4-scope" /></a></p>
+<p>Note that the scales on the actual scope capture are not intuitively chosen.  I wish I could say this was done for a specific reason; however, I am afraid it was simply an oversight on my part.  The input signal is on channel 2 and the output is on channel 1.</p>
+<p>During this problem we struggled to get the simulation correct before actually building the circuit.  After much struggling, we decided to go ahead and build the circuit anyway only to find that in reality the circuit performed much better than in simulation. -note the difference in scopes.  Lesson learned.</p>
+<p>Input: 600mV peak</p>
+<p>Output: 2.5 V peak</p>
+<p>Gain: 4.7 V/V</p>
+<h2 id="problem-5-maximize-the-gain">Problem 5:  Maximize the Gain</h2>
+<p>Modify the circuit in part 4) to achieve as much gain as you can.  Calculate the theoretical gain of your circuit and compare it to the actual gain achieved.</p>
+<h3 id="circuit-setup-4">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-5.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-5.jpg" alt="Problem-5" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-5-Sim-Scope-2.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-5-Sim-Scope-2.jpg" alt="Problem-5-Sim-Scope 2" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-5-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-5-Scope.jpg" alt="Problem-5-Scope" /></a></p>
+<p>Again,  note that the scales on the actual scope capture are not intuitively chosen.  I wish I could say this was done for a specific reason; however, I am afraid it was simply an oversight on my part.  The input signal is on channel 2 and the output is on channel 1.</p>
+<p>Input: 576mV peak</p>
+<p>Output: 6V peak</p>
+<p>Gain: 10.41V/V</p>
+<p>I do realize that this gain is minimal compared to that achieved by other groups, but after spending a disproportionate amount of time on this problem, we decided to move on.  I admit, this problem does deserve to be revisited.</p>
+<h2 id="problem-6-unbypassed-common-source-amplifier">Problem 6: Unbypassed Common Source Amplifier</h2>
+<p>Modify the circuit in part 5) to make it an Unbypassed Common-Source amplifier.  Use a potentiometer for Rs and comment on how the gain is affected at different resistance levels.  You will need to make Rs really small to get close to the same gain you achieved in part 6.  We should have 100 Ω potentiometers in the lab (if not just test it with a few different small resistors).  Be careful with power ratings on the potentiometer.  You can include a second source resistor that is bypassed to give you more control if you want to.</p>
+<h3 id="circuit-setup-5">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-6.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-6.jpg" alt="Problem-6" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-6-Sim-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-6-Sim-Scope.jpg" alt="Problem-6-Sim-Scope" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-6-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-6-Scope.jpg" alt="Problem-6-Scope" /></a></p>
+<p>Input: 600mV</p>
+<p>Output: 2.5V</p>
+<p>Gain: 4.17 V/V</p>
+<h2 id="problem-7-current-mirror-biasing-scheme">Problem 7: Current Mirror Biasing Scheme</h2>
+<p>Build a Bypassed Common-Source amplifier using a current mirror for biasing to achieve a gain magnitude of 10 V/V (± 0.5 V/V).  Calculate the theoretical gain of your circuit and compare it to the actual gain achieved.</p>
+<h3 id="circuit-setup-6">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-7.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-7.jpg" alt="Problem-7" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-7-Sim-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-7-Sim-Scope.jpg" alt="Problem-7-Sim-Scope" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-7-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-7-Scope.jpg" alt="Problem-7-Scope" /></a></p>
+<p>Input: 100mV</p>
+<p>Output: 1V</p>
+<p>Gain: 10V/V</p>
+<h2 id="problem-8-hall-effect-latch-sensor">Problem 8: Hall Effect Latch Sensor</h2>
+<p>Design a circuit using a MOSFET and the SS400 series hall effect latch sensor to turn on and off an LED as a magnet is rotated (north pole facing the sensors to the south pole facing the sensor). Put the magnet on some sort of tether so you can spin it and use the oscilloscope to measure the rpm the magnet was spinning.</p>
+<h3 id="circuit-setup-7">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/halleffect-sensor.jpg"><img src="http://codytaylor.cc/legacy-images/halleffect-sensor.jpg" alt="halleffect-sensor" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Problem-8-Scope.jpg"><img src="http://codytaylor.cc/legacy-images/Problem-8-Scope.jpg" alt="Problem-8-Scope" /></a></p>
+<p>Frequency: 30Hz</p>
+<p>Period: 33.33 mS</p>
+<p>RPM: (==1800rev/min)</p>
+<p>Note we were able to achieve such a high RPM by fixing a magnet to the output shaft of a hobby motor while applying current to it and holding it over the hall effect sensor.</p>
+<h2 id="special-design-problem-h-bridge">Special Design Problem:  H-Bridge</h2>
+<p>Build a MOSFET H-Bridge and control a motor with it.  Demonstrate the forward, reverse, and braking modes.  <strong>Bonus (+10):</strong>  Using two IR LED/phototransistor pairs to make the motor go forward when the beam is broken on one of the IR LEDs and reverse when the beam is broken on the other IR LED.</p>
+<h3 id="circuit-setup-8">Circuit Setup</h3>
+<p><a href="http://codytaylor.cc/legacy-images/H-Bridge.jpg"><img src="http://codytaylor.cc/legacy-images/H-Bridge.jpg" alt="H-Bridge" /></a></p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

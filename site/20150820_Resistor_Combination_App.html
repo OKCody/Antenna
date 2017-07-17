@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">Resistor Combination App</h1>
+<p>Last semester during my Electronics Lab class, there were a few times that my partner and I needed a very specific resistor value. I got by at the time guessing values to combine and then running the numbers on my calculator to check how close the result was.  After several attempts using this method, I knew there must be a better way to find which values of resistors to combine to achieve a target value. I did find a calculator or two online that would do this but each had its own problems. One I recall wanted the user to enter all the resistor values they had on hand prior to each calculation, and another assumed that the user had all possible standard resistor values. -two extremes.</p>
+<p>I decided to use only the resistor values provided to us in our lab kits.  I feel like those values make up the smallest range of resistors that someone serious about electronics might have on hand.  -by using the smallest range of reasonable resistor values, I'm not assuming much on the part of the user in terms of what they have access to.  Each point on the two lines below represents a possible resistor combination using the resistors in the following table.  The first line shows all possible values, and the second line shows values between 0 and 500K ohms in more detail as most combinations will fall within this range.  Note that the distribution of possible values is nearly continuous between 0 and 100K ohms and only slightly less continuous between 0 and 500K ohms.  Click on each image for a closer look.</p>
+<p><a href="http://codytaylor.cc/legacy-images/Resistance-Density.png"><img src="http://codytaylor.cc/legacy-images/Resistance-Density.png" alt="Resistance-Density" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Resistance-Density-Truncated.png"><img src="http://codytaylor.cc/legacy-images/Resistance-Density-Truncated.png" alt="Resistance-Density-Truncated" /></a></p>
+<p>A table of resistor values used in this application is show below. All values, of course, are in ohms.</p>
+<table>
+<tbody>
+<tr>
+10 100 1K 10K 100K
+</tr>
+<tr>
+<p>1.0</p>
+<td>
+10
+</td>
+<td>
+100
+</td>
+<td>
+1K
+</td>
+<td>
+10K
+</td>
+<td>
+100K
+</td>
+</tr>
+<tr>
+<p>1.2</p>
+<td>
+12
+</td>
+<td>
+120
+</td>
+<td>
+1.2K
+</td>
+<td>
+12K
+</td>
+<td>
+120K
+</td>
+</tr>
+<tr>
+<p>1.5</p>
+<td>
+15
+</td>
+<td>
+150
+</td>
+<td>
+1.5K
+</td>
+<td>
+15K
+</td>
+<td>
+150K
+</td>
+</tr>
+<tr>
+<p>1.8</p>
+<td>
+18
+</td>
+<td>
+180
+</td>
+<td>
+1.8K
+</td>
+<td>
+18K
+</td>
+<td>
+180K
+</td>
+</tr>
+<tr>
+<p>2.2</p>
+<td>
+22
+</td>
+<td>
+220
+</td>
+<td>
+2.2K
+</td>
+<td>
+22K
+</td>
+<td>
+220K
+</td>
+</tr>
+<tr>
+<p>2.7</p>
+<td>
+27
+</td>
+<td>
+270
+</td>
+<td>
+2.7K
+</td>
+<td>
+27K
+</td>
+<td>
+270K
+</td>
+</tr>
+<tr>
+<p>3.3</p>
+<td>
+33
+</td>
+<td>
+330
+</td>
+<td>
+3.3K
+</td>
+<td>
+33K
+</td>
+<td>
+330K
+</td>
+</tr>
+<tr>
+<p>3.9</p>
+<td>
+39
+</td>
+<td>
+390
+</td>
+<td>
+3.9K
+</td>
+<td>
+39K
+</td>
+<td>
+390K
+</td>
+</tr>
+<tr>
+<p>4.7</p>
+<td>
+47
+</td>
+<td>
+470
+</td>
+<td>
+4.7K
+</td>
+<td>
+47K
+</td>
+<td>
+470K
+</td>
+</tr>
+<tr>
+<p>5.6</p>
+<td>
+56
+</td>
+<td>
+560
+</td>
+<td>
+5.6K
+</td>
+<td>
+56K
+</td>
+<td>
+560K
+</td>
+</tr>
+<tr>
+<p>6.8</p>
+<td>
+68
+</td>
+<td>
+680
+</td>
+<td>
+6.8K
+</td>
+<td>
+68K
+</td>
+<td>
+680K
+</td>
+</tr>
+<tr>
+<p>8.2</p>
+<td>
+82
+</td>
+<td>
+820
+</td>
+<td>
+8.2K
+</td>
+<td>
+82K
+</td>
+<td>
+820K
+</td>
+</tr>
+<tr>
+<p>Misc.</p>
+<td>
+2K
+</td>
+<td>
+3K
+</td>
+<td>
+1M
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The application is fairly straight forward. It does not employ a fancy algorithm for efficiently determining combinations near the desired value. It simply brute forces all possible (two resistor) series and parallel combinations and displays the closest three of each configuration. It does determine which combination is nearest to the desired value and displays the results of the configuration first and its results in order from closest to farthest from the target value. That's it! Nothing fancy. Regardless of how inefficient this approach might be it returns results instantaneously when running on a Raspberry Pi.</p>
+<pre><code>#!/usr/bin/env python
+import cgi
+import cgitb
+cgitb.enable()
+
+form = cgi.FieldStorage()
+desired = float( form[&#39;desired&#39;].value ) #form.getvalue(&#39;desired&#39;)
+resistors_10 = [10, 100, 1000, 10000, 100000]
+resistors_12 = [12, 120, 1200, 12000, 120000]
+resistors_15 = [15, 150, 1500, 15000, 150000]
+resistors_18 = [18, 180, 1800, 18000, 180000]
+resistors_22 = [22, 220, 2200, 22000, 220000]
+resistors_27 = [27, 270, 2700, 27000, 270000]
+resistors_33 = [33, 330, 3300, 33000, 330000]
+resistors_39 = [39, 390, 3900, 39000, 390000]
+resistors_47 = [47, 470, 4700, 47000, 470000]
+resistors_56 = [56, 560, 5600, 56000, 560000]
+resistors_68 = [68, 680, 6800, 68000, 680000]
+resistors_82 = [82, 820, 8200, 82000, 820000]
+resistors_misc = [2000, 3000, 1000000]
+resistors_int = resistors_10 + resistors_12 + resistors_15 + resistors_18 + resistors_22 + resistors_27 +resistors_33 + resistors_39 + resistors_47 + resistors_56 + resistors_68 + resistors_82 + resistors_misc
+resistors = []  # to contain float versions of resistor values
+for i in resistors_int:
+resistors.append(float(i))
+
+# In[2]:
+
+series_combo = []
+series_val1 = []
+series_val2 = []
+for n, val in enumerate(resistors):
+for m, val in enumerate(resistors):
+    series = resistors[n] + resistors[m]
+    if ( desired &lt;= (series + (series * .5)) ) and ( desired &gt;= (series - (series * .5)) ):
+        if series not in series_combo:
+            series_combo.append(series)
+            series_val1.append(n)
+            series_val2.append(m)
+series_combo = zip(series_combo, series_val1, series_val2)
+series_combo = list(set(series_combo))  #set(creates set() of unique, unordered elements. list() creates a list from those elements
+
+
+# In[3]:
+
+series_diff = []
+for p, val in enumerate(series_combo):
+series_diff.append( abs((series_combo[p][0] - desired) / desired) * 100 )
+
+
+# In[4]:
+
+series_values = sorted(zip(series_diff, series_combo) )
+
+
+# In[5]:
+
+series_opt = []
+for value in series_values[:3]:
+series_opt.append( [ round(value[0],4), int(value[1][0]), int(resistors[value[1][1]]), int(resistors[value[1][2]]) ] )
+
+
+# In[6]:
+
+parallel_combo = []
+parallel_val1 = []
+parallel_val2 = []
+for j, val in enumerate(resistors):
+for k, val in enumerate(resistors):
+    parallel = (resistors[j] * resistors[k]) / (resistors[j] + resistors[k])
+    if ( desired &lt;= (parallel + (parallel * .5)) ) and ( desired &gt;= (parallel - (parallel * .5)) ):
+        if parallel not in parallel_combo:
+            parallel_combo.append(parallel)
+            parallel_val1.append(j)
+            parallel_val2.append(k)
+parallel_combo = zip(parallel_combo, parallel_val1, parallel_val2)
+parallel_combo = list(set(parallel_combo))  #set(creates set() of unique, unordered elements. list() creates a list from those elements
+
+
+# In[7]:
+
+parallel_diff = []
+for q,val in enumerate(parallel_combo):
+parallel_diff.append( abs((parallel_combo[q][0] - desired) / desired) * 100 )
+
+
+# In[8]:
+
+parallel_values = sorted(zip(parallel_diff, parallel_combo))
+
+
+# In[9]:
+
+parallel_opt = []
+for value in parallel_values[:3]:
+parallel_opt.append( [ round(value[0],4), int(value[1][0]), int(resistors[value[1][1]]), int(resistors[value[1][2]]) ] )
+
+
+# In[10]:
+
+def write_series():
+print &#39;&lt;div class=&quot;container&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;row&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;one-half column&quot; style=&quot;margin-top: 5%&quot;&gt;&#39;
+print &#39;&lt;h2&gt;Series&lt;/h2&gt;&#39;
+print &#39;&lt;img src=&quot;http://codytaylor.cc/legacy-images/resistor_series.svg&quot; style=&quot;width: 100%;&quot;&gt;&lt;/img&gt;&#39;
+print &#39;&lt;table style=&quot;width: 100%;&quot;&gt;&#39;
+print &#39;&lt;tr&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;Percent Difference&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;R1&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;R2&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;/tr&gt;&#39;
+if len(series_opt) &gt; 0:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[0][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[0][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[0][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[0][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+if len(parallel_opt) &gt; 1:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[1][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[1][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[1][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[1][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+if len(parallel_opt) &gt; 2:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[2][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[2][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[2][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(series_opt[2][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+print &#39;&lt;/table&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+
+def write_parallel():
+print &#39;&lt;div class=&quot;container&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;row&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;one-half column&quot; style=&quot;margin-top: 5%&quot;&gt;&#39;
+print &#39;&lt;h2&gt;Parallel&lt;/h2&gt;&#39;
+print &#39;&lt;img src=&quot;http://codytaylor.cc/legacy-images/resistor_parallel.svg&quot; style=&quot;width: 100%;&quot;&gt;&lt;/img&gt;&#39;
+print &#39;&lt;table style=&quot;width: 100%;&quot;&gt;&#39;
+print &#39;&lt;tr&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;Percent Difference&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;R1&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;td&gt;&lt;b&gt;R2&lt;/b&gt;&lt;/td&gt;&#39;
+print &#39;&lt;/tr&gt;&#39;
+if len(parallel_opt) &gt; 0:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[0][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[0][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[0][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[0][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+if len(parallel_opt) &gt; 1:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[1][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[1][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[1][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[1][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+if len(parallel_opt) &gt; 2:
+    print &#39;&lt;tr&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[2][0]) + &#39;%&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[2][1]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[2][2]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;td&gt;&#39; + str(parallel_opt[2][3]) + &#39;&lt;/td&gt;&#39;
+    print &#39;&lt;/tr&gt;&#39;
+print &#39;&lt;/table&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+
+
+# In[13]:
+
+print &#39;Content-type:text/html\r\n\r\n&#39;
+print &#39;&lt;html lang=&quot;en&quot;&gt;&#39;
+print &#39;&lt;head&gt;&#39;
+print &#39;&lt;meta charset=&quot;utf-8&quot;&gt;&#39;
+print &#39;&lt;title&gt;Resistor Combination&lt;/title&gt;&#39;
+print &#39;&lt;meta name=&quot;author&quot; content=&quot;Cody Taylor&quot;&gt;&#39;
+print &#39;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;&#39;
+#print &#39;&lt;link href=&quot;//fonts.googleapis.com/css?family=Raleway:400,300,600&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;&#39;)
+print &#39;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://codytaylor.cc/legacy-images/resistor_normalize.css&quot;&gt;&#39;
+print &#39;&lt;link rel=&quot;stylesheet&quot; href=&quot;http://codytaylor.cc/legacy-images/resistor_skeleton.css&quot;&gt;&#39;
+print &#39;&lt;/head&gt;&#39;
+print &#39;&lt;body&gt;&#39;
+print &#39;&lt;div class=&quot;container&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;row&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;one-half column&quot; style=&quot;margin-top: 5%&quot;&gt;&#39;
+print &#39;&lt;h1&gt;&#39; + str(int(desired)) + &#39;&lt;/h1&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+
+print &#39;&lt;/div&gt;&#39;
+if len(series_opt) &gt; 0:
+if series_opt[0][0] &lt;= parallel_opt[0][0]:
+    write_series()
+    write_parallel()
+else:
+    write_parallel()
+    write_series()
+else:
+write_parallel()
+
+print &#39;&lt;/body&gt;&#39;
+print &#39;&lt;div class=&quot;container&quot;&gt;&#39;
+print &#39;&lt;div class=&quot;row&quot;&gt;&#39;
+print &#39;&lt;footer&gt;&#39;
+print &#39;&lt;a href=&quot;http://apps.codytaylor.cc:8080/omega/&quot;&gt;&lt;button type=&quot;button&quot;&gt;Again?&lt;/button&gt;&lt;/a&gt;&#39;
+print &#39;&lt;div class=&quot;row&quot;&gt;&#39;
+print &#39;&lt;a href=&quot;http://apps.codytaylor.cc:8080/omega/about.html&quot;&gt;About&lt;/a&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/footer&gt;&#39;
+print &#39;&lt;/div&gt;&#39;
+print &#39;&lt;/div&gt;&#39;</code></pre>
+<p>I knew that this application would be handy to have in lab, but would be cumbersome to pull up and run on a computer, so I set out hoping to build this in the form of a smartphone application. I know nothing about Android or iOS development, but I am pretty comfortable building websites. Understanding this I set out to build this into a web-app. A web-app appears on a phone exactly like a regular app would except that when it opens it opens in a web browser whether or not the user knows it. Web browsers are incredibly flexible. With this in mind, I knew that Javascript would probably be the most appropriate language to use, but I don't know Javascript and have only been able to achieve the most elementary of tasks using it; however, I am growing continuously more comfortable with Python. Once I had the app working I created another version of it which used Common Gateway Interface to execute Python scripts over the internet and display results in a web browser. For this I set up a Raspberry Pi as a web server (deserving of its own post) that hosts and executes this script via CGI. Screenshots are below.</p>
+<p><a href="http://apps.codytaylor.cc:8080/omega/"><img src="http://codytaylor.cc/legacy-images/omega-home2.png" alt="omega home2" /></a></p>
+<p><a href="http://apps.codytaylor.cc:8080/omega/"><img src="http://codytaylor.cc/legacy-images/omega-results2.png" alt="omega results2" /></a></p>
+<p>Please give it a try. Keep in mind that it has no means of prompting users when they enter invalid information. It only accepts numbers and if you happen to choose an unreasonable number, one that it can't even come close to, you might also receive an error notice.</p>
+<p><a href="http://codytaylor.cc/resistor/">Take Me to the App!</a></p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Banner image credit: <a href="https://learn.sparkfun.com/tutorials/resistors">Sparkfun Education</a></p>
+<h2 id="tangent-resistor-organizer">Tangent: Resistor Organizer</h2>
+<p>As an EE student I also carry a few tools and a tackle box full of electronic components in addition to my laptops, books, and sutff. When it became necessary for me to start carrying a kit of components, I was extremely picky about the box I chose and how it would be organized. At Bass Pro I found a slim Plano tackle box whose compartments were large enough and numerous enough to hold resistors. Excluding their multiples of ten and organizing resistors by their base values, makes retrieval easy and takes up far fewer compartments than allotting a compartment to each value. When resistors are organized in this way it means only having to find the right compartment, and the third-band color that correspond to the value you're looking for as all resistors in any given compartment have the same first and second bands. I created the chart below and taped it to the inside lid of my kit and use it as a quick reference. It's time that I shared it. I was very careful that the compartments in this chart match those in my kit, and that it is as easy to read as possible. -vivid colors, bold font. In the blank space on this chart I have handwritten pin-outs, and other frequently referenced information. It might be time that I revise this chart by recreating that information in a more legible way. Please click the image below to download the full-size PNG or download the Photoshop file in the link below.</p>
+<p><a href="http://codytaylor.cc/legacy-images/Resistor-Organizer.png"><img src="http://codytaylor.cc/legacy-images/Resistor-Organizer.png" alt="Resistor Organizer" /></a></p>
+<p><a href="http://codytaylor.cc/legacy-images/Resistor-Organizer.psd">ResistorOrganizer.psd</a></p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

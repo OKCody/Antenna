@@ -1,0 +1,177 @@
+/* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
+
+.row .row { margin:  0 -1.5em; }
+.col      { padding: 0  1.5em; }
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* MOBILE */
+@media only screen {
+  .col {
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  .menu-item {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-item{
+    margin: 1em;
+    color: var(--gray);
+    white-space: nowrap;
+  }
+  .menu-item:hover{
+    color: var(--black);
+  }
+  #name{
+    margin-top: .5em;
+  }
+  #content{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  img{
+    max-height: 400px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #footer{
+    padding-left: calc(50% - 59px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .footer-icons{
+    height: 25px;
+    width: 25px;
+    background-repeat: no-repeat;
+    float: left;
+    margin-right: 3px;
+  }
+  #cc-cc{background-image: url(site-assets/cc.svg);}
+  #cc-cc:hover{background-image: url(site-assets/cc-black.svg);}
+  #cc-by{background-image: url(site-assets/by.svg);}
+  #cc-by:hover{background-image: url(site-assets/by-black.svg);}
+  #github{background-image: url(site-assets/github.svg); margin-left: 6px;}
+  #github:hover{background-image: url(site-assets/github-black.svg); }
+  #twitter{background-image: url(site-assets/twitter.svg); margin-left: 6px;}
+  #twitter:hover{background-image: url(site-assets/twitter-blue.svg);}
+
+  #about-photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    border-radius: 50%;
+  }
+
+}
+
+/* NOT MOBILE */
+@media only screen and (min-width: 50em) {
+  .container{
+    width: 80%;
+    margin-left: 10%;
+  }
+  #menu {
+    width: 100%;
+  }
+  .menu-item {
+    width: 20%;
+    float: left;
+    text-align: left;
+    white-space: nowrap;
+  }
+  .menu-item a{
+    margin: .5em;
+  }
+  #name{
+    margin-left: 0em;
+  }
+  #content {
+    width: 66.66%;
+    margin-top: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #footer{
+    padding: 0px;
+  }
+  #about-photo{
+    float: left;
+    max-width: 35%;
+    border-radius: 50%;
+  }
+  #about{
+    float: left;
+    max-width: 60%;
+    margin-left: 5%;
+  }
+}
+
+/* GLOBAL */
+:root{
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray:  #AAAAAA;
+  --orange:  #FF851B;
+}
+  h1,h2,h3,h4,h5,h6{
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    color: var(--black);
+  }
+  h1{ font-size: 2.5em; }
+  h2{ font-size: 1.8em; }
+  h3{ font-size: 1.6em; }
+  h4{ font-size: 1.4em; }
+  h5{ font-size: 1.2em; }
+  h6{ font-size: 1.0em; }
+  #content{
+    font-family: helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  a{
+    color: var(--orange);
+    text-decoration: none;
+  }
+  pre{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.6;
+    white-space: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  hr{
+    margin-top: 4em;
+    margin-bottom: 4em;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

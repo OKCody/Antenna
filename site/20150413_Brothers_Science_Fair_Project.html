@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Cody Taylor</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Cody Taylor">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <!--Header-->
+    <div class="row" id="menu">
+      <a href="index.html"><h4 class="menu-item" id="name">Cody Taylor</h4></a>
+      <a href="archive.html"><h6 class="menu-item">Archive</h6></a>
+      <a href="about.html"><h6 class="menu-item">About</h6></a>
+      <h6 class="menu-item">Search</h6>
+    </div>
+    <!--Content-->
+    <div class="row">
+      <div id="content">
+<h1 class="title">Brothers Science Fair Project</h1>
+<p>Some algorithms that play Tic-Tac-Toe are well documented, but none are straight-forward enough for a twelve year old to understand. Honestly, most are so complex that I did not care to spend much time trying to understand them. Considering this, my brother and I set out to build an algorithm to play Tic-Tac-Toe ourselves. From research we knew that the player who makes the first move has a better chance of winning. Considering this, we decided that our algorithm would be forked into two parts, one where the computer algorithm has the first turn, and the other where the player makes the first move. Because I thought it would be most difficult we built the computer-first aspect of the game first. My brother, prior to this project, had no programming experience. For this reason we built our algorithm using <a href="https://scratch.mit.edu/">Scratch</a>. Full disclosure: I think that the visual nature of Scratch helped me keep track of the intricate logic involved too.</p>
+<p>We chose what we believed to be the most simple way of analyzing the Tic-Tac-Toe grid. That is, to assign a number to each cell such that the cells in each column, row, and diagonal add up to 15. Using this method, it is easy to analytically decide where the next move should be. The <a href="http://en.wikipedia.org/wiki/Tic-tac-toe">Wikipedia article on Tic-Tac-Toe</a> is excellent and outlines a number of strategies including the one we chose to use, the <a href="http://en.wikipedia.org/wiki/Magic_square">magic square method</a>.</p>
+<p><a href="http://codytaylor.cc/legacy-images/Magicsquareexample-3.png"><img src="http://codytaylor.cc/legacy-images/Magicsquareexample-3-1024x796.png" alt="Magicsquareexample (3)" /></a></p>
+<p>A magic square is divided into a grid where each cell has been assigned a number such that the sum of each column, row, and diagonal all equal the same number.  In this case, that number is 15 as shown above.  By creating variables that keep track of the sum of each column, row, and diagonal and then subtracting the value of each occupied cell from the columns, rows, or diagonals that that cell belongs to we're able to know which cells remain unoccupied.  Here is an example to clear that up.</p>
+<table>
+<tbody>
+<tr>
+ X - Totals  O - Totals
+</tr>
+<tr>
+<td>
+ <a href="http://codytaylor.cc/legacy-images/MagicSquare-Demo5.png"><img src="http://codytaylor.cc/legacy-images/MagicSquare-Demo5-300x260.png" alt="MagicSquare-Demo5" /></a>
+</td>
+<td>
+<a href="http://codytaylor.cc/legacy-images/MagicSquare-Demo4.png"><img src="http://codytaylor.cc/legacy-images/MagicSquare-Demo4-300x260.png" alt="MagicSquare-Demo4" /></a>
+</td>
+</tr>
+<tr>
+<td>
+(D1 = 15 - 2 - 8 = 5 \ \ D2 = 15 - 4 = 11 \ \ H1 = 15 - 2 = 13 \ \ H2 = 15 \\ H3 = 15 - 4 -8 = 3 \ \ V1 = 15 - 2 - 4 = 9 \ \ V2 = 15 \ \ V3 = 15 - 8 = 7)
+</td>
+<td>
+(D1 = 15 - 5 = 10 \ \D2 = 15 - 6 - 5 = 4 \ \H1 = 15 - 6 = 9 \ \H2 = 15 - 5 = 10 \ \H3 = 15 \ \V1 = 15 \ \V2 = 15 - 5 = 10 \ \V3 = 15 - 6 = 9)
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice that there are two separate totals kept for each row, column, and diagonal.  -one for Xs and another for Os.  Separately keeping track of these totals makes determining the winning cell easy as well as determining which cell to choose in order to block an opponent from winning.</p>
+<p>In the case that the algorithm is allowed to make the first move, it follows a well documented pattern of moves in order to allow itself two winning moves to chose from at once. That is, during the opponent's final turn they are only able to block one of the two winning cells. This pattern begins by randomly choosing a corner cell on the first turn of the game.  During the algorithm's second turn it should choose the corner cell that is directly opposite that of the first move. By this point in the game, the opponent has most usually chosen the center cell and one of the corner cells.  If so, the algorithm's third move should be to occupy the only remaining cell.  If this is possible, the algorithm is set to win the game on its next turn as it has two possible winning moves that it can make during its next turn; however, the opponent may only block one. There are scenarios in which the magic square algorithm does not directly point to where the next move should be made.  In those cases the algorithm, narrows down its possible moves as much as it can then makes moves at random until it chooses an un occupied place to move. Sometimes when this happens, you might notice that the game seems to be glitching, though in fact it is searching for a place to move. In not so many words the sequence below explains the strategy implemented in our algorithm.</p>
+<p>[caption id=&quot;attachment_476&quot; align=&quot;alignnone&quot; width=&quot;1000&quot;][<img src="http://codytaylor.cc/legacy-images/1000px-Tic-tac-toe-game-1.png" alt="CC: BY-SA Wikipedia user: Kilom691" />](http://codytaylor.cc/legacy-images/1000px-Tic-tac-toe-game-1.png) CC: BY-SA Wikipedia user: Kilom691[/caption]</p>
+<p>Of course, this strategy does not guarantee a win. In fact it is most certainly possible for the game to end in a tie with neither player able to place three of their marks in a row.  The version of the game that my brother used in his science fair project is embedded below.  We only finished the portion of the game where the computer has the first turn.  We found another game that played the portion of the game where the player has the first turn and gathered statistics using it.  We would still like to finish our player-first algorithm, but figured that what we have built thus far deserves to be documented.</p>
+<p>The data that my brother collected is in the tables below.  The first table contains the control data for this experiment.  That is, it acted as a baseline from which to compare how well computer algorithms are able to play Tic-Tac-Toe.  It contains data collected over 50 games of Tic-Tac-Toe played between several different people. The number of times the player who made the first move and won the game is compared to that of first turn losses as well as ties.</p>
+<p>The second table contains data from a set of games played against the computer algorithm.  During this test the computer algorithm always made the first move.  As you can see a novice player (one that is unfamiliar with Tic-Tac-Toe strategies) loses to the computer algorithm most of the time; however, ties were found to also be common though the algorithm never lost a game to the human opponent during this test.</p>
+<p>The data in the third table was collected over a trial where the human opponent always made the first move.  During this test the computer algorithm never lost a game, but the data does seem to indicate that the player who makes the first move is still at an advantage even if that player never did win a game.  -Though even with an apparent advantage, the human did still sometimes lose.</p>
+<h3 id="person-v.-person">Person v. Person</h3>
+<table>
+<tbody>
+<tr>
+<p> First Turn Win</p>
+ First Turn Lose
+</tr>
+<tr>
+<td>
+ Win
+</td>
+<td>
+ Tie
+</td>
+<td>
+ Lose
+</td>
+</tr>
+<tr>
+<td>
+ ||||  ||||  ||||  |||
+</td>
+<td>
+ |||| |||| |||| |||
+</td>
+<td>
+ ||||  |||| ||||
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person-v.-computer-computer-first">Person v. Computer: Computer First</h3>
+<table>
+<tbody>
+<tr>
+Computer Win  Tie  Computer Lose
+</tr>
+<tr>
+<td>
+ ||||  ||||  ||||  ||||
+</td>
+<td>
+ |||| |||| ||||
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="person-v.-computer-player-first">Person v. Computer: Player First</h3>
+<table>
+<tbody>
+<tr>
+ Player Win  Tie  Player Lose
+</tr>
+<tr>
+<td>
+</td>
+<td>
+ |||| |||| |||| ||||
+</td>
+<td>
+ |||| ||||
+</td>
+</tr>
+</tbody>
+</table>
+<p>What my brother concluded of this data was that computer algorithms can be made to never lose a game of Tic-Tac-Toe though they can still be tied.  Comparing this to the Human v. Human trials, computer algorithms are much, much better at playing Tic-Tac-Toe than the average player.</p>
+<p><a href="http://codytaylor.cc/legacy-images/Jett-Science-Fair.jpg"><img src="http://codytaylor.cc/legacy-images/Jett-Science-Fair.jpg" alt="Jett-Science-Fair" /></a></p>
+<p>In his school-wide science fair, my brother placed second in his category.  The top three projects from each category were entered into a regional science fair that took place at a local community college.  There my brother placed first in his category.  I was unable to be there for the awards ceremony, but here he is FaceTiming me the evening of the fair proudly showing me his trophy and telling me about the event.  I also understand that In the coming week he is going to be recognized by the local school board for doing so well at a regional competition.  This big brother couldn't be more proud.</p>
+  </div>
+</div>
+<!--Header-->
+<div class="row" id="footer">
+  <a href="license.html"><div id="cc-cc" class="footer-icons"></div></a>
+  <a href="license.html"><div id="cc-by" class="footer-icons"></div></a>
+  <a href="http://github.com/OKCody"><div id="github" class="footer-icons"></div></a>
+  <a href="http://twitter.com/OKCody_"><div id="twitter" class="footer-icons"></div></a>
+</div>
+</div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
