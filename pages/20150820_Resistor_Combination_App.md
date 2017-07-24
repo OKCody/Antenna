@@ -2,9 +2,9 @@ Last semester during my Electronics Lab class, there were a few times that my pa
 
 I decided to use only the resistor values provided to us in our lab kits.  I feel like those values make up the smallest range of resistors that someone serious about electronics might have on hand.  -by using the smallest range of reasonable resistor values, I'm not assuming much on the part of the user in terms of what they have access to.  Each point on the two lines below represents a possible resistor combination using the resistors in the following table.  The first line shows all possible values, and the second line shows values between 0 and 500K ohms in more detail as most combinations will fall within this range.  Note that the distribution of possible values is nearly continuous between 0 and 100K ohms and only slightly less continuous between 0 and 500K ohms.  Click on each image for a closer look.
 
-[![Resistance-Density](http://codytaylor.cc/legacy-images/Resistance-Density.png)](http://codytaylor.cc/legacy-images/Resistance-Density.png)
+[![Resistance-Density](http://codytaylor.cc/opti/Resistance-Density.png)](http://codytaylor.cc/opti/Resistance-Density.png)
 
-[![Resistance-Density-Truncated](http://codytaylor.cc/legacy-images/Resistance-Density-Truncated.png)](http://codytaylor.cc/legacy-images/Resistance-Density-Truncated.png)
+[![Resistance-Density-Truncated](http://codytaylor.cc/opti/Resistance-Density-Truncated.png)](http://codytaylor.cc/opti/Resistance-Density-Truncated.png)
 
 
 
@@ -365,7 +365,7 @@ The application is fairly straight forward. It does not employ a fancy algorithm
     print '<div class="row">'
     print '<div class="one-half column" style="margin-top: 5%">'
     print '<h2>Series</h2>'
-    print '<img src="http://codytaylor.cc/legacy-images/resistor_series.svg" style="width: 100%;"></img>'
+    print '<img src="http://codytaylor.cc/opti/resistor_series.svg" style="width: 100%;"></img>'
     print '<table style="width: 100%;">'
     print '<tr>'
     print '<td><b>Percent Difference</b></td>'
@@ -404,7 +404,7 @@ The application is fairly straight forward. It does not employ a fancy algorithm
     print '<div class="row">'
     print '<div class="one-half column" style="margin-top: 5%">'
     print '<h2>Parallel</h2>'
-    print '<img src="http://codytaylor.cc/legacy-images/resistor_parallel.svg" style="width: 100%;"></img>'
+    print '<img src="http://codytaylor.cc/opti/resistor_parallel.svg" style="width: 100%;"></img>'
     print '<table style="width: 100%;">'
     print '<tr>'
     print '<td><b>Percent Difference</b></td>'
@@ -449,8 +449,8 @@ The application is fairly straight forward. It does not employ a fancy algorithm
     print '<meta name="author" content="Cody Taylor">'
     print '<meta name="viewport" content="width=device-width, initial-scale=1">'
     #print '<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">')
-    print '<link rel="stylesheet" href="http://codytaylor.cc/legacy-images/resistor_normalize.css">'
-    print '<link rel="stylesheet" href="http://codytaylor.cc/legacy-images/resistor_skeleton.css">'
+    print '<link rel="stylesheet" href="http://codytaylor.cc/opti/resistor_normalize.css">'
+    print '<link rel="stylesheet" href="http://codytaylor.cc/opti/resistor_skeleton.css">'
     print '</head>'
     print '<body>'
     print '<div class="container">'
@@ -487,9 +487,9 @@ The application is fairly straight forward. It does not employ a fancy algorithm
 
 I knew that this application would be handy to have in lab, but would be cumbersome to pull up and run on a computer, so I set out hoping to build this in the form of a smartphone application. I know nothing about Android or iOS development, but I am pretty comfortable building websites. Understanding this I set out to build this into a web-app. A web-app appears on a phone exactly like a regular app would except that when it opens it opens in a web browser whether or not the user knows it. Web browsers are incredibly flexible. With this in mind, I knew that Javascript would probably be the most appropriate language to use, but I don't know Javascript and have only been able to achieve the most elementary of tasks using it; however, I am growing continuously more comfortable with Python. Once I had the app working I created another version of it which used Common Gateway Interface to execute Python scripts over the internet and display results in a web browser. For this I set up a Raspberry Pi as a web server (deserving of its own post) that hosts and executes this script via CGI. Screenshots are below.
 
-[![omega home2](http://codytaylor.cc/legacy-images/omega-home2.png)](http://apps.codytaylor.cc:8080/omega/)
+[![omega home2](http://codytaylor.cc/opti/omega-home2.png)](http://apps.codytaylor.cc:8080/omega/)
 
-[![omega results2](http://codytaylor.cc/legacy-images/omega-results2.png)](http://apps.codytaylor.cc:8080/omega/)
+[![omega results2](http://codytaylor.cc/opti/omega-results2.png)](http://apps.codytaylor.cc:8080/omega/)
 
 Please give it a try.  Keep in mind that it has no means of prompting users when they enter invalid information. It only accepts numbers and if you happen to choose an unreasonable number, one that it can't even come close to, you might also receive an error notice.
 
@@ -513,6 +513,6 @@ Banner image credit: [Sparkfun Education](https://learn.sparkfun.com/tutorials/r
 
 As an EE student I also carry a few tools and a tackle box full of electronic components in addition to my laptops, books, and sutff. When it became necessary for me to start carrying a kit of components, I was extremely picky about the box I chose and how it would be organized.  At Bass Pro I found a slim Plano tackle box whose compartments were large enough and numerous enough to hold resistors.  Excluding their multiples of ten and organizing resistors by their base values, makes retrieval easy and takes up far fewer compartments than allotting a compartment to each value.  When resistors are organized in this way it means only having to find the right compartment, and the third-band color that correspond to the value you're looking for as all resistors in any given compartment have the same first and second bands.  I created the chart below and taped it to the inside lid of my kit and use it as a quick reference.  It's time that I shared it.  I was very careful that the compartments in this chart match those in my kit, and that it is as easy to read as possible. -vivid colors, bold font.  In the blank space on this chart I have handwritten pin-outs, and other frequently referenced information.  It might be time that I revise this chart by recreating that information in a more legible way. Please click the image below to download the full-size PNG or download the Photoshop file in the link below.
 
-[![Resistor Organizer](http://codytaylor.cc/legacy-images/Resistor-Organizer.png)](http://codytaylor.cc/legacy-images/Resistor-Organizer.png)
+[![Resistor Organizer](http://codytaylor.cc/opti/Resistor-Organizer.png)](http://codytaylor.cc/opti/Resistor-Organizer.png)
 
-[ResistorOrganizer.psd](http://codytaylor.cc/legacy-images/Resistor-Organizer.psd)
+[ResistorOrganizer.psd](http://codytaylor.cc/opti/Resistor-Organizer.psd)

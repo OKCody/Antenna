@@ -17,32 +17,32 @@ For my individual design project, I chose to build an electronic tic-tac-toe gam
 
 I tried my best to create two independent latch circuits, one controlling a green LED and the other a red LED.  In this configuration I imagined having one switch that would turn on either latching circuit depending on whose turn it was in the game.  I also planned on using a 555 timer in a flip-flop configuration to keep track of whose turn it was.  When the output of the 555 was high it would be one player's turn and when low, the other player's.  After each press of a button on the playing surface, the 555 would need to switch states.  The design that most closely performed as I intended it to is in the diagram below.  It does allow for selectively controlling each LED; however, when switching between states it unintentionally toggles the state of the LED who is being unselected.
 
-[![latch-design-3](http://codytaylor.cc/legacy-images/latch-design-3.jpg)](http://codytaylor.cc/legacy-images/latch-design-3.jpg)
+[![latch-design-3](http://codytaylor.cc/opti/latch-design-3.jpg)](http://codytaylor.cc/opti/latch-design-3.jpg)
 
 
 
 The P-channel MOSFET was intended to be on, or make the red LED active when the 555 timer was in its low state.  Likewise, when the 555 was in its high state, the N-channel MOSFET was intended to be on, making the green LED active.  Again, I was not able to make this circuit work in practice and opted to build the following design.
 
-[![latch-final-design](http://codytaylor.cc/legacy-images/latch-final-design.jpg)](http://codytaylor.cc/legacy-images/latch-final-design.jpg)
+[![latch-final-design](http://codytaylor.cc/opti/latch-final-design.jpg)](http://codytaylor.cc/opti/latch-final-design.jpg)
 
 
 
 The circuit above comprised only one cell of the playing area, that is to say, in the complete circuit this sub-circuit was repeated **nine** **times.  **
 
-[![birdseye](http://codytaylor.cc/legacy-images/birdseye.jpg)](http://codytaylor.cc/legacy-images/birdseye.jpg)
+[![birdseye](http://codytaylor.cc/opti/birdseye.jpg)](http://codytaylor.cc/opti/birdseye.jpg)
 
 
 ## Win Indicator
 
 The win indicator circuitry is simple, yet in order to accommodate all 16 possible win configurations (8 for green, 8 for red), I build 16 three-way AND gates.  Because all I wanted to do was  turn on an LED when a row, column, or oblique had three green or three red LEDs lit, this meant cascading three BS170 MOSFETs together source-to-drain, source-to-drain, and connecting the unconnected drain to the +5v rail through a 1k ohm resistor and the unconnected source to the ground rail through a respectively colored LED, while each gate was connected to a respective latch circuit in a given row, column or oblique.
 
-[![and-gates](http://codytaylor.cc/legacy-images/and-gates.jpg)](http://codytaylor.cc/legacy-images/and-gates.jpg)
+[![and-gates](http://codytaylor.cc/opti/and-gates.jpg)](http://codytaylor.cc/opti/and-gates.jpg)
 
 
 
 Above is one set of win indicators.  I repeated this circuit 8 times, once for each possible winning scenario.  Below is how the win indicators are connected to the latch circuitry.
 
-[![win-indicators](http://codytaylor.cc/legacy-images/win-indicators.jpg)](http://codytaylor.cc/legacy-images/win-indicators.jpg)
+[![win-indicators](http://codytaylor.cc/opti/win-indicators.jpg)](http://codytaylor.cc/opti/win-indicators.jpg)
 
 
 
@@ -190,4 +190,4 @@ Such a high failure rate is due to the large number of parts in this design, 23
 
 This circuit was difficult to build, not because of its complex design, but because of its sheer size and number of components.  To build it, I utilized three dense, yet very organized breadboards as well as one half breadboard.  I also, quickly used all of the pre-cut jumper wires that I own and ended up cutting and stripping about 75% of all the wires used by hand. I am glad that I spent a few minutes at the beginning of this project to think about how it would be laid out on breadboards, because without that, this project would have become a mess and would have been much more difficult to build.
 
-[![2015-02-22-23.50.44](hhttp://codytaylor.cc/legacy-images/2015-02-22-23.50.44.jpg)](http://codytaylor.cc/legacy-images/2015-02-22-23.50.44.jpg)
+[![2015-02-22-23.50.44](hhttp://codytaylor.cc/opti/2015-02-22-23.50.44.jpg)](http://codytaylor.cc/opti/2015-02-22-23.50.44.jpg)

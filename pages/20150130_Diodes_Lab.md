@@ -8,9 +8,9 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 ### Circuit Setup:
 
 
-[![diode-differences-1n914](http://codytaylor.cc/legacy-images/diode-differences-1n914.jpg)](http://codytaylor.cc/legacy-images/diode-differences-1n914.jpg)
+[![diode-differences-1n914](http://codytaylor.cc/opti/diode-differences-1n914.jpg)](http://codytaylor.cc/opti/diode-differences-1n914.jpg)
 
-[![bat85](http://codytaylor.cc/legacy-images/bat85.jpg)](http://codytaylor.cc/legacy-images/bat85.jpg)
+[![bat85](http://codytaylor.cc/opti/bat85.jpg)](http://codytaylor.cc/opti/bat85.jpg)
 
 
 ### Current Limit Calculations & Voltage Drop:
@@ -33,7 +33,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[![1N914-Voltage-Drop](http://codytaylor.cc/legacy-images/1N914-Voltage-Drop.jpg)](http://codytaylor.cc/legacy-images/1N914-Voltage-Drop.jpg)
+[![1N914-Voltage-Drop](http://codytaylor.cc/opti/1N914-Voltage-Drop.jpg)](http://codytaylor.cc/opti/1N914-Voltage-Drop.jpg)
 
 
 
@@ -54,7 +54,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[![1N4007-Voltage-Drop](http://codytaylor.cc/legacy-images/1N4007-Voltage-Drop.jpg)](http://codytaylor.cc/legacy-images/1N4007-Voltage-Drop.jpg)
+[![1N4007-Voltage-Drop](http://codytaylor.cc/opti/1N4007-Voltage-Drop.jpg)](http://codytaylor.cc/opti/1N4007-Voltage-Drop.jpg)
 
 
 
@@ -75,7 +75,7 @@ Input a 0V to 3V (Use DC offset on function generator), 50% duty cycle, 10 kHz s
 
 
 
-[![BAT85-Voltage-Drop](http://codytaylor.cc/legacy-images/BAT85-Voltage-Drop.jpg)](http://codytaylor.cc/legacy-images/BAT85-Voltage-Drop.jpg)
+[![BAT85-Voltage-Drop](http://codytaylor.cc/opti/BAT85-Voltage-Drop.jpg)](http://codytaylor.cc/opti/BAT85-Voltage-Drop.jpg)
 
 
 
@@ -101,7 +101,7 @@ Design a circuit using only resistors, a potentiometer, and a red and green LED.
 ### Circuit Setup
 
 
-[![problem-2](http://codytaylor.cc/legacy-images/problem-2.jpg)](http://codytaylor.cc/legacy-images/problem-2.jpg)
+[![problem-2](http://codytaylor.cc/opti/problem-2.jpg)](http://codytaylor.cc/opti/problem-2.jpg)
 
 
 
@@ -137,7 +137,7 @@ Design a circuit that will convert a 50% duty cycle square wave that goes from -
 ### Circuit Setup
 
 
-[![clamper-circuit](http://codytaylor.cc/legacy-images/clamper-circuit.jpg)](http://codytaylor.cc/legacy-images/clamper-circuit.jpg)
+[![clamper-circuit](http://codytaylor.cc/opti/clamper-circuit.jpg)](http://codytaylor.cc/opti/clamper-circuit.jpg)
 
 
 
@@ -147,7 +147,7 @@ The values for the resistor R and capacitor C should be determined from the time
 ### Measurement
 
 
-[![clamper-circuit](http://codytaylor.cc/legacy-images/clamper-circuit1.jpg)](http://codytaylor.cc/legacy-images/clamper-circuit1.jpg)
+[![clamper-circuit](http://codytaylor.cc/opti/clamper-circuit1.jpg)](http://codytaylor.cc/opti/clamper-circuit1.jpg)
 
 
 ### Conclusion
@@ -165,7 +165,7 @@ Design a circuit that will only pass through the negative cycles of 6 V p-p sine
 ### Circuit Setup
 
 
-[![negative-rectifier](http://codytaylor.cc/legacy-images/negative-rectifier.jpg)](http://codytaylor.cc/legacy-images/negative-rectifier.jpg)
+[![negative-rectifier](http://codytaylor.cc/opti/negative-rectifier.jpg)](http://codytaylor.cc/opti/negative-rectifier.jpg)
 
 
 
@@ -181,7 +181,7 @@ $$3\times\frac{11.4k\Omega}{10k\Omega+11.4k\Omega} = 1.59v$$
 ### Measurement
 
 
-[![negative-rectifier](http://codytaylor.cc/legacy-images/negative-rectifier1.jpg)](http://codytaylor.cc/legacy-images/negative-rectifier1.jpg)
+[![negative-rectifier](http://codytaylor.cc/opti/negative-rectifier1.jpg)](http://codytaylor.cc/opti/negative-rectifier1.jpg)
 
 Note that in this image, the horizontal cursor is set at -1.4v.
 
@@ -201,11 +201,11 @@ Design a peak bridge rectifier circuit with 1N4007 diodes to produce a 5 V DC (+
 ### Circuit Setup
 
 
-[![bridge-peak-rectifier](http://codytaylor.cc/legacy-images/bridge-peak-rectifier.jpg)](http://codytaylor.cc/legacy-images/bridge-peak-rectifier.jpg)
+[![bridge-peak-rectifier](http://codytaylor.cc/opti/bridge-peak-rectifier.jpg)](http://codytaylor.cc/opti/bridge-peak-rectifier.jpg)
 
 Note that care must be taken to properly measure the voltage across the load of this circuit.  In Multisim, one probe and its reference may be intuitively applied across the load; however, when using the oscilloscopes in lab, two probes must be used in conjunction with the scope's 'math' function.  The ground leads of both scopes should be connected to the circuit's ground node, while the channel 1 probe should be connected to the high side of the load.  Likewise, the channel 2 probe should be connected to the low side of the load.  The voltage across the load is then channel 1 minus channel 2.
 
-[![hand](http://codytaylor.cc/legacy-images/hand.jpg)](http://codytaylor.cc/legacy-images/hand.jpg)
+[![hand](http://codytaylor.cc/opti/hand.jpg)](http://codytaylor.cc/opti/hand.jpg)
 
 
 
@@ -213,7 +213,7 @@ Note that care must be taken to properly measure the voltage across the load of 
 ### Measurement
 
 
-[![bridge-peak-rectifier](http://codytaylor.cc/legacy-images/bridge-peak-rectifier1.jpg)](http://codytaylor.cc/legacy-images/bridge-peak-rectifier1.jpg)
+[![bridge-peak-rectifier](http://codytaylor.cc/opti/bridge-peak-rectifier1.jpg)](http://codytaylor.cc/opti/bridge-peak-rectifier1.jpg)
 
 
 ## Problem 6:  Half Wave Peak Rectifier
@@ -225,7 +225,7 @@ Design a half wave peak rectifier circuit with BAT85 schottky diodes to produce 
 ### Circuit Setup
 
 
-[![6.2](http://codytaylor.cc/legacy-images/6.2.jpg)](http://codytaylor.cc/legacy-images/6.2.jpg)
+[![6.2](http://codytaylor.cc/opti/6.2.jpg)](http://codytaylor.cc/opti/6.2.jpg)
 
 
 
@@ -233,7 +233,7 @@ Design a half wave peak rectifier circuit with BAT85 schottky diodes to produce 
 ### Measurement
 
 
-[![6.3](http://codytaylor.cc/legacy-images/6.3.jpg)](http://codytaylor.cc/legacy-images/6.3.jpg)
+[![6.3](http://codytaylor.cc/opti/6.3.jpg)](http://codytaylor.cc/opti/6.3.jpg)
 
 
 ###  Conclusion
@@ -251,7 +251,7 @@ Design a zener regulator circuit that will provide a 9 V (+/- 0.5 V) regulated o
 ###  Circuit Setup
 
 
-[![7](http://codytaylor.cc/legacy-images/7.jpg)](http://codytaylor.cc/legacy-images/7.jpg)
+[![7](http://codytaylor.cc/opti/7.jpg)](http://codytaylor.cc/opti/7.jpg)
 
 Note that 1N4732A has a reverse voltage drop of 4.7v.
 
@@ -281,7 +281,7 @@ Design a circuit that takes a sine wave that is symmetrical about the x-axis and
 ### Circuit setup
 
 
-[![8](http://codytaylor.cc/legacy-images/8.jpg)](http://codytaylor.cc/legacy-images/8.jpg)
+[![8](http://codytaylor.cc/opti/8.jpg)](http://codytaylor.cc/opti/8.jpg)
 
 
 
@@ -293,7 +293,7 @@ This circuit clips the top half of the input waveform to no higher than .7v.
 ### Measurement
 
 
-[![Limiter-Circuit](http://codytaylor.cc/legacy-images/Limiter-Circuit.jpg)](http://codytaylor.cc/legacy-images/Limiter-Circuit.jpg)
+[![Limiter-Circuit](http://codytaylor.cc/opti/Limiter-Circuit.jpg)](http://codytaylor.cc/opti/Limiter-Circuit.jpg)
 
 
 
@@ -303,7 +303,7 @@ This circuit clips the top half of the input waveform to no higher than .7v.
 
 Design a circuit using only diodes and resistors that implements the following digital logic circuit. Verify that all 8 possible input combinations turns a green LED on or off appropriately. For one of the states when the LED is on verify that the current is between 5 and 20 mA. You must use 3 slide toggle switches or a DIP switch in this problem (put them back in the bin when you are done). The inputs (switches) should always be forced to either ground or the positive rail voltage (i.e. don’t leave it “floating”).
 
-[![Untitled Diagram](http://codytaylor.cc/legacy-images/Untitled-Diagram.jpg)](http://codytaylor.cc/legacy-images/Untitled-Diagram.jpg)
+[![Untitled Diagram](http://codytaylor.cc/opti/Untitled-Diagram.jpg)](http://codytaylor.cc/opti/Untitled-Diagram.jpg)
 
 
 
@@ -311,7 +311,7 @@ Design a circuit using only diodes and resistors that implements the following d
 ### Circuit Setup
 
 
-[![9](http://codytaylor.cc/legacy-images/9.jpg)](http://codytaylor.cc/legacy-images/9.jpg)
+[![9](http://codytaylor.cc/opti/9.jpg)](http://codytaylor.cc/opti/9.jpg)
 
 
 

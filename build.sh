@@ -50,8 +50,28 @@ done
 cat head.html temp.html tail.html > site/archive.html
 rm temp.html
 
+if [ -e opti/ ];
+then
+  :
+else
+  mkdir opti/
+fi
+for filename in images/*.jpg images/*.png
+do
+  newfile=${filename##images/}
+  newfile=${newfile:0:-3}jpg
+  if [ -e "opti/$newfile" ];
+  then
+    :
+  else
+    echo $newfile
+    convert $filename -resize x400 -quality 85 opti/$newfile
+  fi
+done
 
 cp -r pages/site-assets site/site-assets
 cp stylesheet.css site/stylesheet.css
 mkdir site/images
 cp images/* site/images/
+mkdir site/opti/
+cp opti/* site/opti/
