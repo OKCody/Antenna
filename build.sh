@@ -76,3 +76,4 @@ mkdir site/images
 cp images/* site/images/
 mkdir site/opti/
 cp opti/* site/opti/
+cp -r tipuesearch/ site/tipuesearch
