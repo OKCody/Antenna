@@ -38,15 +38,16 @@ do
   rm temp.html
 done
 
-echo "<h1 class=\"title\">Archive</h1>" > temp.html
+touch temp.html
 for filename in pages/*.md
 do
   title=${filename##*/}
   title=${title:9}
   title=${title%.md}
   title=${title//_/ }
-  echo "<h4><a href=\"${filename%.md}.html\">$title</a></h4>" >> temp.html
+  echo -e "<h4><a href=\"${filename%.md}.html\">$title</a></h4>\n$(cat temp.html)" > temp.html
 done
+echo -e "<h1 class=\"title\">Archive</h1>\n$(cat temp.html)" > temp.html
 cat head.html temp.html tail.html > site/archive.html
 rm temp.html
 
