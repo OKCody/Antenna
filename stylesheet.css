@@ -89,6 +89,34 @@
     border-color: var(--yellow);
   }
 
+  #tipue_search_input{
+    height: 2em;
+    text-align: center;
+    margin-top: -2em;
+    color: var(--gray);
+    font-size: 1.0em;
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    border: none;
+  }
+
+  #tipue_search_input:hover{
+    color: var(--gray);
+    border-width: .5px;
+    border-radius: 2em;
+    border-style: solid;
+  }
+
+  #tipue_search_input:focus{
+    outline: none;
+    border-radius: 2em;
+    border-width: .5px;
+    border-style: solid;
+    border-color: var(--yellow);
+    color: var(--gray);
+  }
+
   .tipue_search_content_title{
     font-size: 1.6em;
     font-family: arial, sans-serif;
@@ -106,38 +134,84 @@
     display: none;
   }
 
+  #tipue_search_foot_boxes li{
+    display: inline;
+    float: left;
+    margin: 2em;
+  }
+
+  #tipue_search_foot_boxes .current{
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    font-weight: 600;
+    color: var(--black);
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--yellow);
+  }
+
+  .tipue_search_foot_box{
+    font-weight: 600;
+    color: var(--black);
+    border: none;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+  }
+
 }
 
 /* NOT MOBILE */
 @media only screen and (min-width: 50em) {
   .container{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%; /*80%*/
+  }
+
+  #menu-container{
+    border-bottom-color: var(--gray);
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: var(--white);
   }
   #menu {
     width: 100%;
+    margin-left: 10%;
   }
   .menu-item {
     width: 20%;
     float: left;
     text-align: left;
     white-space: nowrap;
+    margin-bottom: .5em;
   }
   .menu-item a{
     margin: .5em;
+  }
+
+  #tipue_search_input{
+    padding-left: 1em;
+    text-align: left;
   }
 
   #name{
     margin-left: 0em;
   }
   #content {
-    width: 66.66%;
+    width: 53%; /*66.66%*/
+    margin-left: 10%;
     margin-top: 10%;
-    margin-left: 0%;
     margin-right: 0%;
   }
   #footer{
     padding: 0px;
+    margin-left: 10%;
   }
   #about-photo{
     float: left;
@@ -158,58 +232,58 @@
   --gray:  #AAAAAA;
   --yellow: #FFBB00;
 }
-  h1,h2,h3,h4,h5,h6{
-    font-family: arial, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    color: var(--black);
-  }
-  h1{ font-size: 2.5em; }
-  h2{ font-size: 1.8em; }
-  h3{ font-size: 1.6em; }
-  h4{ font-size: 1.4em; }
-  h5{ font-size: 1.2em; }
-  h6{ font-size: 1.0em; }
-  #content{
-    font-family: helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.6;
-  }
-  a{
-    color: var(--black);
-    font-weight: 300;
-    padding: bottom: 3px;
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--yellow);
-  }
-  a:hover{
-    color: var(--gray);
-    cursor: pointer;
-  }
-  pre{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1.1em;
-    line-height: 1.6;
-    white-space: normal;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    background-color: #EEEEEE;
-    border-radius: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  hr{
-    margin-top: 4em;
-    margin-bottom: 4em;
-    width: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+h1,h2,h3,h4,h5,h6{
+  font-family: arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: var(--black);
+}
+h1{ font-size: 2.5em; }
+h2{ font-size: 1.8em; }
+h3{ font-size: 1.6em; }
+h4{ font-size: 1.4em; }
+h5{ font-size: 1.2em; }
+h6{ font-size: 1.0em; }
+#content{
+  font-family: helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.6;
+}
+a{
+  color: var(--black);
+  font-weight: 300;
+  padding: bottom: 3px;
+  text-decoration: none;
+  border-bottom: 1.5px solid var(--yellow);
+}
+a:hover{
+  color: var(--gray);
+  cursor: pointer;
+}
+pre{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6;
+  white-space: normal;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+hr{
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
