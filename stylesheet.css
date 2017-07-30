@@ -97,6 +97,15 @@
     color: var(--black);
   }
 
+  .tipue_search_content_text{
+    color: var(--gray);
+    margin-bottom: 1em;
+  }
+
+  .tipue_search_content_url{
+    display: none;
+  }
+
 }
 
 /* NOT MOBILE */

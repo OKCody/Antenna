@@ -70,6 +70,32 @@ do
   fi
 done
 
+# Making search index, preparing variables to insert into JSON
+# tipue_search_stop_words.txt contains the default words tipue ignores in its
+# searches for in an effort to reduce the filesize for the JSON index.
+echo "var tipuesearch = {\"pages\": [" > tipuesearch/tipuesearch_content.js
+for filename in pages/*.md
+do
+  domain="codytaylor.cc"
+  title=${filename##*/}
+  file=$title
+  title=${title:9}
+  title=${title%.md}
+  title=${title//_/ }
+  cp $filename temp.txt
+  text=$(while IFS= read -r word; do gsed -ri "s/( |)\b$word\b//g" temp.txt; done < tipue_stopwords.txt)
+  text=$(cat temp.txt | tr -d "\n")
+  text=$(echo $text|tr -d '"')
+  rm temp.txt
+  echo "   {\"title\": \"$title\", \"text\": \"$text\", \"tags\": \"\", \"url\": \"http://$domain/pages/${file%md}html\"}," >> tipuesearch/tipuesearch_content.js
+done
+echo "$(sed '$ s/.$//' tipuesearch/tipuesearch_content.js)" > tipuesearch/tipuesearch_content.js
+echo "]};" >> tipuesearch/tipuesearch_content.js
+
+
+
+
+
 cp -r pages/site-assets site/site-assets
 cp stylesheet.css site/stylesheet.css
 mkdir site/images
