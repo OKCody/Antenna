@@ -70,6 +70,19 @@ do
   fi
 done
 
+if [ -e site/site-assets/ ];
+then
+  :
+else
+  mkdir site/site-assets/
+fi
+for filename in site-assets/*.svg
+do
+  echo $filename
+  svgo $filename site/$filename
+  #tr -d '\n' < $filename > "site/$filename"
+done
+
 # Making search index, preparing variables to insert into JSON
 # tipue_search_stop_words.txt contains the default words tipue ignores in its
 # searches for in an effort to reduce the filesize for the JSON index.
@@ -96,10 +109,11 @@ echo "]};" >> tipuesearch/tipuesearch_content.js
 
 
 
-cp -r pages/site-assets site/site-assets
+#cp -r pages/site-assets site/site-assets
 cp stylesheet.css site/stylesheet.css
 mkdir site/images
 cp images/* site/images/
 mkdir site/opti/
 cp opti/* site/opti/
 cp -r tipuesearch/ site/tipuesearch
+cp .htaccess site/.htaccess

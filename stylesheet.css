@@ -172,13 +172,11 @@
   }
 
   #menu-container{
-    border-bottom-color: var(--gray);
-    border-bottom-style: solid;
-    border-bottom-width: .5px;
     width: 100%;
     position: fixed;
     top: 0px;
     background-color: var(--white);
+    opacity: .95;
   }
   #menu {
     width: 100%;

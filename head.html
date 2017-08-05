@@ -15,7 +15,8 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/stylesheet.css">
+  <link rel="preload" href="/stylesheet.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/stylesheet.css"></noscript>
 
 </head>
 <body>
