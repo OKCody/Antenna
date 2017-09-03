@@ -99,22 +99,18 @@
     font-style: normal;
     font-weight: 900;
     border: none;
+    background-color: rgba(0,0,0,.05);
+    border-radius: 2em;
   }
 
   #tipue_search_input:hover{
-    color: var(--gray);
-    border-width: .5px;
+    color: var(--yellow);
     border-radius: 2em;
-    border-style: solid;
   }
 
   #tipue_search_input:focus{
     outline: none;
     border-radius: 2em;
-    border-width: .5px;
-    border-style: solid;
-    border-color: var(--yellow);
-    color: var(--gray);
   }
 
   .tipue_search_content_title{

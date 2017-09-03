@@ -1,13 +1,17 @@
 
 if [ -e site/ ];
 then
-  rm -rf site
-  mkdir site/
+  :
 else
   mkdir site/
 fi
 
-mkdir site/pages/
+if [ -e site/pages/ ];
+then
+  :
+else
+  mkdir site/pages/
+fi
 for filename in pages/*.md
 do
   title=${filename##*/}
@@ -21,6 +25,8 @@ do
   cat head.html > site/pages/$filename.html
   echo $title >> site/pages/$filename.html
   cat temp.html tail.html >> site/pages/$filename.html
+  # replace "<!--analytics-->" on all pages with the contents of analytics.txt
+  gsed -i "s@<!--analytics-->@$(cat analytics.txt)@g" site/pages/$filename.html
   rm temp.html
 done
 
@@ -51,6 +57,8 @@ echo -e "<h1 class=\"title\">Archive</h1>\n$(cat temp.html)" > temp.html
 cat head.html temp.html tail.html > site/archive.html
 rm temp.html
 
+
+# Optimizing images for web delivery
 if [ -e opti/ ];
 then
   :
@@ -61,7 +69,7 @@ for filename in images/*.jpg images/*.png
 do
   newfile=${filename##images/}
   newfile=${newfile:0:-3}jpg
-  if [ -e "opti/$newfile" ];
+  if cmp -s "opti/$newfile" "site/opti/$newfile"
   then
     :
   else
@@ -70,50 +78,51 @@ do
   fi
 done
 
-if [ -e site/site-assets/ ];
-then
-  :
-else
-  mkdir site/site-assets/
-fi
-for filename in site-assets/*.svg
-do
-  echo $filename
-  svgo $filename site/$filename
-  #tr -d '\n' < $filename > "site/$filename"
-done
-
 # Making search index, preparing variables to insert into JSON
 # tipue_search_stop_words.txt contains the default words tipue ignores in its
 # searches for in an effort to reduce the filesize for the JSON index.
-echo "var tipuesearch = {\"pages\": [" > tipuesearch/tipuesearch_content.js
-for filename in pages/*.md
-do
-  domain="codytaylor.cc"
-  title=${filename##*/}
-  file=$title
-  title=${title:9}
-  title=${title%.md}
-  title=${title//_/ }
-  cp $filename temp.txt
-  text=$(while IFS= read -r word; do gsed -ri "s/( |)\b$word\b//g" temp.txt; done < tipue_stopwords.txt)
-  text=$(cat temp.txt | tr -d "\n")
-  text=$(echo $text|tr -d '"')
-  rm temp.txt
-  echo "   {\"title\": \"$title\", \"text\": \"$text\", \"tags\": \"\", \"url\": \"http://$domain/pages/${file%md}html\"}," >> tipuesearch/tipuesearch_content.js
-done
-echo "$(sed '$ s/.$//' tipuesearch/tipuesearch_content.js)" > tipuesearch/tipuesearch_content.js
-echo "]};" >> tipuesearch/tipuesearch_content.js
 
+if cmp -s "tipuesearch/tipuesearch_content.js" "site/tipuesearch/tipuesearch_content.js"
+then
+  :
+else
+  echo "var tipuesearch = {\"pages\": [" > tipuesearch/tipuesearch_content.js
+  for filename in pages/*.md
+  do
+    domain="codytaylor.cc"
+    title=${filename##*/}
+    file=$title
+    title=${title:9}
+    title=${title%.md}
+    title=${title//_/ }
+    cp $filename temp.txt
+    text=$(while IFS= read -r word; do gsed -ri "s/( |)\b$word\b//g" temp.txt; done < tipue_stopwords.txt)
+    text=$(cat temp.txt | tr -d "\n")
+    text=$(echo $text|tr -d '"')
+    rm temp.txt
+    echo "   {\"title\": \"$title\", \"text\": \"$text\", \"tags\": \"\", \"url\": \"http://$domain/pages/${file%md}html\"}," >> tipuesearch/tipuesearch_content.js
+  done
+  echo "$(sed '$ s/.$//' tipuesearch/tipuesearch_content.js)" > tipuesearch/tipuesearch_content.js
+  echo "]};" >> tipuesearch/tipuesearch_content.js
+fi
 
+if [ -e site/images/ ];
+then
+  :
+else
+  mkdir site/images/
+fi
 
+if [ -e site/opti/ ];
+then
+  :
+else
+  mkdir site/opti/
+fi
 
-
-#cp -r pages/site-assets site/site-assets
 cp stylesheet.css site/stylesheet.css
-mkdir site/images
-cp images/* site/images/
-mkdir site/opti/
-cp opti/* site/opti/
+cp -r site-assets/ site/site-assets/
+cp -r images/ site/images/
+cp -r opti/ site/opti/
 cp -r tipuesearch/ site/tipuesearch
 cp .htaccess site/.htaccess
