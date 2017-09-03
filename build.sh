@@ -41,6 +41,8 @@ do
   filename=${filename##*/}
   filename=${filename%.md}
   cat head.html temp.html tail.html > site/$filename.html
+  # replace "<!--analytics-->" on all pages with the contents of analytics.txt
+  gsed -i "s@<!--analytics-->@$(cat analytics.txt)@g" site/$filename.html
   rm temp.html
 done
 
