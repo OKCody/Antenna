@@ -57,6 +57,8 @@ do
 done
 echo -e "<h1 class=\"title\">Archive</h1>\n$(cat temp.html)" > temp.html
 cat head.html temp.html tail.html > site/archive.html
+# replace "<!--analytics-->" on all pages with the contents of analytics.txt
+gsed -i "s@<!--analytics-->@$(cat analytics.txt)@g" site/archive.html
 rm temp.html
 
 
