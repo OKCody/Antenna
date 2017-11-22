@@ -1,0 +1,243 @@
+<html>
+<style>
+.row{
+  width: 100%;
+  float: left;
+}
+.column{
+  width: 33.333%;
+  float: left;
+  text-align: center;
+}
+.indent{
+  padding-left: .25in;
+}
+.social_icon{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  position: relative;
+  top: 3.5px;
+}
+html{
+  width: 8.5in;
+  height: 11in;
+  font-family: helvetica, sans-serif;
+  padding-left: .5in;
+  padding-right: .5in;
+  padding-top: .25in;
+  padding-bottom: .5in;
+}
+p{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+h1,h2,h3,h4,h5,h6{
+  width: 100%;
+  float: left;
+  margin-top: 15px;
+}
+h1{
+  font-size: 50px;
+  margin-top: 0px;
+}
+h2{
+  margin-bottom: 5px;
+}
+h3{
+  color: #AAAAAA;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+a{
+  text-decoration: none;
+  border-bottom: 1.5px solid #FFBB00;
+  color: #000000;
+}
+ul{
+  width: 100%;
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+li{
+  width: 100%;
+  float: left;
+}
+div h2{
+  border-bottom: 2px solid #FFBB00;
+}
+@media print {
+  .row{page-break-inside: avoid;}
+  #name,#contact,#education,#skills,#experience,#presentations{page-break-inside: avoid;}
+}
+</style>
+<!-- name -->
+<div id="name" class="row">
+  <h1>Cody Taylor</h1>
+</div>
+<!-- /name -->
+<!-- contact -->
+<div id="contact" class="row">
+  <h2>Contact</h2>
+  <div class="indent">
+    <div class="row">
+      <div class="column">
+        <p><a href="mailto:codyalantayor@gmail.com">codyalantaylor@gmail.com</a></p>
+        <p>405-605-9810</p>
+      </div>
+      <div class="column">
+        <p><img class="social_icon" src="http://codytaylor.cc/site-assets/twitter-blue.svg"></img><a href="https://twitter.com/OKCody_" target="_blank">@OKCody_</a></p>
+        <p><img class="social_icon" src="http://codytaylor.cc/site-assets/github-black.svg"></img><a href="https://github.com/OKCody" target="_blank">OKCody</a></p>
+      </div>
+      <div class="column">
+        <p><a href="http://codytaylor.cc">http://codytaylor.cc</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /contact -->
+<!-- education -->
+<div id="education" class="row">
+  <h2>Education</h2>
+  <div class="indent">
+    <h3>B.S. 2016, Electrical Engineering, University of Oklahoma, Norman, OK</h3>
+    <ul>
+      <li><b>Capstone:</b> Designed and constructed an automated tool to calibrate precision approach path
+indicators for use by and under the supervision of the Federal Aviation Administration</li>
+      <li><b>Independent Study:</b> Studied open culture including open source software, open source software, open pedagogy, and open educational resources with Katherine Pandora, Ph.D.</li>
+    </ul>
+  </div>
+</div>
+<!-- /education -->
+<!-- skills -->
+<div id="skills" class="row">
+  <h2>Skills</h2>
+  <div class="indent">
+    <h3>Programming</h3>
+    <ul>
+      <li>Languages: BASH, Python, Javasctipt, PHP, embedded C++, Chrome extensions</li>
+      <li>Web design: emphasis on static, minimal design, minimal bandwidth, offline capable sites</li>
+      <li>Server-Side: web apps using PHP, Javascript, and BASH; Ubuntu, Apache, Dat protocol</li>
+    </ul>
+    <h3>Engineering</h3>
+    <ul>
+      <li>Electronics: Arduino, Raspberry Pi, mbed, microcontrollers in general, circuit design</li>
+      <li>3D Printing: Maintenance and operation of 6 Lulzbot machines of ~100% duty cycle</li>
+      <li>3D Modeling: Solidworks, Autodesk, Meshlab, Meshmixer, ADMesh</li>
+    </ul>
+  </div>
+</div>
+<!-- /skills -->
+<!-- experience -->
+<div id="experience" class="row">
+  <h2>Experience</h2>
+  <div class="indent">
+    <!-- ETL -->
+    <h3>Emerging Technologies Librarian</h3>
+    <div class="indent">
+      <p>University of Oklahoma Libraries, June 2016 - present</p>
+      <ul>
+        <li>Manager of library makerspace, its equipment and student staff</li>
+        <li>Maintained equipemnt: 3 VR systems, 6 3D printers, electronics workbench, other technologies</li>
+        <li>Administered ~2000 3D prints per year</li>
+        <li>Hosted regular workshops on 3D printing, microcontroller programming, and Software Carpentry workshops including lessons on BASH, Python, Git & Github</li>
+        <li>Open educational resource technologist</li>
+        <li>Developed OER authoring workflow and tool</li>
+        <li>Co-administrator of Alternative Textbook Grant --saved OU students > $1.9M to date</li>
+      </ul>
+    </div>
+    <!-- /ETL -->
+    <!-- OER Student -->
+    <h3>Assistant to Open Educational Resources (OER) Coordinator</h3>
+    <div class="indent">
+      <p>University of Oklahoma Libraries, January 2014 - June 2016</p>
+      <ul>
+        <li>OER developent, curation, outreach</li>
+        <li>Assess faculty OER needs, develop and execute projects</li>
+        <li>Grant administration</li>
+        <li>Web development, Wordpress administration</li>
+      </ul>
+    </div>
+    <!-- /OER Studnet -->
+    <!-- Software Maintenance Intern -->
+    <h3>Software Maintenance Intern</h3>
+    <div class="indent">
+      <p>United States Air Force, Software Maintenance Group, Tinker Air Force Base, July 2013 - January 2014</p>
+      <ul>
+        <li>Developed C++ coding standards</li>
+        <li>Developed manual on distrubuted computing using Open MPI</li>
+      </ul>
+    </div>
+    <!-- /Software Maintenance Intern -->
+  </div>
+</div>
+<!-- /experience -->
+<!-- leadership -->
+<div id="leadership" class="row">
+  <h2>Leadership</h2>
+  <div class="indent">
+    <ul>
+      <li>SPARC Open Education Leadership Program, piolt cohort, Oct. 2017 - May 2018</li>
+      <li>Enhancing Scholarly Reach Committee, co-chair, Aug. 2017 - present</li>
+      <li>Youngblood Geology Librarian search committee, Mar. 2017 - Aug. 2017</li>
+      <li>Open Textbook Network scholarship to attend OpenCon 2016, Washington D.C., Nov. 2016</li>
+      <li>Innovation Hub Fablab planning committee (undergraduate representative), Aug. 2015 - May 2016</li>
+    </ul>
+  </div>
+</div>
+<!-- /leadership -->
+<!-- publications -->
+<div id="publications" class="row">
+  <h2>Publications</h2>
+  <div class="indent">
+    <h3>Chapters</h3>
+    <ul>
+      <li><i>Case Study: University of Oklahoma Libraries</i>, Authoring Open Textbooks, Melissa Falldin and Karen Lauritsen, Open Textbook Network, Mar. 2017, <a href="https://press.rebus.community/authoropen/">https://press.rebus.community/authoropen/</a></li>
+    </ul>
+    <h3>Book Reviews</h3>
+    <ul>
+      <li><i>Book Review: The Makerspace Librarian’s Sourcebook</i>, by Ellyssa Kroski, Reference and User Services Association Quarterly (RUSQ), Vol. 57, fall 2017, <a href="http://dx.doi.org/10.5860/rusq.57.1.6451">http://dx.doi.org/10.5860/rusq.57.1.6451</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /publications -->
+<!-- presentations -->
+<div id="presentations" class="row">
+  <h2>Presentations</h2>
+  <div class="indent">
+    <ul>
+      <!-- opened 2017 -->
+      <li>Oct. 2017, OpenEd 2017 - Anaheim, CA</li>
+        <ul>
+          <li><i>Being True To The 5 Rs: Publishing OER That Are Easy To Reuse and Remix</i></li>
+          <li><i>Creating an Open Anthology: A Year in the Life of an OER Grant Project</i></li>
+      </ul>
+      </li>
+      <!-- /opened 2017 -->
+      <!-- domains 2017 -->
+      <li>Jul. 2017, Domains 2017 - Oklahoma City, OK</li>
+        <ul>
+          <li><i>Markdown Converter Demonstration</i></li>
+      </ul>
+      </li>
+      <!-- /domains 2017 -->
+      <!-- open textbook summit 2017 -->
+      <li>Jun. 2017, Open Textbook Summit - Vancouver, B.C.</li>
+        <ul>
+          <li><i>Publishing OER with Markdown</i></li>
+      </ul>
+      </li>
+      <!-- /open textbook summit 2017 -->
+      <!-- the collective -->
+      <li>Feb. 2017, The Collective - Knoxville, TN</li>
+        <ul>
+          <li><i>Publishing OER with Markdown</i></li>
+      </ul>
+      </li>
+      <!-- /the collective -->
+    </ul>
+  </div>
+</div>
+<!-- /presentations -->
+</html>
