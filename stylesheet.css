@@ -11,6 +11,9 @@
 
 /* MOBILE */
 @media only screen {
+  html{
+    overflow-x: hidden;
+  }
   .col {
     float: left;
     width: 80%;
@@ -168,11 +171,14 @@
   }
 
   #menu-container{
-    width: 100%;
-    position: fixed;
+    width: 101%;
+    position: absolute;
     top: 0px;
+    left: -1%;
     background-color: var(--white);
-    opacity: .95;
+    opacity: .6;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   #menu {
     width: 100%;
@@ -184,6 +190,8 @@
     text-align: left;
     white-space: nowrap;
     margin-bottom: .5em;
+    color: var(--gray);
+    text-transform: uppercase;
   }
   .menu-item a{
     margin: .5em;
@@ -192,6 +200,7 @@
   #tipue_search_input{
     padding-left: 1em;
     text-align: left;
+    text-transform: uppercase;
   }
 
   #name{
@@ -261,7 +270,8 @@ pre{
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.6;
-  white-space: normal;
+  white-space: no-wrap;
+  overflow-x: scroll;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 2em;

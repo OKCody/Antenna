@@ -39,10 +39,15 @@ print(4*(inCount/i))
 > My results:
 >
 > 3.124           - 1,000 points
+>
 > 3.1232         - 10,000 points
+>
 > 3.14168       - 100,000 points
+>
 > 3.142084     - 1,000,000 points
+>
 > 3.1415316   - 10,000,000 points
+>
 > 3.14194152 - 100,000,000 points
 >
 > **Question!  Why does the difference in the results and the known value of pi not decrease at a rate proportional to the number of points used in the calculation?**
